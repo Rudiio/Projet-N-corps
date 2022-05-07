@@ -49,6 +49,8 @@ public:
     double GetROI() const;
     int GetMethod();
     
+    float Getmesuretemps();
+    
 
 private:
 
@@ -77,6 +79,8 @@ private:
     int m_num;	 		///< Number of particles
     int methode_calcul;
     bool m_bVerbose;
+
+    float mesure_temps;
 };
 
 #endif
