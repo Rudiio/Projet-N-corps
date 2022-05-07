@@ -10,4 +10,6 @@ L'algorithme de Barnes-Hut est algorithme hiérarchique inventé par Josh Barnes
 Le principe général de l'algorithme est de regrouper les particules proches en une seule plus grosse particule selon leur distance  à la particule dont on veut calculer les forces. Cela permet alors d'approximer correctement les forces touten réduisant les calculs nécessaires.
 
 
+\section{Fonctionnement de l'algorithme}
+ 
 \section{Algorithme}

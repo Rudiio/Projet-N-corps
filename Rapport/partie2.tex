@@ -1,4 +1,4 @@
-\chapter{Aspect physique du problème}
+\chapter{Aspect physique et mathématique du problème}
 Le problème consiste à calculer pour chaque particule la force exercée sur elle par toutes les autres à un instant $t$.
 Cela revient donc à résoudre les équations de Newton des N particules. La force prise en compte est ainsi l'interaction gravitationnelle d'un corps sur un autre.
 
@@ -70,7 +70,7 @@ L'intégrateur permettra alors de résoudre numériquement et simplement cette �
 
 \vspace{2mm}
 
-Dans notre cas, nous utilisons une méthode d'Euler explicite afin de calculer la vitesse de chaque particule et ensuite sa position à chaque instant $t$.
+Dans notre cas, nous utilisons d'abord une méthode d'Euler explicite afin de calculer la vitesse de chaque particule et ensuite sa position à chaque instant $t$.
 
 Les vitesses s'obtiennent alors de la manière suivante :
 \vspace{2mm}
@@ -78,8 +78,8 @@ Les vitesses s'obtiennent alors de la manière suivante :
 $
 \left\{
     \begin{array}{ll}
-        vx_{t+1} =vx_{t} + \Delta t *ax_{t} \\
-        vy_{t+1} =vy_{t} + \Delta t *ay_{t}
+        vx_{n+1} =vx_{n} + \Delta t *ax_{n} \\
+        vy_{n+1} =vy_{n} + \Delta t *ay_{n}
     \end{array}
 \right.
 $
@@ -91,8 +91,8 @@ et les positions se retrouvent de la même manière :
 $
 \left\{
     \begin{array}{ll}
-        x_{t+1} =x_{t} + \Delta t *vy_{t} \\
-        y_{t+1} =y_{t} + \Delta t *vy_{t}
+        x_{n+1} =x_{n} + \Delta t *vy_{n} \\
+        y_{n+1} =y_{n} + \Delta t *vy_{n}
     \end{array}
 \right.
 $
@@ -100,6 +100,45 @@ $
 \vspace{2mm}
 
 où $\Delta t$ est le pas de discrétisation du temps.
+
+\vspace{2mm}
+
+Cependant, pour des problèmes de mécaniques, la méthode d'Euler n'est pas stable (divergence de trajectoire). Ainsi, il est préférable d'utiliser le schéma saute-mouton ("leap frog") qui est d'ordre 2 et conserve l'énergie mécanique des systèmes dynamiques.
+
+\vspace{2mm}
+Voici la forme de la version "Drift-kick-Drift" de la méthode:
+
+$
+\left\{
+    \begin{array}{ll}
+        x_{n+\frac{1}{2}} = x_n + vx \frac{\Delta t}{2} \\
+        y_{n+\frac{1}{2}} = y_n + vy \frac{\Delta t}{2}
+    \end{array}
+\right.
+$
+
+\vspace{2mm}
+
+$
+\left\{
+    \begin{array}{ll}
+        vx_{n+1} = vx_n + ax_{n+\frac{1}{2}} \\
+        vy_{n+1} = vy_n + ay_{n+\frac{1}{2}}
+    \end{array}
+\right.
+$
+
+\vspace{2mm}
+
+$
+\left\{
+    \begin{array}{ll}
+        x_{n+1} = x_{n+\frac{1}{2}} + vx_{n+1}\frac{\Delta t}{2}\\
+        y_{n+1} = y_{n+\frac{1}{2}} + vy_{n+1}\frac{\Delta t}{2}
+    \end{array}
+\right.
+$
+
 
 \vspace{3mm}
 \underline{Le principe d'action-réaction}
