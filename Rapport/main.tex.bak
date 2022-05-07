@@ -1,0 +1,208 @@
+\documentclass[a4paper]{report}
+
+%====================== PACKAGES ======================
+\usepackage[french]{babel}
+\usepackage[utf8x]{inputenc}
+
+%pour gérer les positionnement d'images
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{url}
+
+%pour les informations sur un document compilé en PDF et les liens externes / internes
+\usepackage{hyperref}
+
+%pour la mise en page des tableaux
+\usepackage{array}
+\usepackage{tabularx}
+
+%pour utiliser \floatbarrier
+%\usepackage{placeins}
+%\usepackage{floatrow}
+
+%espacement entre les lignes
+\usepackage{setspace}
+
+%modifier la mise en page de l'abstract
+\usepackage{abstract}
+
+%police et mise en page (marges) du document
+\usepackage[T1]{fontenc}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+%Pour les galerie d'images
+\usepackage{subfig}
+\usepackage{etoolbox}
+
+\makeatletter
+% First, modify the \@endpart macro.
+\def\@endpart{} 
+
+% Next, copy the \chapter macro to \nonewpagechapter, and ...
+% ... suppress page-breaking instructions in the modified macro
+\let\nonewpagechapter\chapter 
+\patchcmd\nonewpagechapter{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+
+% Third, suppress vertical whitespace before "Part xx" material
+\patchcmd{\part}{\null\vfil}{}{}{}
+
+\makeatother
+
+%Pour l'insertion de code
+\usepackage{color}
+\usepackage{listings}
+ 
+\definecolor{darkWhite}{rgb}{0.94,0.94,0.94}
+ 
+\lstset{
+  aboveskip=3mm,
+  belowskip=-2mm,
+  backgroundcolor=\color{darkWhite},
+  basicstyle=\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{red},
+  deletekeywords={...},
+  escapeinside={\%*}{*)},
+  extendedchars=true,
+  framexleftmargin=16pt,
+  framextopmargin=3pt,
+  framexbottommargin=6pt,
+  frame=tb,
+  keepspaces=true,
+  keywordstyle=\color{blue},
+  language=C++,
+  literate=
+  {²}{{\textsuperscript{2}}}1
+  {⁴}{{\textsuperscript{4}}}1
+  {⁶}{{\textsuperscript{6}}}1
+  {⁸}{{\textsuperscript{8}}}1
+  {€}{{\euro{}}}1
+  {é}{{\'e}}1
+  {è}{{\`{e}}}1
+  {ê}{{\^{e}}}1
+  {ë}{{\¨{e}}}1
+  {É}{{\'{E}}}1
+  {Ê}{{\^{E}}}1
+  {û}{{\^{u}}}1
+  {ù}{{\`{u}}}1
+  {â}{{\^{a}}}1
+  {à}{{\`{a}}}1
+  {á}{{\'{a}}}1
+  {ã}{{\~{a}}}1
+  {Á}{{\'{A}}}1
+  {Â}{{\^{A}}}1
+  {Ã}{{\~{A}}}1
+  {ç}{{\c{c}}}1
+  {Ç}{{\c{C}}}1
+  {õ}{{\~{o}}}1
+  {ó}{{\'{o}}}1
+  {ô}{{\^{o}}}1
+  {Õ}{{\~{O}}}1
+  {Ó}{{\'{O}}}1
+  {Ô}{{\^{O}}}1
+  {î}{{\^{i}}}1
+  {Î}{{\^{I}}}1
+  {í}{{\'{i}}}1
+  {Í}{{\~{Í}}}1,
+  morekeywords={*,...},
+  numbers=left,
+  numbersep=10pt,
+  numberstyle=\tiny\color{black},
+  rulecolor=\color{black},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=1,
+  stringstyle=\color{gray},
+  tabsize=4,
+  title=\lstname,
+}
+
+%====================== INFORMATION ET REGLES ======================
+
+%rajouter les numérotation pour les \paragraphe et \subparagraphe
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\hypersetup{							% Information sur le document
+pdfauthor = {Premier Au,
+			Deuxième Auteur,
+			Troisième Auteur,
+    		Quatrième Auteur},			% Auteurs
+pdftitle = {Projet N-corps -
+			Sujet du Projet},			% Titre du document
+pdfsubject = {Mémoire de Projet},		% Sujet
+pdfkeywords = {Tag1, Tag2, Tag3, ...},	% Mots-clefs
+pdfstartview={FitH}}					% ajuste la page à la largueur de l'écran
+%pdfcreator = {MikTeX},% Logiciel qui a crée le document
+%pdfproducer = {}} % Société avec produit le logiciel
+
+%======================== DEBUT DU DOCUMENT ========================
+
+\begin{document}
+
+%régler l'espacement entre les lignes
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%page de garde
+\input{./title.tex}
+
+%page blanche
+\newpage
+%~
+%ne pas numéroter cette page
+\thispagestyle{empty}
+\newpage
+
+%\input{./abstract.tex}
+
+\tableofcontents
+\thispagestyle{empty}
+\setcounter{page}{0}
+%ne pas numéroter le sommaire
+
+
+%espacement entre les lignes d'un tableau
+\renewcommand{\arraystretch}{1.5}
+
+%====================== INCLUSION DES PARTIES ======================
+
+~
+\thispagestyle{empty}
+%recommencer la numérotation des pages à "1"
+\setcounter{page}{0}
+\newpage
+
+\input{./partie1.tex}
+
+\input{./partie2.tex}
+ 
+\input{./partie3.tex}
+
+\input{./partie4.tex}
+
+\input{./partie5.tex}
+
+\input{./partie6.tex}
+
+\input{./partie7.tex}
+
+\input{./annexes.tex}
+
+\newpage
+
+%récupérer les citation avec "/footnotemark"
+\nocite{*}
+
+%choix du style de la biblio
+\bibliographystyle{plain}
+%inclusion de la biblio
+\bibliography{bibliographie.bib}
+%voir wiki pour plus d'information sur la syntaxe des entrées d'une bibliographie
+
+\end{document}

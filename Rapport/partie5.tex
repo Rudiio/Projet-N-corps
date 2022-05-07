@@ -1,0 +1,13 @@
+\chapter{Algorithme de Barnes-Hut}
+
+Dans cette partie, nous nous intéressons à l'algorithme de Barnes-Hut afin d'optimiser notre résolution du problème à N-corps.
+
+\section{Présentation de l'algorithme}
+
+L'algorithme de Barnes-Hut est algorithme hiérarchique inventé par Josh Barnes et Piet Hut en 1986. Il est basé sur l'utilisation d'un arbre appelé $quadtree$ afin d'approximer le calcul des  interactions gravitationnelles. Il permet de réduire les calculs de manière à obtenir une complexité en $O(Nlog(N))$, tout en restant physiquement correct. Sa fiabilité et son efficacité en fait alors l'algorithme le plus utilisé pour résoudre le problème à N corps.
+ 
+
+Le principe général de l'algorithme est de regrouper les particules proches en une seule plus grosse particule selon leur distance  à la particule dont on veut calculer les forces. Cela permet alors d'approximer correctement les forces touten réduisant les calculs nécessaires.
+
+
+\section{Algorithme}

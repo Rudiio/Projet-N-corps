@@ -1,0 +1,122 @@
+\chapter{Aspect physique du problème}
+Le problème consiste à calculer pour chaque particule la force exercée sur elle par toutes les autres à un instant $t$.
+Cela revient donc à résoudre les équations de Newton des N particules. La force prise en compte est ainsi l'interaction gravitationnelle d'un corps sur un autre.
+
+\vspace{3mm}
+\underline{Expressions des forces}
+\vspace{2mm}
+
+Soit $p_{1}$ et $p_{2}$ deux particules, la force appliquée par $p_2$ sur $p_1$ est :
+
+\begin{equation}
+\vec{F}_{2 \rightarrow 1} = \frac{-Gm_1m_2}{{\left\| \vec{p}_{2 \rightarrow 1} \right\|}^2} \vec{p}_{2 \rightarrow 1}
+\end{equation}
+
+où 
+\begin{itemize}
+\item  $G$ est la constante de la gravitation $G = {6.672.10^{-11}}{Nm^2/kg^2}$.
+
+\item $m_1$ est la masse de $p_1$.
+\item $m_2$ est la masse de $p_2$.
+
+\end{itemize}
+
+\vspace{2mm}
+
+En pratique, on ne pourra pas appliquer directement cette formule. Ainsi, on en utilise une variante.
+
+Posons $\begin{pmatrix}
+x_1\\
+y_1
+\end{pmatrix}$ la position de la particule $p_1$ et $\begin{pmatrix}
+x_2\\
+y_2
+\end{pmatrix}$ celle de la particule $p_2$.
+
+La distance $d$ entre ces deux particules est alors donnée par la formule suivante:
+$d= \sqrt{(x_2-x_1)^2 + (y_2 - y_1)^2}$.
+
+Et la force appliquée par $p_2$ sur $p_1$ $F_{2 \rightarrow 1}$ est alors la suivante :
+
+$F_{2 \rightarrow 1}=G*m_1*m_2*\begin{pmatrix}
+\frac{x_2 -x_1}{d^3}\\
+\frac{y_2 -y_1}{d^3}
+\end{pmatrix}
+$
+Cette formule est alors plus simple à implémenter.
+
+\vspace{3mm}
+\underline{Expression de l'accélération}
+\vspace{2mm}
+
+On peut alors calculer l'accélération d'une particule avec la 2ème loi de Newton:
+
+\begin{equation}
+ma(t) = \Sigma \Vec{F} = m \frac{dv}{dt}
+\end{equation}
+
+où $v$ est la vitesse de la particule, $m$ sa masse et $\vec{F}$ les forces qui s'y appliquent.
+
+\vspace{3mm}
+\underline{Résolution numérique et calcul des positions}
+\vspace{2mm}
+
+On obtient donc l'équation différentielle sur la position $OP_1(t)$ :
+\begin{equation}
+\frac{d^2 \vec{OP_1(t)}}{dt^2} = \vec{a(t)}
+\end{equation}
+
+L'intégrateur permettra alors de résoudre numériquement et simplement cette équation différentielle qui serait compliquée à résoudre de manière exacte avec $N$ particules pour un $N>=3$.
+
+\vspace{2mm}
+
+Dans notre cas, nous utilisons une méthode d'Euler explicite afin de calculer la vitesse de chaque particule et ensuite sa position à chaque instant $t$.
+
+Les vitesses s'obtiennent alors de la manière suivante :
+\vspace{2mm}
+
+$
+\left\{
+    \begin{array}{ll}
+        vx_{t+1} =vx_{t} + \Delta t *ax_{t} \\
+        vy_{t+1} =vy_{t} + \Delta t *ay_{t}
+    \end{array}
+\right.
+$
+
+\vspace{2mm}
+et les positions se retrouvent de la même manière :
+\vspace{2mm}
+
+$
+\left\{
+    \begin{array}{ll}
+        x_{t+1} =x_{t} + \Delta t *vy_{t} \\
+        y_{t+1} =y_{t} + \Delta t *vy_{t}
+    \end{array}
+\right.
+$
+
+\vspace{2mm}
+
+où $\Delta t$ est le pas de discrétisation du temps.
+
+\vspace{3mm}
+\underline{Le principe d'action-réaction}
+\vspace{2mm}
+
+La 3ème loi de Newton appelée également principe d'action-réaction annonce que tout corps $1$ exerçant une force sur un corps $2$ subit une force de même intensité, de même direction mais de sens opposé, exercée par 2.
+
+\vspace{2mm}
+
+Cela se traduit ainsi :
+$\vec{F}_{2 \rightarrow 1} = -\vec{F}_{1 \rightarrow 2}  $
+
+\vspace{2mm}
+Ce principe nous sera utile pour améliorer nos performances étant donné qu'il s'applique aux forces gravitationnelles.
+
+\vspace{3mm}
+\underline{Les paramètres physiques de la simulation}
+\vspace{2mm}
+
+Les paramètres utilisés lors d'une simulation permettent de modifier le type de simulation et de résultat que l'on veut obtenir. Il est donc important de les maîtriser et de les connaître afin d'avoir des simulations cohérentes, notamment pour simuler des galaxies.
