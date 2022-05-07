@@ -23,8 +23,9 @@
 \contentsline {subsection}{\numberline {6.1.1}Principe}{10}{subsection.6.1.1}%
 \contentsline {subsection}{\numberline {6.1.2}Directives et fonctions importantes}{10}{subsection.6.1.2}%
 \contentsline {section}{\numberline {6.2}Application \IeC {\`a} notre programme de r\IeC {\'e}solution du probl\IeC {\`e}me \IeC {\`a} N-corps}{11}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Conclusion}{12}{chapter.7}%
-\contentsline {part}{Annexes}{13}{part*.4}%
-\contentsline {chapter}{Annexe 1}{14}{chapter*.5}%
-\contentsline {section}{\numberline {1}Lien vers le repository github}{14}{section.7.1}%
-\contentsline {chapter}{Annexe 2}{15}{chapter*.6}%
+\contentsline {chapter}{\numberline {7}Analyse comparative des performances}{12}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Conclusion}{13}{chapter.8}%
+\contentsline {part}{Annexes}{14}{part*.4}%
+\contentsline {chapter}{Annexe 1}{15}{chapter*.5}%
+\contentsline {section}{\numberline {1}Lien vers le repository github}{15}{section.8.1}%
+\contentsline {chapter}{Annexe 2}{16}{chapter*.6}%

@@ -6,11 +6,12 @@ FLAGS = -L /lib64
 LIBS = -l pthread -fopenmp 
 LIBS_FLAGS = -lSDL -lGL -lGLU -lglut -lX11 -lSDL_gfx
 EXEC = main
+EXEC_MESURE = main_mesure
 # -lusb-1.0
 	
-.PHONY : $(EXEC) $(OBJ) mv_object clean
+.PHONY : $(EXEC) $(EXEC_MESURE) $(OBJ) mv_object clean
 
-all : $(EXEC)
+all : $(EXEC) $(EXEC_MESURE)
 
 BHTree.o : ./src/BHTree.cpp ./src/BHTree.h
 	$(CC) $(CFLAGS) -c $< 
@@ -50,6 +51,9 @@ mv_object :
 
 $(EXEC) : $(OBJ) mv_object 
 	$(CC) $(CFLAGS) $(LIBS) ./src/main.cpp ./OBJ/*.o -o $@ $(LIBS_FLAGS)
+
+$(EXEC_MESURE) :  
+	$(CC) $(CFLAGS) $(LIBS) ./src/main_mesure.cpp ./OBJ/*.o -o $@ $(LIBS_FLAGS) 
 
 clean:
 	rm -f prog *.o *.mod ./OBJ/*.o
