@@ -89,6 +89,8 @@ private:
   GLuint m_fontBase;
 
   volatile bool m_bRunning;
+
+  int nombre_iteration;
 };
 
 #endif

@@ -1,7 +1,7 @@
 CC=g++ 
 CFLAGS = -Wall -ggdb3 -O3
 SRC = ./src/*.c
-OBJ = BHTree.o IIntegrator.o IModel.o IntegratorEuler.o ModelNBody.o SDLWnd.o NBodyWnd.o Types.o Vector.o gettimes.o IntegratorLeapFrog.o
+OBJ = BHTree.o IIntegrator.o IModel.o IntegratorEuler.o ModelNBody.o SDLWnd.o NBodyWnd.o Types.o Vector.o gettimes.o IntegratorLeapFrog.o 
 FLAGS = -L /lib64 
 LIBS = -l pthread -fopenmp 
 LIBS_FLAGS = -lSDL -lGL -lGLU -lglut -lX11 -lSDL_gfx
@@ -41,6 +41,9 @@ Types.o :  ./src/Types.cpp ./src/Types.h
 
 Vector.o : ./src/Vector.cpp ./src/Vector.h
 	$(CC) $(CFLAGS) -c $< 
+
+# graphique.pyc: ./src/graphique.py
+# 	python3 ./src/graphique.py $<
 
 mv_object :
 	mv *.o OBJ

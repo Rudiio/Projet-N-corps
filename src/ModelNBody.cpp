@@ -22,7 +22,7 @@ using namespace std;
 
 struct timeval start;
 struct timeval fin;
-ofstream fichier("src/donnees_temps.txt", ios::out ); 
+ofstream fichier("./src/donnees_temps.txt", ios::out ); 
 
 float time_diff(struct timeval *start, struct timeval *end)
 {
@@ -75,14 +75,14 @@ ModelNBody::ModelNBody(int num,int methode_calcul)
   InitCollision(num, 0);
   gettimeofday(&fin, NULL);
   std::cout << "  Le temps passé dans la fonction InitCollision est : " <<time_diff(&start, &fin) << "sec \n";
-  if(fichier) 
-    {
-      fichier << time_diff(&start, &fin) << "\n" ;
+  // if(fichier) 
+  //   {
+  //     fichier << time_diff(&start, &fin) << "\n" ;
     
-      fichier.close(); 
-     }
-  else  
-      cerr << "Erreur à l'ouverture !" << endl;
+  //     fichier.close(); 
+  //    }
+  // else  
+  //     cerr << "Erreur à l'ouverture !" << endl;
 
   // gettimeofday(&start, NULL);
   // Init3Body();
@@ -103,6 +103,10 @@ ModelNBody::~ModelNBody()
 {
   delete m_pInitial;
   delete m_pAux;
+}
+//------------------------------------------------------------------------
+float ModelNBody::Getmesuretemps(){
+  return mesure_temps;
 }
 
 //------------------------------------------------------------------------
@@ -515,6 +519,7 @@ void ModelNBody::Fusion(double *a_state)
 
 //------------------------------------------------------------------------
 /** \brief Calcule l'accélération et la vitesse pour chaque particule*/
+
 void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
 {
   // wrap the complete particle data together for easier treatment
@@ -532,12 +537,14 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   double acy[m_num];
 
   //initialisation des tableaux pour le calcul efficace
+
   #pragma omp parallel for
   for(int j=0; j<m_num; j++){
    acx[j]=0;
    acy[j]=0;
   }
 
+  gettimeofday(&start, NULL);
   #pragma omp parallel for
   for (int i=0; i<m_num; ++i)   //i=1 de base
   {
@@ -583,6 +590,11 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
       //cout<<"ALERT\n";
     }
   }
+  gettimeofday(&fin, NULL);
+  // std::cout << "  Le temps passé dans la  durée des calculs est de  : " <<time_diff(&start, &fin) << "sec \n";
+  fichier << time_diff(&start, &fin) << "\n" ;
+
+
 
   // Particle 0 is calculated last, because the statistics
   // data relate to this particle. They would be overwritten
