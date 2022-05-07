@@ -22,12 +22,14 @@ public:
 
   SDLWindow(int width, int height, double axisLen, const std::string &caption);
   virtual ~SDLWindow();
-  void MainLoop();
+  void MainLoop(int num,int methode);
   void ExitMainLoop();
   void SetCaption(const std::string &caption);
   int GetWidth() const;
   int GetHeight() const;
   virtual void Render() = 0;
+  virtual float gettime()=0;
+  virtual float getconstruction()=0;
 
 protected:
 

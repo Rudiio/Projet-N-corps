@@ -537,3 +537,15 @@ void NBodyWnd::OnProcessEvents(uint8_t type)
         break;
   }
 }
+
+//------------------------------------------------------------------------------
+float NBodyWnd::gettime()
+{
+  return m_pModel->Getmesuretemps();
+}
+
+//------------------------------------------------------------------------------
+float NBodyWnd::getconstruction()
+{
+  return m_pModel->Getmesureconstruction();
+}

@@ -22,7 +22,7 @@ using namespace std;
 
 struct timeval start;
 struct timeval fin;
-ofstream fichier("./src/donnees_temps.txt", ios::out ); 
+// ofstream fichier("./src/donnees_temps.txt", ios::out ); 
 
 float time_diff(struct timeval *start, struct timeval *end)
 {
@@ -53,6 +53,8 @@ ModelNBody::ModelNBody(int num,int methode_calcul)
   ,m_num(num)
   ,methode_calcul(methode_calcul)
   ,m_bVerbose(false)
+  ,mesure_temps(0)
+  ,mesure_construction_BH(0)
 {
   BHTreeNode::s_gamma = gamma_1;
 
@@ -105,8 +107,15 @@ ModelNBody::~ModelNBody()
   delete m_pAux;
 }
 //------------------------------------------------------------------------
-float ModelNBody::Getmesuretemps(){
+float ModelNBody::Getmesuretemps()
+{
   return mesure_temps;
+}
+
+//------------------------------------------------------------------------
+float ModelNBody::Getmesureconstruction()
+{
+  return mesure_construction_BH;
 }
 
 //------------------------------------------------------------------------
@@ -530,7 +539,12 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   ParticleData all(pState, m_pAux);
 
   CalcBHArea(all);
+
+  //Construction de l'arbre et mesure de temps
+  gettimeofday(&start,NULL);
   BuiltTree(all);
+  gettimeofday(&fin,NULL);
+  mesure_construction_BH  += time_diff(&start,&fin);
 
   //Tableaux pour le calcul efficace
   double acx[m_num];
@@ -545,6 +559,8 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   }
 
   gettimeofday(&start, NULL);
+
+  //Calcul des forces
   #pragma omp parallel for
   for (int i=0; i<m_num; ++i)   //i=1 de base
   {
@@ -590,11 +606,6 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
       //cout<<"ALERT\n";
     }
   }
-  gettimeofday(&fin, NULL);
-  // std::cout << "  Le temps passé dans la  durée des calculs est de  : " <<time_diff(&start, &fin) << "sec \n";
-  fichier << time_diff(&start, &fin) << "\n" ;
-
-
 
   // Particle 0 is calculated last, because the statistics
   // data relate to this particle. They would be overwritten
@@ -648,6 +659,11 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   //Anti-warning
   acc.x = acx[0];
   acc.y = acy[0];
+
+  gettimeofday(&fin, NULL);
+  // std::cout << "  Le temps passé dans la  durée des calculs est de  : " <<time_diff(&start, &fin) << "sec \n";
+  // fichier << time_diff(&start, &fin) << "\n" ;
+  mesure_temps  += time_diff(&start, &fin);
 }
 
 //------------------------------------------------------------------------

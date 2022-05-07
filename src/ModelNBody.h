@@ -50,6 +50,7 @@ public:
     int GetMethod();
     
     float Getmesuretemps();
+    float Getmesureconstruction();
     
 
 private:
@@ -81,6 +82,7 @@ private:
     bool m_bVerbose;
 
     float mesure_temps;
+    float mesure_construction_BH;
 };
 
 #endif

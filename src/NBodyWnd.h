@@ -29,7 +29,8 @@ public:
 
     virtual void Render();
     virtual void OnProcessEvents(uint8_t type);
-
+    virtual float gettime();
+    virtual float getconstruction();
     void Init(int num,int methode_calcul);
 
 private:

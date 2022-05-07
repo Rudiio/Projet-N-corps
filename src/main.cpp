@@ -39,7 +39,7 @@ int main(int argc, char** argv)
     //implique des modifications d'autres fonctions 
 
     wndMain.Init(num,methode_calcul);
-    wndMain.MainLoop();
+    wndMain.MainLoop(num,methode_calcul);
   }
   catch(std::exception & exc)
   {

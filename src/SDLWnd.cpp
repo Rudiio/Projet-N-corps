@@ -13,6 +13,7 @@
 #include <GL/glu.h>	// Header File For The GLu32 Library
 #include <GL/glx.h>     // Header file fot the glx libraries.
 
+using namespace std;
 
 // static functions / variables
 GLuint SDLWindow::s_fontBase = 0;
@@ -371,13 +372,13 @@ void SDLWindow::DrawAxis(const Vec2D &origin)
 }
 
 //-----------------------------------------------------------------------
-void SDLWindow::MainLoop()
+void SDLWindow::MainLoop(int num,int methode)
 {
   int ct = 0;
   double dt = 0;
   time_t t1(time(NULL)), t2;
 
-  while (m_bRunning)
+  while (m_bRunning && nombre_iteration < 1000)
   {
     Render();
     PollEvents();
@@ -390,6 +391,40 @@ void SDLWindow::MainLoop()
       m_fps = (double)ct / dt;
       ct = 0;
       t1 = t2;
+    }
+    nombre_iteration++;
+  }
+  
+  //Temps moyen de construction de l'arbre
+  ofstream file("./data/BH_Tree_Construction_time.txt", ios_base::app ); 
+  if(file.is_open()){
+      file <<num << " " << getconstruction()/(nombre_iteration*1.0) << endl;
+      file.close();
+    }
+
+  //Temps moyen de calcul BH
+  if(methode==1){
+    ofstream fichier("./data/donnees_temps_BH.txt", ios_base::app ); 
+    if(fichier.is_open()){
+      fichier <<num << " " << gettime()/(nombre_iteration*1.0) << endl;
+      fichier.close();
+    }
+  }
+
+  //Temps moyen de calcul Naïve optimisée
+  else if(methode==2){
+    ofstream fichier("./data/donnees_temps_NE.txt", ios_base::app ); 
+    if(fichier.is_open()){
+      fichier <<num << " " << gettime()/(nombre_iteration*1.0) << endl;
+      fichier.close();
+    }
+  }
+  //Temps moyen de calcul Naïve
+  else if(methode==3){
+    ofstream fichier("./data/donnees_temps_N.txt", ios_base::app ); 
+    if(fichier.is_open()){
+      fichier <<num << " " << gettime()/(nombre_iteration*1.0) << endl;
+      fichier.close();
     }
   }
 }
