@@ -3,3 +3,5 @@ main
 
 #ingnorer le dossier de paramètres vscode
 .vscode
+
+*.o
