@@ -43,12 +43,13 @@ omp_set_num_threads(int) // spécifie un nombre de thread dans une région paral
 omp_get_thread_num() // retourne le numéro du thread courant
 \end{lstlisting}
 
-\subsection{Application à notre programme de résolution du problème à N-corps}
+\section{Application à notre programme de résolution du problème à N-corps}
 
 Dans notre cas, les processus les plus lourds sont les calculs de forces gravitationnelle et la création de l'arbre, c'est donc ceux-ci que nous allons paralléliser.
 
 \begin{itemize}
-\item La construction de l'arbre :
+\item La construction de l'arbre : les particules peuvent être ajoutées parallèlement cependant, il est possible d'obtenir des problèmes de synchronisation, il est donc intéressant de vérifier si la parallélisation effective.
 
-\item Le calcul des forces : 
+\item Le calcul des forces : les calculs intermédiaires (distances...) sont stockés dans des variables temporaires ce qui facilite la parallélisation.
 \end{itemize}
+

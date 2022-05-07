@@ -4,4 +4,4 @@ main
 #ingnorer le dossier de paramètres vscode
 .vscode
 
-./OBJ/.o
+./OBJ/*.o
