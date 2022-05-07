@@ -378,7 +378,7 @@ void SDLWindow::MainLoop(int num,int methode)
   double dt = 0;
   time_t t1(time(NULL)), t2;
 
-  while (m_bRunning && nombre_iteration < 1000)
+  while (m_bRunning && nombre_iteration < 100)
   {
     Render();
     PollEvents();
@@ -396,7 +396,7 @@ void SDLWindow::MainLoop(int num,int methode)
   }
   
   //Temps moyen de construction de l'arbre
-  ofstream file("./data/BH_Tree_Construction_time.txt", ios_base::app ); 
+  ofstream file("./data/seq_BH_Tree_Construction_time.txt", ios_base::app ); 
   if(file.is_open()){
       file <<num << " " << getconstruction()/(nombre_iteration*1.0) << endl;
       file.close();
@@ -404,7 +404,7 @@ void SDLWindow::MainLoop(int num,int methode)
 
   //Temps moyen de calcul BH
   if(methode==1){
-    ofstream fichier("./data/donnees_temps_BH.txt", ios_base::app ); 
+    ofstream fichier("./data/seq_donnees_temps_BH.txt", ios_base::app ); 
     if(fichier.is_open()){
       fichier <<num << " " << gettime()/(nombre_iteration*1.0) << endl;
       fichier.close();
@@ -413,7 +413,7 @@ void SDLWindow::MainLoop(int num,int methode)
 
   //Temps moyen de calcul Naïve optimisée
   else if(methode==2){
-    ofstream fichier("./data/donnees_temps_NE.txt", ios_base::app ); 
+    ofstream fichier("./data/seq_donnees_temps_NE.txt", ios_base::app ); 
     if(fichier.is_open()){
       fichier <<num << " " << gettime()/(nombre_iteration*1.0) << endl;
       fichier.close();
@@ -421,7 +421,7 @@ void SDLWindow::MainLoop(int num,int methode)
   }
   //Temps moyen de calcul Naïve
   else if(methode==3){
-    ofstream fichier("./data/donnees_temps_N.txt", ios_base::app ); 
+    ofstream fichier("./data/seq_donnees_temps_N.txt", ios_base::app ); 
     if(fichier.is_open()){
       fichier <<num << " " << gettime()/(nombre_iteration*1.0) << endl;
       fichier.close();

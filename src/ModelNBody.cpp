@@ -387,7 +387,7 @@ void ModelNBody::BuiltTree(const ParticleData &all)
   // build the quadtree
   int ct = 0;
 
-  #pragma omp parallel for
+  // #pragma omp parallel for
   for (int i=0; i<m_num; ++i)
   {
 //    PODState *st = &(all.m_pState[i]);
@@ -552,7 +552,7 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
 
   //initialisation des tableaux pour le calcul efficace
 
-  #pragma omp parallel for
+  // #pragma omp parallel for
   for(int j=0; j<m_num; j++){
    acx[j]=0;
    acy[j]=0;
@@ -561,7 +561,7 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   gettimeofday(&start, NULL);
 
   //Calcul des forces
-  #pragma omp parallel for
+  // #pragma omp parallel for
   for (int i=0; i<m_num; ++i)   //i=1 de base
   {
 

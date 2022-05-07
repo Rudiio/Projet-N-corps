@@ -7,11 +7,12 @@ LIBS = -l pthread -fopenmp
 LIBS_FLAGS = -lSDL -lGL -lGLU -lglut -lX11 -lSDL_gfx
 EXEC = main
 EXEC_MESURE = main_mesure
+EXEC_TESTS = tests 
 # -lusb-1.0
 	
-.PHONY : $(EXEC) $(EXEC_MESURE) $(OBJ) mv_object clean
+.PHONY : $(EXEC) $(EXEC_MESURE) $(EXEC_TESTS) $(OBJ) mv_object clean
 
-all : $(EXEC) $(EXEC_MESURE)
+all : $(EXEC) $(EXEC_MESURE) $(EXEC_TESTS)
 
 BHTree.o : ./src/BHTree.cpp ./src/BHTree.h
 	$(CC) $(CFLAGS) -c $< 
@@ -54,6 +55,9 @@ $(EXEC) : $(OBJ) mv_object
 
 $(EXEC_MESURE) :  
 	$(CC) $(CFLAGS) $(LIBS) ./src/main_mesure.cpp ./OBJ/*.o -o $@ $(LIBS_FLAGS) 
+
+$(EXEC_TESTS):
+	$(CC) $(CFLAGS) ./src/lance_tests.cpp  -o $@ 
 
 clean:
 	rm -f prog *.o *.mod ./OBJ/*.o
