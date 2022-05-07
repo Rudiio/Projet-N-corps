@@ -22,8 +22,8 @@ Nous avons travaillé à partir d'un code C++ comprenant déja toute la partie d
 - [x] Algorithme de Barnes-Hut
 - [ ] Parallélisation OpenMP
 - [ ] Etude comparative des performances
-- [ ] Rajouter un nouvel intégrateur
-- [ ] Coloration des particules
+- [x] Rajouter un nouvel intégrateur
+- [x] Coloration des particules
 
 ##  Prise en main
 
