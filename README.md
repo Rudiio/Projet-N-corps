@@ -75,6 +75,9 @@ La parallèlisation est réalisée à partir de la library [OpenMP](https://www.
 ### Avec 2 Trous Noirs et 20000 particules
 ![2 galaxies](/visuels/2_galax.png)
 
+### Galaxie spirale
+![spiral](./visuels/spirale.png)
+
 ## A corriger
 
 - Ejections trop importantes avec l'algorithme de Barnes-Hut
