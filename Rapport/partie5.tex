@@ -10,6 +10,31 @@ L'algorithme de Barnes-Hut est algorithme hiérarchique inventé par Josh Barnes
 Le principe général de l'algorithme est de regrouper les particules proches en une seule plus grosse particule selon leur distance  à la particule dont on veut calculer les forces. Cela permet alors d'approximer correctement les forces touten réduisant les calculs nécessaires.
 
 
-\section{Fonctionnement de l'algorithme}
- 
-\section{Algorithme}
+\section{Implementation de notre propre algorithme}
+L'algorithme de Barnes Hut se décompose en trois majeurs parties. On construit tout d'abord notre arbre en insérant les différentes particules, puis on calcule la masse et le centre de masse des noeuds et finalement les forces appliquées entre nos différentes particules. Dans l'algorithme qui nous a été fourni, les fonctions qui codent ces différentes étapes étaient vide, nous avons ainsi effectuons notre propre implémentation de l'algorithme de Barnes-Hut. Rentrons plus en détail.
+\newline
+Avant de commencer ces étapes nous avons besoin de mettre en place la notion de quadrants. Un quadrant est une division de notre arbre soit le noeud. Comme nous travaillons en deux dimensions, nous avons besoin de quatre quadrant, un quadrant en haut à gauche, un autre en bas à gauche , un troisième à droite en haute et un dernier à droite en bas. On les appellera respectivement NW,SW,NE et SE en référence aux points cardinaux. Pour les créer nous avons fait appel à l'outil d'énumération qui assigne une valeur à chacune des variables (par exemple 0 pour NE).
+\newline
+Passons maintenant à la première étape de notre algorithme.
+\newline
+Soit la particule P1. Tout d'abord nous vérifions si P1 rentre dans l'arbre en regardant sa position.
+SI c'est le cas nous distinguons plusieurs cas. S'il existe plus d'une particule dans le noeud on crée le fils de ce noeud (donc un quadrant à l'intérieur de ce quadrant) et on insère P1 dans ce fils. S'il existe qu'une seule particule on remplace l'ancienne particule par P1 puis on crée le noeud fils qui va nous permettre d'insérer l'ancienne particule. Enfin s'il n'y a aucune particule dans le noeud (donc le noeud est une feuille), on insère directement P1 sans créer de fils.
+Important : chaque noeud ne doit contenir qu'une seule particule
+\newline
+La deuxième étape, le calcul de la masse et le centre de masse de chaque noeud.
+\newline
+Soit le noeud N1. Si N1 contient qu'une seule particule alors la masse et le centre de masse de cette particule sera aussi celle de N1. Si ce n'est pas le cas, la masse de N1 sera la somme des masses de chacun des fils noeuds et son centre du masse se calcule par la formule suivant
+\begin{equation}
+    centre_de_masse_N1=masse[1]*centredemasse[1] +...+ masse[n]*centredemasse[n]/sommemassechacundes ils
+\end{equation}
+où n représente le nombre de fils.
+\newline
+Enfin  pour la dernière étape le principe est simple nous calculons la distance d1 entre chaque particules puis nous comparons le rapport centre de masse du noeud sur d1 par rapport à thêta où thêta est un paramètre qu'on fixe aux alentours de 1. Si ce rapport est est petit alors la force exercé sur la particule sera la force exercé par le noeud dans lequel il se trouve si le rapport est plus grand, la force exercé sur la particule sera alors la somme des forces de chacun des noeuds fils.
+
+
+Nous avons ainsi le résultat suivant
+\begin{center}
+\includegraphics[scale=0.6]{arbre_bh.png}
+\captionof{figure}{Arbre construit avec l'algorithme de Barnes Hut}
+\label{figbh}
+\end{center}

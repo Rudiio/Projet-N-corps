@@ -48,26 +48,12 @@ Quand au fichier Types.h, on y retrouve différentes structures :
 Ce fichier contient les fonctions permettant la création de notre modèle à N-corps. Nous avons ainsi :
 \newline
 \begin{itemize}
-    \item Une classe permettant la création de notre modèle à N-corps. Il y figure un ensemble de donnée comme par exemple la masse du Soleil ou encore la constante gravitationnelle
-    \item Un destructeur de la classe précédente, dans le but de libérer l'espace alloué par notre classe
-    \item une fonction définissant la région d'étude
-    \item une fonction obtenant le temps des étapes
-    \item une fonction récupérant la région d'étude lors de la visualisation
-    \item une fonction récupérant le centre de masse
+    \item Une classe permettant la création de notre modèle à N-corps. Il y figure un ensemble de donnée comme par exemple la masse du Soleil ou encore la constante gravitationnelle. Un destructeur de cette classe dans le but de libérer l'espace alloué par notre classe
+    \item Des fonctions définissant la région d'étude,obtenant le temps des étapes, récupérant la région d'étude lors de la visualisation, ainsi que le centre de masse,calculant la vitesse orbitale d'une particule par rapport à une autre particule
     \item une fonction permettant d'obtenir la direction de la caméra et une autre sa position lors de la visualisation
-    \item Une fonction récupérant l'état initial de la simulation
-    \item une fonction permettant de calculer la vitesse orbitale d'une particule par rapport à une autre particule
-    \item une classe permettant la reintialisation du modèle à N-corps
-    \item une classe qui initialise la simulation du modèle
-    \item une autre classe qui initialise la simulation du modèle mais cette fois avec seulement 3 particules
-    \item une classe permettant l'initialisation de black holes (=trou noir) accompagné de particules aléatoires
-    \item une classe permettant la mise en place de l'arbre(cette notion d'arbre se clarifiera par la suite)
-    \item une classe qui sert à obtenir le noeud racine de l'arbre
-    \item Une classe récupérant les différents noeud
-    \item une classe permettant de régler thêta et une autre classe le récupérant.Thêta est une variable qui va être utiliser lors de la mise en place de l'algorithme de Barnes-Hut
-    \item une classe récupérant la masse des particules
-    \item une classe calculant l'accélération et la vitesse sur chaque particule du modèle
-    \item une fonction booléenne qui permet de savoir lorsque la mise en place du modèle est terminé
+    \item Des classes permettant la reintialisation du modèle à N-corps, initialisant la simulation du modèle, initialisant avec seulement 3 particules. Mais aussi des classes creant des black holes (=trou noir) accompagné de particules aléatoires, permettant la mise en place de l'arbre(cette notion d'arbre se clarifiera par la suite)
+    \item Des fonctions obtenant le noeud racine de l'arbre, permettant de régler thêta et une autre classe le récupérant.Thêta est une variable qui va être utiliser lors de la mise en place de l'algorithme de Barnes-Hut
+    \item Enfin une fonction booléenne qui permet de savoir lorsque la mise en place du modèle est terminé
 \end{itemize}
 
 Par exemple, voici le destructeur du modèle à N-corps
