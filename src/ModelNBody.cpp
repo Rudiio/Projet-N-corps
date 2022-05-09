@@ -256,7 +256,7 @@ void ModelNBody::InitCollision(int num, int mode)
       st_aux.mass = 431000;//4310000; //43100;//1000000; //431000;   // 4.31 Millionen Sonnenmassen
     }
     //---------------------------------------------------------------------------------------------------- POUR DÉCIDER À PARTIR DE QUELLE PARTICULE ON CHANGE DE GALAXIE
-    else if (i<30000)  //Initialisation des autres particules  random autour de black hole 1
+    else if (i<50000)  //Initialisation des autres particules  random autour de black hole 1
     {
       const double rad = 10;
       double r = 0.1 + .8 * (rad * ((double)rand() / RAND_MAX));
@@ -268,7 +268,7 @@ void ModelNBody::InitCollision(int num, int mode)
 
       GetOrbitalVelocity(blackHole, ParticleData(&st, &st_aux));
     }
-    else if (i==30000)   //Initialisation de black hole 2
+    else if (i==50000)   //Initialisation de black hole 2
     {
       blackHole2.m_pState = &st;
       blackHole2.m_pAuxState = &st_aux;
@@ -552,7 +552,7 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
 
   //initialisation des tableaux pour le calcul efficace
 
-  // #pragma omp parallel for
+  #pragma omp parallel for
   for(int j=0; j<m_num; j++){
    acx[j]=0;
    acy[j]=0;
@@ -561,7 +561,7 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   gettimeofday(&start, NULL);
 
   //Calcul des forces
-  // #pragma omp parallel for
+  #pragma omp parallel for
   for (int i=0; i<m_num; ++i)   //i=1 de base
   {
 

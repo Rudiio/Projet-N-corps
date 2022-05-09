@@ -1,16 +1,24 @@
 \chapter{Algorithme de Barnes-Hut}
 
-Dans cette partie, nous nous intéressons à l'algorithme de Barnes-Hut afin d'optimiser notre résolution du problème à N-corps.
+Pour accélérer les calculs et permettre de plus grandes simulations, nous allons dans cette partie s’intéresser à l’algorithme de Barnes-Hut.
 
 \section{Présentation de l'algorithme}
 
 L'algorithme de Barnes-Hut est algorithme hiérarchique inventé par Josh Barnes et Piet Hut en 1986. Il est basé sur l'utilisation d'un arbre appelé $quadtree$ afin d'approximer le calcul des  interactions gravitationnelles. Il permet de réduire les calculs de manière à obtenir une complexité en $O(Nlog(N))$, tout en restant physiquement correct. Sa fiabilité et son efficacité en fait alors l'algorithme le plus utilisé pour résoudre le problème à N corps.
  
+\section{Principe général de l'algorithme}
 
-Le principe général de l'algorithme est de regrouper les particules proches en une seule plus grosse particule selon leur distance  à la particule dont on veut calculer les forces. Cela permet alors d'approximer correctement les forces touten réduisant les calculs nécessaires.
+L'idée est d'approcher les forces à longue portée en remplaçant un groupe de points éloignés par leur centre de masse. Il y a évidemment en contrepartie une légère part erreur et approximation mais ce schéma accélère considérablement le calcul. Notamment avec une complexité $ Nlog(N)$ plutôt que $N^2$.
+Au centre de cette approximation se trouve un arbre : une « carte » de l'espace qui nous aide à modéliser des groupes de points comme un seul centre de masse. En deux dimensions, nous pouvons utiliser une structure de données quadtree, qui subdivise de manière récursive les régions carrées de l'espace en quatre quadrants de taille égale. (En trois dimensions, on peut utiliser un octree qui divise de la même manière un volume cubique en huit sous-cubes.)
 
 
-\section{Implementation de notre propre algorithme}
+\begin{center}
+\includegraphics[scale=0.2]{./images/quadtree.png}
+\captionof{figure}{Exemple de Quadtree}
+\label{figbh}
+\end{center}
+
+\section{L'algorithme de Barnes-Hut}
 L'algorithme de Barnes Hut se décompose en trois majeurs parties. On construit tout d'abord notre arbre en insérant les différentes particules, puis on calcule la masse et le centre de masse des noeuds et finalement les forces appliquées entre nos différentes particules. Dans l'algorithme qui nous a été fourni, les fonctions qui codent ces différentes étapes étaient vide, nous avons ainsi effectuons notre propre implémentation de l'algorithme de Barnes-Hut. Rentrons plus en détail.
 \newline
 Avant de commencer ces étapes nous avons besoin de mettre en place la notion de quadrants. Un quadrant est une division de notre arbre soit le noeud. Comme nous travaillons en deux dimensions, nous avons besoin de quatre quadrant, un quadrant en haut à gauche, un autre en bas à gauche , un troisième à droite en haute et un dernier à droite en bas. On les appellera respectivement NW,SW,NE et SE en référence aux points cardinaux. Pour les créer nous avons fait appel à l'outil d'énumération qui assigne une valeur à chacune des variables (par exemple 0 pour NE).
@@ -34,7 +42,7 @@ Enfin  pour la dernière étape le principe est simple nous calculons la distanc
 
 Nous avons ainsi le résultat suivant
 \begin{center}
-\includegraphics[scale=0.6]{arbre_bh.png}
+\includegraphics[scale=0.4]{./images/arbre_bh.png}
 \captionof{figure}{Arbre construit avec l'algorithme de Barnes Hut}
 \label{figbh}
 \end{center}

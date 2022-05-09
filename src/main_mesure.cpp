@@ -36,7 +36,7 @@ int main(int argc, char** argv)
     //implique des modifications d'autres fonctions 
 
     wndMain.Init(num,methode_calcul);
-    wndMain.MainLoop(num,methode_calcul);
+    wndMain.MainLoop(num,methode_calcul,100);
   }
   catch(std::exception & exc)
   {
@@ -46,10 +46,6 @@ int main(int argc, char** argv)
   {
     std::cout << "Fatal error: unexpected exception" << std::endl;
   }
-
-  // int systemtest = system("python3 ./src/graphique.py");
-  // if(systemtest == -1){
-  // std :: cout << "Erreur avec la compilation du fichier python \n ";
 
   return (EXIT_SUCCESS);
 }

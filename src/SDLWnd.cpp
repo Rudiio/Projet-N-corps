@@ -372,13 +372,17 @@ void SDLWindow::DrawAxis(const Vec2D &origin)
 }
 
 //-----------------------------------------------------------------------
-void SDLWindow::MainLoop(int num,int methode)
+void SDLWindow::MainLoop(int num,int methode,int nb_iterations_max)
 {
   int ct = 0;
   double dt = 0;
   time_t t1(time(NULL)), t2;
+  bool iteration_cap=false;
 
-  while (m_bRunning && nombre_iteration < 100)
+  if(nb_iterations_max==-1)
+    iteration_cap=true;
+
+  while (m_bRunning && (nombre_iteration < nb_iterations_max || iteration_cap))
   {
     Render();
     PollEvents();
@@ -394,37 +398,38 @@ void SDLWindow::MainLoop(int num,int methode)
     }
     nombre_iteration++;
   }
-  
-  //Temps moyen de construction de l'arbre
-  ofstream file("./data/seq_BH_Tree_Construction_time.txt", ios_base::app ); 
-  if(file.is_open()){
-      file <<num << " " << getconstruction()/(nombre_iteration*1.0) << endl;
-      file.close();
+  if(!iteration_cap){
+    //Temps moyen de construction de l'arbre
+    ofstream file("./data/seq_BH_Tree_Construction_time.txt", ios_base::app ); 
+    if(file.is_open()){
+        file <<num << " " << getconstruction()/(nombre_iteration*1.0) << endl;
+        file.close();
+      }
+
+    //Temps moyen de calcul BH
+    if(methode==1){
+      ofstream fichier("./data/donnees_temps_BH.txt", ios_base::app ); 
+      if(fichier.is_open()){
+        fichier <<num << " " << gettime()/(nombre_iteration*1.0) << endl;
+        fichier.close();
+      }
     }
 
-  //Temps moyen de calcul BH
-  if(methode==1){
-    ofstream fichier("./data/seq_donnees_temps_BH.txt", ios_base::app ); 
-    if(fichier.is_open()){
-      fichier <<num << " " << gettime()/(nombre_iteration*1.0) << endl;
-      fichier.close();
+    //Temps moyen de calcul Naïve optimisée
+    else if(methode==2){
+      ofstream fichier("./data/donnees_temps_NE.txt", ios_base::app ); 
+      if(fichier.is_open()){
+        fichier <<num << " " << gettime()/(nombre_iteration*1.0) << endl;
+        fichier.close();
+      }
     }
-  }
-
-  //Temps moyen de calcul Naïve optimisée
-  else if(methode==2){
-    ofstream fichier("./data/seq_donnees_temps_NE.txt", ios_base::app ); 
-    if(fichier.is_open()){
-      fichier <<num << " " << gettime()/(nombre_iteration*1.0) << endl;
-      fichier.close();
-    }
-  }
-  //Temps moyen de calcul Naïve
-  else if(methode==3){
-    ofstream fichier("./data/seq_donnees_temps_N.txt", ios_base::app ); 
-    if(fichier.is_open()){
-      fichier <<num << " " << gettime()/(nombre_iteration*1.0) << endl;
-      fichier.close();
+    //Temps moyen de calcul Naïve
+    else if(methode==3){
+      ofstream fichier("./data/donnees_temps_N.txt", ios_base::app ); 
+      if(fichier.is_open()){
+        fichier <<num << " " << gettime()/(nombre_iteration*1.0) << endl;
+        fichier.close();
+      }
     }
   }
 }

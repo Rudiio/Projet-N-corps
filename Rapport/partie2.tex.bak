@@ -154,8 +154,21 @@ $\vec{F}_{2 \rightarrow 1} = -\vec{F}_{1 \rightarrow 2}  $
 \vspace{2mm}
 Ce principe nous sera utile pour améliorer nos performances étant donné qu'il s'applique aux forces gravitationnelles.
 
+
 \vspace{3mm}
 \underline{Les paramètres physiques de la simulation}
 \vspace{2mm}
 
-Les paramètres utilisés lors d'une simulation permettent de modifier le type de simulation et de résultat que l'on veut obtenir. Il est donc important de les maîtriser et de les connaître afin d'avoir des simulations cohérentes, notamment pour simuler des galaxies.
+Les paramètres utilisés lors d'une simulation permettent de modifier le type de simulation et de résultat que l'on veut obtenir. Il est donc important de les maîtriser et de les connaître afin d'avoir des simulations cohérentes, notamment pour simuler des galaxies. Les variables principales seront les masses des étoiles ainsi que la répartition initiale des étoiles. Les vitesses orbitales sont initialisées comme si la galaxie est déjà formée, même si cela peut paraître incohérent, c'est ce choix qui est fait dans la plupart des modélisations.
+
+\vspace{3mm}
+\underline{Problème théorique : Newton ou Einstein ?}
+\vspace{2mm}
+
+Malgré l'efficacité de la loi d'attraction gravitationnelle de Newton, il demeure un problème : son cadre d'application, celle-ci ne pouvant s'appliquer que lorsque les champs gravitationnels sont faibles ou modérés (peu de particules, particules peu massives, ou particules éloignées). Dans le cadre où ces conditions ne sont pas respectées, ce qui se passe en réalité souvent (lorsque deux particules ont des positions très proches), une des particules va se retrouver éjectée en adoptant une vitesse plus grande que celle de la lumière, ces éjections étant un réel problème. Pour résoudre ce problème théorique, nous aurions pu utiliser la relativité générale d'Einstein, mais nous avons plutôt opté pour l'ajout d'un paramètre $\it{softening}$ qui va créer artificiellement une distance entre deux étoiles.
+
+\vspace{3mm}
+\underline{Question de l'initialisation : Avec ou sans trou noir ?}
+\vspace{2mm}
+
+La question des trous noirs est assez importante car ce sont des objets qui participent à une stabilité locale du centre des galaxies, stabilité qui de proche en proche impacte la stabilité de l'ensemble. Nous avons donc choisi d'en positionner un au centre de chaque galaxie.

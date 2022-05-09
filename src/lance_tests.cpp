@@ -47,7 +47,7 @@ int main(int argc,char **argv)
         }
     }
 
-    for(int n=3000;n<=10000;n+=1000){ 
+    for(int n=2000;n<=40000;n+=2000){ 
         
         char sbh[30];
         char sno[30];

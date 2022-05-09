@@ -22,7 +22,7 @@ public:
 
   SDLWindow(int width, int height, double axisLen, const std::string &caption);
   virtual ~SDLWindow();
-  void MainLoop(int num,int methode);
+  void MainLoop(int num,int methode,int nb_iterations_max);
   void ExitMainLoop();
   void SetCaption(const std::string &caption);
   int GetWidth() const;

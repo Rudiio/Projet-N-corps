@@ -1,5 +1,7 @@
 #ignorer le binaire
 main
+main_mesure
+tests
 
 #ingnorer le dossier de paramètres vscode
 .vscode
