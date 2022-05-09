@@ -90,7 +90,7 @@ make
  
 ## Visuels actuels
 
-### Avec 26000 particules
+### Galaxie sphérique avec 26000 particules
 ![25000](/visuels/N-corps.png)
 
 ### Avec 2 Trous Noirs et 20000 particules
