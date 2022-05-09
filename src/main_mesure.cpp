@@ -28,6 +28,9 @@ int main(int argc, char** argv)
     //Choix de la méthode 
     int methode_calcul=1;
     methode_calcul=std::stoi(argv[2]);
+    
+    //Nombre maximale d'itération
+    int Nmax = 100;
 
     NBodyWnd wndMain(700, "NBody Simulation (Barnes Hut algorithm)");
 
@@ -36,7 +39,7 @@ int main(int argc, char** argv)
     //implique des modifications d'autres fonctions 
 
     wndMain.Init(num,methode_calcul);
-    wndMain.MainLoop(num,methode_calcul,100);
+    wndMain.MainLoop(num,methode_calcul,Nmax);
   }
   catch(std::exception & exc)
   {

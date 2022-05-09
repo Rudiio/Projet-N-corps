@@ -1,5 +1,20 @@
 \chapter{Conclusion}
 
-\par Jusque-là, nous avons étudié le code qui nous a été fournit afin de commencer une implémentation naïve du problème à N-corps. Avant de résoudre naïvement le problème, nous allons recrée les fonctions nécessaires à l'initialisation  à la simulation (nombre de trous noirs galactiques, taille des galaxies ou encore autre forme de départ plus singulière).
-\par Nous reimplémenterons par la suite un intégrateur saute-mouton afin de remplacer celui qui était présent dans le code et qui ne fonctionne pas puis nous coderons tout ce qui permettra à la simulation naive de tourner. 
-\par Dans un deuxième temps, nous allons nous servir de l'algorithme de Barnes-Hut afin d'améliorer l'efficacité. Enfin nous allons nous servir de la bibliothèque OpenMP pour faire du multi-thread et ainsi rendre la simulation beaucoup plus efficace.
+Le projet consistait à étudier différentes manières de résoudre numériquement le problème à N-corps afin d'obtenir la solution la plus efficace.
+
+Nous avons pu mettre en place $3$ méthodes de calcul différentes pour les forces :
+
+\begin{itemize}
+\item la méthode naïve qui calcule pour chaque particule les forces qui s'y applique en répétant les calculs
+
+\item la méthode naïve optimisée qui utilise le principe d'action-réaction afin de diminuer le nombre de calculs
+
+\item l'algorithme de Barnes-Hut qui utilise un arbre afin réduire considérablement le nombre de calcul en utilisant des approximations.
+
+\end{itemize}
+
+Au final, l'algorithme de Barnes-hut est bien plus rapide et efficace que les autres malgré qu'il donne des résultats similaires. Il s'agit donc de la meilleure résolution approchée possible au problème à N-corps. De plus, la parallélisation permet d'avoir des performances plus stables et montre son intérêt pour de grandes simulations. Cependant, la parallélisation des autres méthodes montre clairement l'importance d'avoir une implémentation qui soit compatible, au risque d'avoir une parallélisation inefficace ou même pénalisante.
+
+Cependant, ce projet reste encore exploitable puisqu'il existe encore beaucoup de possibilités comme par exemple le passage sur une carte graphique pour simuler plus de points ou encore le passage en 3 dimensions.
+
+

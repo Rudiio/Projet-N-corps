@@ -3,7 +3,8 @@ main
 main_mesure
 tests
 
-#ingnorer le dossier de paramètres vscode
+#ignorer le dossier de paramètres vscode
 .vscode
 
+#fichiers objet
 ./OBJ/*.o

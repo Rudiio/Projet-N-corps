@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  9 MAY 2022 21:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  10 MAY 2022 01:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -779,24 +779,29 @@ Package caption Info: hyperref package is loaded.
 ) (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count333
+) (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count334
+\c@@ppsavesec=\count335
+\c@@ppsaveapp=\count336
 ) (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count334
+\lst@mode=\count337
 \lst@gtempboxa=\box67
 \lst@token=\toks48
-\lst@length=\count335
+\lst@length=\count338
 \lst@currlwidth=\dimen296
-\lst@column=\count336
-\lst@pos=\count337
+\lst@column=\count339
+\lst@pos=\count340
 \lst@lostspace=\dimen297
 \lst@width=\dimen298
-\lst@newlines=\count338
-\lst@lineno=\count339
+\lst@newlines=\count341
+\lst@lineno=\count342
 \lst@maxwidth=\dimen299
 
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count340
-\lst@skipnumbers=\count341
+\c@lstnumber=\count343
+\lst@skipnumbers=\count344
 \lst@framebox=\box68
 )
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
@@ -818,63 +823,48 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count342
+\l__color_backend_stack_int=\count345
 \l__pdf_internal_box=\box69
-) (main.aux
-
-LaTeX Warning: Label `figbh' multiply defined.
-
-
-LaTeX Warning: Label `figbh' multiply defined.
-
-
-LaTeX Warning: Label `figbh' multiply defined.
-
-
-LaTeX Warning: Label `figbh' multiply defined.
-
-
-LaTeX Warning: Label `figbh' multiply defined.
-
-)
+) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Info: Redefining \degres on input line 147.
-LaTeX Info: Redefining \up on input line 147.
- (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/ucs\ucsencs.def
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Info: Redefining \degres on input line 149.
+LaTeX Info: Redefining \up on input line 149.
+
+(C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/ucs\ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count343
+\scratchcounter=\count346
 \scratchdimen=\dimen300
 \scratchbox=\box70
-\nofMPsegments=\count344
-\nofMParguments=\count345
+\nofMPsegments=\count347
+\nofMParguments=\count348
 \everyMPshowfont=\toks49
-\MPscratchCnt=\count346
+\MPscratchCnt=\count349
 \MPscratchDim=\dimen301
-\MPnumerator=\count347
-\makeMPintoPDFobject=\count348
+\MPnumerator=\count350
+\makeMPintoPDFobject=\count351
 \everyMPtoPDFconversion=\toks50
 )
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -887,7 +877,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 147.
+Package hyperref Info: Link coloring OFF on input line 149.
 
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -899,11 +889,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count349
+\c@section@level=\count352
 )
-LaTeX Info: Redefining \ref on input line 147.
-LaTeX Info: Redefining \pageref on input line 147.
-LaTeX Info: Redefining \nameref on input line 147.
+LaTeX Info: Redefining \ref on input line 149.
+LaTeX Info: Redefining \pageref on input line 149.
+LaTeX Info: Redefining \nameref on input line 149.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -947,14 +937,14 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count350
+\c@lstlisting=\count353
 (title.tex
-<./logo.png, id=154, 481.8pt x 190.46156pt>
+<./logo.png, id=158, 481.8pt x 190.46156pt>
 File: ./logo.png Graphic file (type png)
 <use ./logo.png>
 Package pdftex.def Info: ./logo.png  used on input line 5.
 (pdftex.def)             Requested size: 169.29684pt x 66.92409pt.
-<./galaxy.jpg, id=155, 369.88188pt x 357.83687pt>
+<./galaxy.jpg, id=159, 369.88188pt x 357.83687pt>
 File: ./galaxy.jpg Graphic file (type jpg)
 <use ./galaxy.jpg>
 Package pdftex.def Info: ./galaxy.jpg  used on input line 20.
@@ -970,7 +960,7 @@ Package pdftex.def Info: ./galaxy.jpg  used on input line 20.
 
 ] (partie1.tex
 Chapitre 1.
-<presentation/2_corps.png, id=211, 344.2461pt x 159.2349pt>
+<presentation/2_corps.png, id=216, 344.2461pt x 159.2349pt>
 File: presentation/2_corps.png Graphic file (type png)
 <use presentation/2_corps.png>
 Package pdftex.def Info: presentation/2_corps.png  used on input line 13.
@@ -996,16 +986,11 @@ d \OT1/cmr/m/n/10 = []$\T1/cmr/m/n/10 .
 
 ]) (partie3.tex [3]
 Chapitre 3.
-<aff.png, id=240, 352.81813pt x 370.88562pt>
-File: aff.png Graphic file (type png)
-<use aff.png>
-Package pdftex.def Info: aff.png  used on input line 31.
-(pdftex.def)             Requested size: 369.88582pt x 388.8302pt.
-[4
+) (partie4.tex [4
 
-]) (partie4.tex [5 <./aff.png>]
+]
 Chapitre 4.
-<images/naive.png, id=252, 344.28625pt x 210.7875pt>
+<images/naive.png, id=250, 344.28625pt x 210.7875pt>
 File: images/naive.png Graphic file (type png)
 <use images/naive.png>
 Package pdftex.def Info: images/naive.png  used on input line 9.
@@ -1015,7 +1000,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 10.
 See the caption package documentation for explanation.
 
-<images/naive_optimised.png, id=253, 347.2975pt x 199.24437pt>
+<images/naive_optimised.png, id=251, 347.2975pt x 199.24437pt>
 File: images/naive_optimised.png Graphic file (type png)
 <use images/naive_optimised.png>
 Package pdftex.def Info: images/naive_optimised.png  used on input line 33.
@@ -1025,14 +1010,14 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 34.
 See the caption package documentation for explanation.
 
-[6
+[5
 
- <./images/naive.png>]) (partie5.tex [7 <./images/naive_optimised.png>]
+ <./images/naive.png>]) (partie5.tex [6 <./images/naive_optimised.png>]
 Chapitre 5.
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/ucs\uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-<./images/quadtree.png, id=264, 1439.97975pt x 714.56963pt>
+<./images/quadtree.png, id=263, 1439.97975pt x 714.56963pt>
 File: ./images/quadtree.png Graphic file (type png)
 <use ./images/quadtree.png>
 Package pdftex.def Info: ./images/quadtree.png  used on input line 16.
@@ -1043,28 +1028,30 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 17.
 See the caption package documentation for explanation.
 
-[8
+(C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/ucs\uni-1.def
+File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
+) [7
 
  <./images/quadtree.png (PNG copy)>]
-<./images/arbre_bh.png, id=270, 702.625pt x 712.6625pt>
+<./images/arbre_bh.png, id=272, 702.625pt x 712.6625pt>
 File: ./images/arbre_bh.png Graphic file (type png)
 <use ./images/arbre_bh.png>
-Package pdftex.def Info: ./images/arbre_bh.png  used on input line 45.
+Package pdftex.def Info: ./images/arbre_bh.png  used on input line 89.
 (pdftex.def)             Requested size: 281.04501pt x 285.05995pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 46.
+(caption)                particular \caption on input line 90.
 See the caption package documentation for explanation.
 
-) (partie6.tex [9 <./images/arbre_bh.png>]
+[8]) (partie6.tex [9 <./images/arbre_bh.png>]
 Chapitre 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
 
-<images/process_thread.png, id=278, 246.9225pt x 93.34875pt>
+<images/process_thread.png, id=284, 246.9225pt x 93.34875pt>
 File: images/process_thread.png Graphic file (type png)
 <use images/process_thread.png>
 Package pdftex.def Info: images/process_thread.png  used on input line 12.
@@ -1078,7 +1065,7 @@ See the caption package documentation for explanation.
 
  <./images/process_thread.png>]) (partie7.tex [11]
 Chapitre 7.
-<./resultats/tree_comparison.png, id=297, 578.16pt x 361.35pt>
+<./resultats/tree_comparison.png, id=303, 578.16pt x 361.35pt>
 File: ./resultats/tree_comparison.png Graphic file (type png)
 <use ./resultats/tree_comparison.png>
 Package pdftex.def Info: ./resultats/tree_comparison.png  used on input line 8.
@@ -1089,7 +1076,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 9.
 See the caption package documentation for explanation.
 
-<./resultats/method_comparison_seq.png, id=298, 578.16pt x 361.35pt>
+<./resultats/method_comparison_seq.png, id=304, 578.16pt x 361.35pt>
 File: ./resultats/method_comparison_seq.png Graphic file (type png)
 <use ./resultats/method_comparison_seq.png>
 Package pdftex.def Info: ./resultats/method_comparison_seq.png  used on input l
@@ -1100,7 +1087,7 @@ Overfull \hbox (33.571pt too wide) in paragraph at lines 19--20
  [] 
  []
 
-<./resultats/method_comparison_par.png, id=299, 578.16pt x 361.35pt>
+<./resultats/method_comparison_par.png, id=305, 578.16pt x 361.35pt>
 File: ./resultats/method_comparison_par.png Graphic file (type png)
 <use ./resultats/method_comparison_par.png>
 Package pdftex.def Info: ./resultats/method_comparison_par.png  used on input l
@@ -1111,41 +1098,51 @@ Overfull \hbox (33.571pt too wide) in paragraph at lines 24--25
  [] 
  []
 
+
+Package caption Warning: \captionsetup{type*=...} or \captionof
+(caption)                outside box or environment on input line 27.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 27.
+See the caption package documentation for explanation.
+
 [12
 
  <./resultats/tree_comparison.png>]
-<./resultats/comparison_BH.png, id=306, 578.16pt x 361.35pt>
+<./resultats/comparison_BH.png, id=312, 578.16pt x 361.35pt>
 File: ./resultats/comparison_BH.png Graphic file (type png)
 <use ./resultats/comparison_BH.png>
-Package pdftex.def Info: ./resultats/comparison_BH.png  used on input line 35.
+Package pdftex.def Info: ./resultats/comparison_BH.png  used on input line 39.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 36.
+(caption)                particular \caption on input line 40.
 See the caption package documentation for explanation.
 
-<./resultats/comparison_NE.png, id=307, 578.16pt x 361.35pt>
+<./resultats/comparison_NE.png, id=313, 578.16pt x 361.35pt>
 File: ./resultats/comparison_NE.png Graphic file (type png)
 <use ./resultats/comparison_NE.png>
-Package pdftex.def Info: ./resultats/comparison_NE.png  used on input line 44.
+Package pdftex.def Info: ./resultats/comparison_NE.png  used on input line 48.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 45.
+(caption)                particular \caption on input line 49.
 See the caption package documentation for explanation.
 
 [13 <./resultats/method_comparison_seq.png> <./resultats/method_comparison_par.
 png> <./resultats/comparison_BH.png>]
-<./resultats/comparison_N.png, id=316, 578.16pt x 361.35pt>
+<./resultats/comparison_N.png, id=323, 578.16pt x 361.35pt>
 File: ./resultats/comparison_N.png Graphic file (type png)
 <use ./resultats/comparison_N.png>
-Package pdftex.def Info: ./resultats/comparison_N.png  used on input line 54.
+Package pdftex.def Info: ./resultats/comparison_N.png  used on input line 58.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 55.
+(caption)                particular \caption on input line 59.
 See the caption package documentation for explanation.
 
 ) (partie8.tex [14 <./resultats/comparison_NE.png> <./resultats/comparison_N.pn
@@ -1153,31 +1150,51 @@ g>]
 Chapitre 8.
 ) (annexes.tex [15
 
-] (annexe1.tex [16
-
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-3.
 
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 11.
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+2.
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-))
-(annexe2.tex [17
+)
+<./images/sphere.png, id=337, 351.3125pt x 309.65688pt>
+File: ./images/sphere.png Graphic file (type png)
+<use ./images/sphere.png>
+Package pdftex.def Info: ./images/sphere.png  used on input line 18.
+(pdftex.def)             Requested size: 222.5038pt x 196.12907pt.
+<./images/spirale.png, id=338, 349.305pt x 315.67938pt>
+File: ./images/spirale.png Graphic file (type png)
+<use ./images/spirale.png>
+Package pdftex.def Info: ./images/spirale.png  used on input line 24.
+(pdftex.def)             Requested size: 222.5038pt x 201.08519pt.
+<./images/galaxies.png, id=339, 352.31625pt x 230.36063pt>
+File: ./images/galaxies.png Graphic file (type png)
+<use ./images/galaxies.png>
+Package pdftex.def Info: ./images/galaxies.png  used on input line 31.
+(pdftex.def)             Requested size: 222.5038pt x 145.48296pt.
+<./images/BH_tree.png, id=340, 348.80313pt x 293.095pt>
+File: ./images/BH_tree.png Graphic file (type png)
+<use ./images/BH_tree.png>
+Package pdftex.def Info: ./images/BH_tree.png  used on input line 35.
+(pdftex.def)             Requested size: 222.5038pt x 186.96745pt.
+)
+[16
 
-])) [18
+ <./images/sphere.png> <./images/spirale.png> <./images/galaxies.png> <./images
+/BH_tree.png>] (main.bbl) [17
 
-] (bibliographie.bib) [19] (main.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
+] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C824AA17F9013DE8F52702A261BE018E;6627.
+(rerunfilecheck)             Checksum: DF7577565701BFF803FF568F751CC06A;7129.
  ) 
 Here is how much of TeX's memory you used:
- 27537 strings out of 478584
- 501692 string characters out of 2844401
- 992074 words of memory out of 3000000
- 45130 multiletter control sequences out of 15000+600000
+ 28300 strings out of 478584
+ 510323 string characters out of 2844401
+ 993525 words of memory out of 3000000
+ 45874 multiletter control sequences out of 15000+600000
  483712 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,10n,133p,898b,1255s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1207,9 +1224,9 @@ Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/fidac
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Use
 rs/fidac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pf
 b>
-Output written on main.pdf (21 pages, 940770 bytes).
+Output written on main.pdf (19 pages, 1020267 bytes).
 PDF statistics:
- 900 PDF objects out of 1000 (max. 8388607)
- 80 named destinations out of 1000 (max. 500000)
- 384 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 928 PDF objects out of 1000 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
+ 407 words of extra memory for PDF output out of 10000 (max. 10000000)
 

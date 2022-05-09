@@ -1,13 +1,13 @@
 \chapter{Analyse comparative des  performances}
 Dans cette partie, nous analysons les résultats et performances des différentes méthodes et optimisations implémentées.
 
-Pour cela, nous avons lancé des séries de tests avec 100 itérations et avec des nombres particules différents. Nous avons donc mesuré et sommé le temps concerné pour chaque itération afin d'effectuer une moyenne pour chaque nombre de particules.
+Pour cela, nous avons lancé des séries de tests avec 100 itérations et avec des nombres particules différents. Nous avons donc mesuré et sommé le temps concerné pour chaque itération afin d'effectuer une moyenne pour chaque nombre de particules. Pour chaque méthode, les paramètres physiques seront les mêmes.
 
 \section{Construction de l'arbre}
 \begin{center}
 \includegraphics[scale=0.6]{./resultats/tree_comparison.png}
 \captionof{figure}{Durée moyenne de construction de l'arbre}
-\label{figbh}
+\label{fig7}
 \end{center}
 
 On peut voir sur la figure que pour des plus petits nombres de particules, la version séquentielle aura légèrement de meilleure performance alors que pour des valeurs plus grandes(>250000), la version parallèle sera plus intéressante. Mais de manière globale, l'algorithme de création de l'arbre est aussi performant avec ou sans parallélisation. On peut alors penser que la parallélisation ne fonctionne pas correctement à cause de problème de compétition entre les threads : les insertions des particules ne sont pas totalement indépendantes.
@@ -24,7 +24,11 @@ On peut voir sur la figure que pour des plus petits nombres de particules, la ve
             \includegraphics[width=9cm]{./resultats/method_comparison_par.png}
         \end{center}
  \end{minipage}
- 
+ \captionof{figure}{Durée moyenne en fonction du nombre de particule}
+\label{fig8}
+
+\vspace{2mm}
+
 Les résultats confirment la théorie. Il est clair que les méthodes brutes ont une complexité en $O(N^2)$ alors que l'algorithme de Barnes-Hut a une complexité bien inférieure en $O(Nlog(N))$.
 On peut également confirmer que l'algorithme naïf optimisé a une meilleure complexité que la version naïve.
  
@@ -34,7 +38,7 @@ On peut également confirmer que l'algorithme naïf optimisé a une meilleure co
 \begin{center}
 \includegraphics[scale=0.6]{./resultats/comparison_BH.png}
 \captionof{figure}{Résultats pour l'algorithme de Barnes-Hut}
-\label{figbh}
+\label{fig9}
 \end{center}
 
 On peut voir sur la figure que globalement la parallélisation n'améliore pas énormément l'efficacité de l'algorithme. Cependant, malgré tout, la version parallèle a une complexité plus "stable" et pour un grand nombre de particules(>2000), il sera plus intéressant.
@@ -43,7 +47,7 @@ On peut voir sur la figure que globalement la parallélisation n'améliore pas �
 \begin{center}
 \includegraphics[scale=0.6]{./resultats/comparison_NE.png}
 \captionof{figure}{Résultats pour l'algorithme naïf optimisé}
-\label{figbh}
+\label{fig10}
 \end{center}
 
 Les résultats montrent clairement que la parallélisation n'améliore pas la complexité de l'algorithme et que pour des grandes valeurs elle ralentit les calculs.
@@ -53,7 +57,7 @@ Cela s'explique simplement par les situations de compétition des threads lors d
 \begin{center}
 \includegraphics[scale=0.6]{./resultats/comparison_N.png}
 \captionof{figure}{Résultats pour l'algorithme naïf }
-\label{figbh}
+\label{fig11}
 \end{center}
 
 De nouveau, la parallélisation ne change pas les performances de l'algorithme ce qui est plutôt surprenant étant donné que les calculs de forces sont tous indépendants les uns des autres.

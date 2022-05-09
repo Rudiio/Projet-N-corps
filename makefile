@@ -60,7 +60,7 @@ $(EXEC_TESTS):
 	$(CC) $(CFLAGS) ./src/lance_tests.cpp  -o $@ 
 
 clean:
-	rm -f prog *.o *.mod ./OBJ/*.o
+	rm -f prog *.o *.mod ./OBJ/*.o $(EXEC) $(EXEC_MESURE) $(EXEC_TESTS)
 
 # default:
 # 	$(GC) -O3 -c BHTree.cpp

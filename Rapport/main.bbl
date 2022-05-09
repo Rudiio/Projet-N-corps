@@ -1,0 +1,50 @@
+\begin{thebibliography}{10}
+
+\bibitem{8}
+Barnes-hut.
+
+\bibitem{4}
+{\em Bases de la parallélisation multitâches : OpenMP (Open
+  Multi-Processing)}.
+
+\bibitem{9}
+Méthode saute-mouton.
+
+\bibitem{11}
+Re-bienvenue dans c++ - c++ moderne.
+
+\bibitem{6}
+Mancheron Alban.
+\newblock Une introduction à la programmation parallèle avec open mpi et
+  openmp.
+
+\bibitem{10}
+Josh Barnes and Piet Hut.
+\newblock A hierarchical o(nlogn) force-calculation algorithm.
+
+\bibitem{7}
+Leah Birch, Elizabeth Finn, and Karen Yu.
+\newblock The n-body problem.
+
+\bibitem{5}
+Jalel Chergui and Pierre-François Lavallée.
+\newblock Openmp parallélisation multitâches pour machines à mémoire
+  partagée.
+
+\bibitem{1}
+Gargne Fabien.
+\newblock Algorithme de barnes-hut pour le problème des n-body.
+
+\bibitem{0}
+Laurent Garcin.
+\newblock Méthode d'euler et gravitation.
+
+\bibitem{2}
+O.~Marguin.
+\newblock {\em C++ : LES BASES}.
+
+\bibitem{3}
+Philip Mocz.
+\newblock Create your own n-body simulation (with python).
+
+\end{thebibliography}

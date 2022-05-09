@@ -37,6 +37,8 @@
 \usepackage{subfig}
 \usepackage{etoolbox}
 
+\usepackage[toc,page]{appendix}
+
 \makeatletter
 % First, modify the \@endpart macro.
 \def\@endpart{} 
@@ -170,6 +172,9 @@ pdfstartview={FitH}}					% ajuste la page à la largueur de l'écran
 %espacement entre les lignes d'un tableau
 \renewcommand{\arraystretch}{1.5}
 
+\renewcommand{\appendixpagename}{Annexes}
+\renewcommand{\appendixtocname}{Annexes}
+
 %====================== INCLUSION DES PARTIES ======================
 
 ~
@@ -204,7 +209,7 @@ pdfstartview={FitH}}					% ajuste la page à la largueur de l'écran
 %choix du style de la biblio
 \bibliographystyle{plain}
 %inclusion de la biblio
-\input{bibliographie.bib}
+\bibliography{bibliographie}
 %voir wiki pour plus d'information sur la syntaxe des entrées d'une bibliographie
 
 \end{document}

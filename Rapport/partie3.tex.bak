@@ -19,18 +19,3 @@ Ces fichiers concerne la mise en place des différentes fonctions nécessaires �
 
 \section{Intégrateurs}
 Le dossier \textit{src} contient également les fichiers \textit{IntegratorEuler}, \textit{IntegratorLeapFrog} et \textit{IIntegrator} qui sont des fichiers contenant des méthodes numériques qui nous permettent de calculer l'évolution des positions des particules en considérant un pas de temps \textit{$\Delta t$} et en ayant au préalable effectué le calcul des forces exercées sur chaque particule grâce aux fichiers \textit{BHTree}.
-
-\section{La visualisation}
-Des classes et méthodes gérant l'affichage des particules est aussi implémenté à partir des bibliothèques SDL et OpenGL, ce qui nous permet de pouvoir nous concentrer sur les calculs qui doivent être effectués.
-
-%inclusion d'une mage dans le document
-\begin{figure}[!h]
-\begin{center}
-%taille de l'image en largeur
-%remplacer "width" par "height" pour régler la hauteur
-\includegraphics[width=13cm]{aff.png}
-\end{center}
-%légende de l'image
-\caption{Visualisation (aucun calcul effectué)}
-\end{figure}
- 

@@ -3,6 +3,36 @@
 %Rajouter la ligne "Annexes" dans le sommaire
 \addcontentsline{toc}{part}{Annexes}
 
-\input{./annexe1.tex}
+%changer le format des sections, subsections pour apparaittre sans le num de chapitre
+\makeatletter
+\renewcommand{\thesection}{\@arabic\c@section}
+\makeatother
 
-\input{./annexe2.tex}
+\section{Lien vers le repository Github}
+\url{https://github.com/Rudiio/Projet-N-corps.git}
+
+\section{Différentes simulations}
+
+\begin{figure}[H]
+\begin{minipage}[b]{.46\linewidth}
+\centering\epsfig{figure=./images/sphere.png,width=\linewidth}
+\caption{Galaxie sphérique
+    \label{fig12}
+    }
+\end{minipage} \hfill
+\begin{minipage}[b]{.46\linewidth}
+\centering\epsfig{figure=./images/spirale.png,width=\linewidth}
+\caption{Galaxie spirale\label{fig13}}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\begin{minipage}[b]{.46\linewidth}
+\centering\epsfig{figure=./images/galaxies.png,width=\linewidth}
+\caption{2 galaxies\label{fig14}}
+\end{minipage} \hfill
+\begin{minipage}[b]{.46\linewidth}
+\centering\epsfig{figure=./images/BH_tree.png,width=\linewidth}
+\caption{Quadtree\label{fig15}}
+\end{minipage}
+\end{figure}
