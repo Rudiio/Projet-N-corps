@@ -7,3 +7,4 @@ tests
 .vscode
 
 #fichiers objet
+.o
