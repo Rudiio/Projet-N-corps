@@ -48,7 +48,7 @@ Vector.o : ./src/Vector.cpp ./src/Vector.h
 # 	python3 ./src/graphique.py $<
 
 mv_object :
-	mv *.o OBJ
+	mkdir OBJ && mv *.o OBJ
 
 $(EXEC) : $(OBJ) mv_object 
 	$(CC) $(CFLAGS) $(LIBS) ./src/main.cpp ./OBJ/*.o -o $@ $(LIBS_FLAGS)
