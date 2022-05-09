@@ -20,8 +20,8 @@ Nous avons travaillé à partir d'un code C++ comprenant déja toute la partie d
 - [x] Méthode de calcul directe
 - [x] Méthode de calcul directe optimisée
 - [x] Algorithme de Barnes-Hut
-- [ ] Parallélisation OpenMP
-- [ ] Etude comparative des performances
+- [x] Parallélisation OpenMP
+- [x] Etude comparative des performances
 - [x] Rajouter un nouvel intégrateur
 - [x] Coloration des particules
 
