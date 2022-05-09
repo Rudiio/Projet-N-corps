@@ -7,4 +7,4 @@ tests
 .vscode
 
 #fichiers objet
-./OBJ/*.o
+*.o
