@@ -1,9 +1,10 @@
 \chapter{Aspect physique et mathématique du problème}
 Le problème consiste à calculer pour chaque particule la force exercée sur elle par toutes les autres à un instant $t$.
-Cela revient donc à résoudre les équations de Newton des N particules. La force prise en compte est ainsi l'interaction gravitationnelle d'un corps sur un autre.
+Cela revient donc à résoudre les équations de Newton des $N$ particules. La force prise en compte est ainsi l'interaction gravitationnelle d'un corps sur un autre.
 
-\vspace{3mm}
-\underline{Expressions des forces}
+\section{Un problème de mécanique}
+\vspace{2mm}
+\subsection{Expression des forces}
 \vspace{2mm}
 
 Soit $p_{1}$ et $p_{2}$ deux particules, la force appliquée par $p_2$ sur $p_1$ est :
@@ -36,30 +37,65 @@ y_2
 La distance $d$ entre ces deux particules est alors donnée par la formule suivante:
 $d= \sqrt{(x_2-x_1)^2 + (y_2 - y_1)^2}$.
 
-Et la force appliquée par $p_2$ sur $p_1$ $F_{2 \rightarrow 1}$ est alors la suivante :
+La force appliquée par $p_2$ sur $p_1$ $F_{2 \rightarrow 1}$ est alors la suivante :
 
+\begin{center}
 $F_{2 \rightarrow 1}=G*m_1*m_2*\begin{pmatrix}
 \frac{x_2 -x_1}{d^3}\\
 \frac{y_2 -y_1}{d^3}
 \end{pmatrix}
 $
+\end{center}
+
+\vspace{2mm}
 Cette formule est alors plus simple à implémenter.
 
 \vspace{3mm}
-\underline{Expression de l'accélération}
+\subsection{Expression de l'accélération}
 \vspace{2mm}
 
 On peut alors calculer l'accélération d'une particule avec la 2ème loi de Newton:
 
 \begin{equation}
-ma(t) = \Sigma \Vec{F} = m \frac{dv}{dt}
+ma(t) = \Sigma F = m \frac{dv}{dt}
 \end{equation}
 
-où $v$ est la vitesse de la particule, $m$ sa masse et $\vec{F}$ les forces qui s'y appliquent.
+où $v$ est la vitesse de la particule, $m$ sa masse et $F$ les forces qui s'y appliquent.
+
+\vspace{2mm}
+\subsection{Principe d'action-réaction}
+\vspace{2mm}
+
+La 3ème loi de Newton appelée également principe d'action-réaction annonce que tout corps $1$ exerçant une force sur un corps $2$ subit une force de même intensité, de même direction mais de sens opposé, exercée par 2.
+
+\vspace{2mm}
+
+Cela se traduit ainsi :
+$\vec{F}_{2 \rightarrow 1} = -\vec{F}_{1 \rightarrow 2}  $
+
+\vspace{2mm}
+Ce principe nous sera utile pour améliorer nos performances étant donné qu'il s'applique aux forces gravitationnelles.
+
 
 \vspace{3mm}
-\underline{Résolution numérique et calcul des positions}
+\subsection{Paramètres physiques de la simulation}
 \vspace{2mm}
+
+Les paramètres utilisés lors d'une simulation permettent de modifier le type de simulation et de résultat que l'on veut obtenir. Il est donc important de les maîtriser et de les connaître afin d'avoir des simulations cohérentes, notamment pour simuler des galaxies. Les variables principales seront les masses des étoiles ainsi que la répartition initiale des étoiles. Les vitesses orbitales sont initialisées comme si la galaxie est déjà formée, même si cela peut paraître incohérent, c'est ce choix qui est fait dans la plupart des modélisations.
+
+\vspace{3mm}
+\subsection{Problème théorique : Newton ou Einstein ?}
+\vspace{2mm}
+
+Malgré l'efficacité de la loi d'attraction gravitationnelle de Newton, il demeure un problème : son cadre d'application, celle-ci ne pouvant s'appliquer que lorsque les champs gravitationnels sont faibles ou modérés (peu de particules, particules peu massives, ou particules éloignées). Dans le cadre où ces conditions ne sont pas respectées, ce qui se passe en réalité souvent (lorsque deux particules ont des positions très proches), une des particules va se retrouver éjectée en adoptant une vitesse plus grande que celle de la lumière, ces éjections étant un réel problème. Pour résoudre ce problème théorique, nous aurions pu utiliser la relativité générale d'Einstein, mais nous avons plutôt opté pour l'ajout d'un paramètre $\it{softening}$ qui va créer artificiellement une distance entre deux étoiles.
+
+\vspace{3mm}
+\subsection{Question de l'initialisation : Avec ou sans trou noir ?}
+\vspace{2mm}
+
+La question des trous noirs est assez importante car ce sont des objets qui participent à une stabilité locale du centre des galaxies, stabilité qui de proche en proche impacte la stabilité de l'ensemble. Nous avons donc choisi d'en positionner un au centre de chaque galaxie.
+
+\section{L'aspect mathématique du problème : résolution numérique et calcul des positions}
 
 On obtient donc l'équation différentielle sur la position $OP_1(t)$ :
 \begin{equation}
@@ -70,8 +106,11 @@ L'intégrateur permettra alors de résoudre numériquement et simplement cette �
 
 \vspace{2mm}
 
+\subsection{La méthode d'Euler explicite}
+
 Dans notre cas, nous utilisons d'abord une méthode d'Euler explicite afin de calculer la vitesse de chaque particule et ensuite sa position à chaque instant $t$.
 
+\vspace{2mm}
 Les vitesses s'obtiennent alors de la manière suivante :
 \vspace{2mm}
 
@@ -103,10 +142,12 @@ où $\Delta t$ est le pas de discrétisation du temps.
 
 \vspace{2mm}
 
-Cependant, pour des problèmes de mécaniques, la méthode d'Euler n'est pas stable (divergence de trajectoire). Ainsi, il est préférable d'utiliser le schéma saute-mouton ("leap frog") qui est d'ordre 2 et conserve l'énergie mécanique des systèmes dynamiques.
+\subsection{La méthode saute-mouton (Leap frog)}
+Pour des problèmes de mécaniques, la méthode d'Euler n'est pas stable (divergence de trajectoire). Ainsi, il est préférable d'utiliser le schéma saute-mouton ("leap frog") qui est d'ordre 2 et conserve l'énergie mécanique des systèmes dynamiques.
 
-\vspace{2mm}
+\vspace{3mm}
 Voici la forme de la version "Drift-kick-Drift" de la méthode:
+\vspace{2mm}
 
 $
 \left\{
@@ -117,7 +158,7 @@ $
 \right.
 $
 
-\vspace{2mm}
+\vspace{3mm}
 
 $
 \left\{
@@ -128,7 +169,7 @@ $
 \right.
 $
 
-\vspace{2mm}
+\vspace{3mm}
 
 $
 \left\{
@@ -139,36 +180,6 @@ $
 \right.
 $
 
-
-\vspace{5mm}
-\underline{Le principe d'action-réaction}
 \vspace{2mm}
 
-La 3ème loi de Newton appelée également principe d'action-réaction annonce que tout corps $1$ exerçant une force sur un corps $2$ subit une force de même intensité, de même direction mais de sens opposé, exercée par 2.
-
-\vspace{2mm}
-
-Cela se traduit ainsi :
-$\vec{F}_{2 \rightarrow 1} = -\vec{F}_{1 \rightarrow 2}  $
-
-\vspace{2mm}
-Ce principe nous sera utile pour améliorer nos performances étant donné qu'il s'applique aux forces gravitationnelles.
-
-
-\vspace{3mm}
-\underline{Les paramètres physiques de la simulation}
-\vspace{2mm}
-
-Les paramètres utilisés lors d'une simulation permettent de modifier le type de simulation et de résultat que l'on veut obtenir. Il est donc important de les maîtriser et de les connaître afin d'avoir des simulations cohérentes, notamment pour simuler des galaxies. Les variables principales seront les masses des étoiles ainsi que la répartition initiale des étoiles. Les vitesses orbitales sont initialisées comme si la galaxie est déjà formée, même si cela peut paraître incohérent, c'est ce choix qui est fait dans la plupart des modélisations.
-
-\vspace{3mm}
-\underline{Problème théorique : Newton ou Einstein ?}
-\vspace{2mm}
-
-Malgré l'efficacité de la loi d'attraction gravitationnelle de Newton, il demeure un problème : son cadre d'application, celle-ci ne pouvant s'appliquer que lorsque les champs gravitationnels sont faibles ou modérés (peu de particules, particules peu massives, ou particules éloignées). Dans le cadre où ces conditions ne sont pas respectées, ce qui se passe en réalité souvent (lorsque deux particules ont des positions très proches), une des particules va se retrouver éjectée en adoptant une vitesse plus grande que celle de la lumière, ces éjections étant un réel problème. Pour résoudre ce problème théorique, nous aurions pu utiliser la relativité générale d'Einstein, mais nous avons plutôt opté pour l'ajout d'un paramètre $\it{softening}$ qui va créer artificiellement une distance entre deux étoiles.
-
-\vspace{3mm}
-\underline{Question de l'initialisation : Avec ou sans trou noir ?}
-\vspace{2mm}
-
-La question des trous noirs est assez importante car ce sont des objets qui participent à une stabilité locale du centre des galaxies, stabilité qui de proche en proche impacte la stabilité de l'ensemble. Nous avons donc choisi d'en positionner un au centre de chaque galaxie.
+où $\Delta t$ est le pas de discrétisation du temps.

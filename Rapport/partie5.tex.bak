@@ -15,12 +15,12 @@ Au centre de cette approximation se trouve un arbre : une « carte » de l'espac
 \begin{center}
 \includegraphics[scale=0.2]{./images/quadtree.png}
 \captionsetup{hypcap=false}
-\captionof{figure}{Exemple de Quadtree}
-\label{fig4}
+\captionof{figure}{Exemple de Quadtree \\ \url{https://www.lrde.epita.fr}}
+\label{fig5}
 \end{center}
 
 \section{L'algorithme de Barnes-Hut}
-L'algorithme de Barnes Hut se décompose en trois majeurs parties:
+L'algorithme de Barnes Hut se décompose en trois étapes majeures:
 
 \begin{enumerate}
 \item la construction de l'arbre
@@ -31,11 +31,11 @@ L'algorithme de Barnes Hut se décompose en trois majeurs parties:
 \end{enumerate}
 
 
-Avant de détailler ces étapes nous avons besoin de mettre en place la notion de quadrants. Un quadrant est une division de notre arbre soit un nœud. Comme nous travaillons en deux dimensions, nous avons besoin de quatre quadrants, un quadrant en haut à gauche, un autre en bas à gauche , un troisième à droite en haute et un dernier à droite en bas. On les appellera respectivement NW,SW,NE et SE en référence aux points cardinaux.
+Avant de détailler ces étapes nous avons besoin de mettre en place la notion de quadrants. Un quadrant est une division de notre arbre et donc un nœud de l'arbre. Comme nous travaillons en deux dimensions, nous avons besoin de quatre quadrants, un quadrant en haut à gauche, un autre en bas à gauche , un troisième à droite en haute et un dernier à droite en bas. On les appellera respectivement NW,SW,NE et SE en référence aux points cardinaux.
 
 \subsection{La construction de l'arbre}
 
-Elle consiste aux insertions successives des particules dans l'arbre.
+Elle consiste à insérer successivement les particules dans l'arbre.
 
 Soit la particule $p1$. Tout d'abord nous devons vérifier que $P1$ doit bien être insérée dans l'arbre.
 Si c'est le cas nous distinguons plusieurs cas. 
@@ -54,10 +54,10 @@ Il est important de noter que seule les feuilles contiennent des particules.
 
 \subsection{Le calcul des masses et centres de masse}
 
-Les calculs des masses et centres de masses se calculent naturellement de manière récursive en commençant par les feuilles de l'arbre.
+Les calculs des masses et centres de masses se calculent naturellement en utilisant la récursivité en commençant par les feuilles de l'arbre.
 
 Soit le nœud $n$. 
-Si $n$ contient qu'une seule particule alors il s'agit d'une feuille et sa masse correspond à la masse de la particule et son centre de masse sera la position de la particule. Si ce n'est pas le cas, la masse de $n$ sera la somme des masses de chacun des fils et son centre du masse se calcule par la formule suivant
+Si $n$ ne contient qu'une seule particule alors il s'agit d'une feuille et sa masse correspond à la masse de la particule et son centre de masse sera la position de la particule. Si ce n'est pas le cas, la masse de $n$ sera la somme des masses de chacun des fils et son centre du masse se calcule par la formule suivant
 
 \begin{equation}
     CM_n = \frac{m_1*CM_1 + m_2*CM_2+ m_3*CM_3 + m_4*CM_4 }{\sum_{i=1}^{4}{m_i}}
@@ -67,7 +67,7 @@ où $\forall i\in \{1,2,3,4\}$ $CM_i$ est le centre de masse d'un fils et $m_i$ 
 
 \subsection{Le calcul des forces}
 
-L'avantage de l'utilisation d'un arbre est que le calcul des forces gravitationnelles se fait simplement de manière récursive pour chaque particule à partir de la racine de l'arbre.
+L'avantage de l'utilisation d'un arbre est que le calcul des forces gravitationnelles pour chaque particule se fait simplement en se servant de la récursivité, à partir de la racine de l'arbre.
 
 Pour chaque particule $p$.
 
@@ -90,15 +90,15 @@ Nous avons ainsi le résultat suivant
 \includegraphics[scale=0.4]{./images/arbre_bh.png}
 \captionsetup{hypcap=false}
 \captionof{figure}{Arbre construit avec l'algorithme de Barnes Hut}
-\label{fig5}
+\label{fig6}
 \end{center}
 
 On peut donc déjà remarquer que physiquement le résultat obtenu semble correcte malgré les approximations effectuées, c'est ce qui fait la force de cet algorithme.
-Il nous est alors possible de pousser les simulations plus loin pour simuler notamment la formation de galaxies (spirale ou sphériques) en augmentant considérablement le nombre de particules,. Cela montre alors l'intérêt et l'efficacité de l'algorithme de Barnes-Hut.
+Il devient alors possible de pousser les simulations plus loin pour simuler notamment la formation de galaxies (spirale ou sphériques) en augmentant considérablement le nombre de particules,. Cela montre alors l'intérêt et l'efficacité de l'algorithme de Barnes-Hut.
 
 \begin{center}
 \includegraphics[scale=0.9]{./images/spirale_2.png}
 \captionsetup{hypcap=false}
 \captionof{figure}{Galaxie spirale avec 30000 particules}
-\label{fig5}
+\label{fig7}
 \end{center}

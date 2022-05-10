@@ -1,38 +1,35 @@
 \begin{thebibliography}{10}
 
-\bibitem{9}
-Méthode saute-mouton.
-
 \bibitem{8}
-N-body building.
-
-\bibitem{11}
-Re-bienvenue dans c++ - c++ moderne.
+Barnes-hut.
 
 \bibitem{4}
 {\em Bases de la parallélisation multitâches : OpenMP (Open
   Multi-Processing)}.
-\newblock 2016.
+
+\bibitem{9}
+Méthode saute-mouton.
+
+\bibitem{11}
+Re-bienvenue dans c++ - c++ moderne.
 
 \bibitem{6}
 Mancheron Alban.
 \newblock Une introduction à la programmation parallèle avec open mpi et
-  openmp, 2018.
+  openmp.
 
-\bibitem{}
+\bibitem{10}
 Josh Barnes and Piet Hut.
-\newblock A hierarchical o(n log n) force-calculation algorithm.
-\newblock {\em Nature}, 1986.
+\newblock A hierarchical o(nlogn) force-calculation algorithm.
 
 \bibitem{7}
 Leah Birch, Elizabeth Finn, and Karen Yu.
 \newblock The n-body problem.
-\newblock 2012.
 
 \bibitem{5}
 Jalel Chergui and Pierre-François Lavallée.
 \newblock Openmp parallélisation multitâches pour machines à mémoire
-  partagée, 2017.
+  partagée.
 
 \bibitem{1}
 Gargne Fabien.
@@ -40,15 +37,14 @@ Gargne Fabien.
 
 \bibitem{0}
 Laurent Garcin.
-\newblock Méthode d'euler et gravitation, 2016.
+\newblock Méthode d'euler et gravitation.
 
 \bibitem{2}
 O.~Marguin.
 \newblock {\em C++ : LES BASES}.
-\newblock 2003/2004.
 
 \bibitem{3}
 Philip Mocz.
-\newblock Create your own n-body simulation (with python), 2020.
+\newblock Create your own n-body simulation (with python).
 
 \end{thebibliography}

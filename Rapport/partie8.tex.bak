@@ -7,7 +7,7 @@ Le projet consistait à étudier différentes manières de résoudre numériquem
 Nous avons pu mettre en place $3$ méthodes de calcul différentes pour les forces :
 
 \begin{itemize}
-\item la méthode naïve qui calcule pour chaque particule les forces qui s'y applique en répétant les calculs
+\item la méthode naïve qui calcule pour chaque particule les forces qui s'y applique de la manière la plus intuitive possible
 
 \item la méthode naïve optimisée qui utilise le principe d'action-réaction afin de diminuer le nombre de calculs
 
@@ -26,7 +26,7 @@ La résolution du problème à N-corps est extrêmement important dans des domai
 Cela leur permet donc d'avoir une vision pratique sur des concepts et des objets qui ne peuvent pas être étudiés ni visualisés facilement ce qui permet de servir la recherche sur les galaxie, la matière noire ...
 
 
-De plus, la partie optimisation a un fort impact les recherches dans ces domaines et donc sur la société mais aussi également sur l'environnement. En effet, la réduction des temps de calculs permet dans un premier temps d'élargir les possibilités ce qui permet donc d'avoir des simulations plus précises,plus conséquentes. Dans un deuxième temps, réduire les temps de calcul permet de réduire l'énergie dépensée et donc de diminuer la pollution lié à la production énergétique. Cela, se ressent évidemment plus sur des simulations de grande échelle sur des super-calculateurs.
+De plus, la partie optimisation a un fort impact sur la recherche dans ces domaines et donc sur la société mais aussi également sur l'environnement. En effet, la réduction des temps de calculs permet dans un premier temps d'élargir les possibilités ce qui permet donc d'avoir des simulations plus précises,plus conséquentes. Dans un deuxième temps, réduire les temps de calcul permet de réduire l'énergie dépensée et donc de diminuer la pollution lié à la production énergétique. Cela, se ressent évidemment plus sur des simulations de grande échelle lancées sur des super-calculateurs.
 
 \section{Bilans personnels}
 
@@ -57,6 +57,6 @@ J'aurais cependant aimé pouvoir poussé le projet plus loin en explorant d'autr
 \subsection{Elyas}
 
 
-Le projet était exactement ce que j'espérais, le fait que nous avons procédé à la simulation d'objets célestes m'a permit d'apprendre plusieurs notions techniques (au niveau informatique)mais aussi scientifiques (les n corps). L'utilisation du C++ a été aussi très intéressante cependant je regrette qu'on n'ait pas exploité plus ce langage. Ce projet m'a aussi permis de voir que l'utilisation des mathématiques est un outil très important notamment pour l'amélioration des calculs avec la mise en place des différents intégrateurs.
+Le projet était exactement ce que j'espérais, le fait que nous avons procédé à la simulation d'objets célestes m'a permit d'apprendre plusieurs notions techniques (au niveau informatique)mais aussi scientifiques (les $n$ corps). L'utilisation du C++ a été aussi très intéressante cependant je regrette qu'on n'ait pas exploité plus ce langage. Ce projet m'a aussi permis de voir que l'utilisation des mathématiques est un outil très important notamment pour l'amélioration des calculs avec la mise en place des différents intégrateurs.
 
 

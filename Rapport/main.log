@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  10 MAY 2022 18:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  10 MAY 2022 22:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -825,14 +825,7 @@ tex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count345
 \l__pdf_internal_box=\box69
-) (main.aux
-
-LaTeX Warning: Label `fig4' multiply defined.
-
-
-LaTeX Warning: Label `fig5' multiply defined.
-
-)
+) (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
@@ -855,7 +848,8 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 149.
 LaTeX Font Info:    ... okay on input line 149.
 LaTeX Info: Redefining \degres on input line 149.
 LaTeX Info: Redefining \up on input line 149.
- (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/ucs\ucsencs.def
+
+(C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/ucs\ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
@@ -945,12 +939,12 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count353
 (title.tex
-<./logo.png, id=186, 481.8pt x 190.46156pt>
+<./logo.png, id=226, 481.8pt x 190.46156pt>
 File: ./logo.png Graphic file (type png)
 <use ./logo.png>
 Package pdftex.def Info: ./logo.png  used on input line 5.
 (pdftex.def)             Requested size: 169.29684pt x 66.92409pt.
-<./galaxy.jpg, id=187, 369.88188pt x 357.83687pt>
+<./galaxy.jpg, id=227, 369.88188pt x 357.83687pt>
 File: ./galaxy.jpg Graphic file (type jpg)
 <use ./galaxy.jpg>
 Package pdftex.def Info: ./galaxy.jpg  used on input line 20.
@@ -963,7 +957,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.46 ...e}rentes simulations}{17}{section.Alph0.2}
+l.46 ...e {8}Conclusions du projet}{16}{chapter.8}
                                                   % [1
 
 ])
@@ -972,12 +966,17 @@ l.46 ...e}rentes simulations}{17}{section.Alph0.2}
 
  [0] (partie1.tex
 Chapitre 1.
-<presentation/2_corps.png, id=254, 344.2461pt x 159.2349pt>
+<presentation/2_corps.png, id=304, 344.2461pt x 159.2349pt>
 File: presentation/2_corps.png Graphic file (type png)
 <use presentation/2_corps.png>
 Package pdftex.def Info: presentation/2_corps.png  used on input line 13.
-(pdftex.def)             Requested size: 369.88582pt x 171.10612pt.
-) (partie2.tex
+(pdftex.def)             Requested size: 312.9803pt x 144.78249pt.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+7.
+(C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+))
+(partie2.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -988,7 +987,7 @@ l.1 \chapter
  <./presentation/2_corps.png>]
 Chapitre 2.
 
-Overfull \hbox (3.17525pt too wide) in paragraph at lines 36--38
+Overfull \hbox (3.17525pt too wide) in paragraph at lines 37--39
 []\T1/cmr/m/n/10 La dis-tance $\OML/cmm/m/it/10 d$ \T1/cmr/m/n/10 entre ces deu
 x par-ti-cules est alors don-née par la for-mule sui-vante : $\OML/cmm/m/it/10 
 d \OT1/cmr/m/n/10 = []$\T1/cmr/m/n/10 . 
@@ -996,36 +995,36 @@ d \OT1/cmr/m/n/10 = []$\T1/cmr/m/n/10 .
 
 [2
 
-]) (partie3.tex [3]
+] [3]) (partie3.tex [4]
 Chapitre 3.
-) (partie4.tex [4
+) (partie4.tex [5
 
 ]
 Chapitre 4.
-<images/naive.png, id=289, 344.28625pt x 210.7875pt>
+<images/naive.png, id=346, 344.28625pt x 210.7875pt>
 File: images/naive.png Graphic file (type png)
 <use images/naive.png>
 Package pdftex.def Info: images/naive.png  used on input line 9.
 (pdftex.def)             Requested size: 275.42937pt x 168.63022pt.
-<images/naive_optimised.png, id=290, 347.2975pt x 199.24437pt>
+<images/naive_optimised.png, id=347, 347.2975pt x 199.24437pt>
 File: images/naive_optimised.png Graphic file (type png)
 <use images/naive_optimised.png>
 Package pdftex.def Info: images/naive_optimised.png  used on input line 34.
 (pdftex.def)             Requested size: 277.83836pt x 159.3957pt.
-[5
+[6
 
  <./images/naive.png>]
-<images/NO.png, id=296, 344.28625pt x 233.87375pt>
+<images/NO.png, id=353, 344.28625pt x 233.87375pt>
 File: images/NO.png Graphic file (type png)
 <use images/NO.png>
 Package pdftex.def Info: images/NO.png  used on input line 41.
 (pdftex.def)             Requested size: 275.42937pt x 187.09923pt.
-) (partie5.tex [6 <./images/naive_optimised.png> <./images/NO.png>]
+) (partie5.tex [7 <./images/naive_optimised.png> <./images/NO.png>]
 Chapitre 5.
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/ucs\uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-<./images/quadtree.png, id=303, 1439.97975pt x 714.56963pt>
+<./images/quadtree.png, id=360, 1439.97975pt x 714.56963pt>
 File: ./images/quadtree.png Graphic file (type png)
 <use ./images/quadtree.png>
 Package pdftex.def Info: ./images/quadtree.png  used on input line 16.
@@ -1033,43 +1032,43 @@ Package pdftex.def Info: ./images/quadtree.png  used on input line 16.
 
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/ucs\uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
-) [7
+) [8
 
  <./images/quadtree.png (PNG copy)>]
-<./images/arbre_bh.png, id=312, 702.625pt x 712.6625pt>
+<./images/arbre_bh.png, id=371, 702.625pt x 712.6625pt>
 File: ./images/arbre_bh.png Graphic file (type png)
 <use ./images/arbre_bh.png>
 Package pdftex.def Info: ./images/arbre_bh.png  used on input line 90.
 (pdftex.def)             Requested size: 281.04501pt x 285.05995pt.
- [8]
-<./images/spirale_2.png, id=318, 337.26pt x 243.91125pt>
+ [9]
+<./images/spirale_2.png, id=377, 337.26pt x 243.91125pt>
 File: ./images/spirale_2.png Graphic file (type png)
 <use ./images/spirale_2.png>
 Package pdftex.def Info: ./images/spirale_2.png  used on input line 100.
 (pdftex.def)             Requested size: 303.53119pt x 219.51808pt.
-) (partie6.tex [9 <./images/arbre_bh.png> <./images/spirale_2.png>]
+) (partie6.tex [10 <./images/arbre_bh.png> <./images/spirale_2.png>]
 Chapitre 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
 
-<images/process_thread.png, id=326, 246.9225pt x 93.34875pt>
+<images/process_thread.png, id=386, 246.9225pt x 93.34875pt>
 File: images/process_thread.png Graphic file (type png)
 <use images/process_thread.png>
 Package pdftex.def Info: images/process_thread.png  used on input line 12.
 (pdftex.def)             Requested size: 197.53824pt x 74.6791pt.
-[10
+[11
 
- <./images/process_thread.png>]) (partie7.tex [11]
+ <./images/process_thread.png>]) (partie7.tex [12]
 Chapitre 7.
-<./resultats/tree_comparison.png, id=345, 578.16pt x 361.35pt>
+<./resultats/tree_comparison.png, id=406, 578.16pt x 361.35pt>
 File: ./resultats/tree_comparison.png Graphic file (type png)
 <use ./resultats/tree_comparison.png>
 Package pdftex.def Info: ./resultats/tree_comparison.png  used on input line 8.
 
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
-<./resultats/method_comparison_seq.png, id=346, 578.16pt x 361.35pt>
+<./resultats/method_comparison_seq.png, id=407, 578.16pt x 361.35pt>
 File: ./resultats/method_comparison_seq.png Graphic file (type png)
 <use ./resultats/method_comparison_seq.png>
 Package pdftex.def Info: ./resultats/method_comparison_seq.png  used on input l
@@ -1080,7 +1079,7 @@ Overfull \hbox (33.571pt too wide) in paragraph at lines 20--21
  [] 
  []
 
-<./resultats/method_comparison_par.png, id=347, 578.16pt x 361.35pt>
+<./resultats/method_comparison_par.png, id=408, 578.16pt x 361.35pt>
 File: ./resultats/method_comparison_par.png Graphic file (type png)
 <use ./resultats/method_comparison_par.png>
 Package pdftex.def Info: ./resultats/method_comparison_par.png  used on input l
@@ -1091,88 +1090,79 @@ Overfull \hbox (33.571pt too wide) in paragraph at lines 25--26
  [] 
  []
 
-[12
+[13
 
  <./resultats/tree_comparison.png>]
-<./resultats/comparison_BH.png, id=354, 578.16pt x 361.35pt>
+<./resultats/comparison_BH.png, id=415, 578.16pt x 361.35pt>
 File: ./resultats/comparison_BH.png Graphic file (type png)
 <use ./resultats/comparison_BH.png>
-Package pdftex.def Info: ./resultats/comparison_BH.png  used on input line 39.
+Package pdftex.def Info: ./resultats/comparison_BH.png  used on input line 43.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
-<./resultats/comparison_NE.png, id=355, 578.16pt x 361.35pt>
+<./resultats/comparison_NE.png, id=416, 578.16pt x 361.35pt>
 File: ./resultats/comparison_NE.png Graphic file (type png)
 <use ./resultats/comparison_NE.png>
-Package pdftex.def Info: ./resultats/comparison_NE.png  used on input line 50.
+Package pdftex.def Info: ./resultats/comparison_NE.png  used on input line 54.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
- [13 <./resultats/method_comparison_seq.png> <./resultats/method_comparison_par
+ [14 <./resultats/method_comparison_seq.png> <./resultats/method_comparison_par
 .png> <./resultats/comparison_BH.png>]
-<./resultats/comparison_N.png, id=365, 578.16pt x 361.35pt>
+<./resultats/comparison_N.png, id=426, 578.16pt x 361.35pt>
 File: ./resultats/comparison_N.png Graphic file (type png)
 <use ./resultats/comparison_N.png>
-Package pdftex.def Info: ./resultats/comparison_N.png  used on input line 62.
+Package pdftex.def Info: ./resultats/comparison_N.png  used on input line 66.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
 )
-(partie8.tex [14 <./resultats/comparison_NE.png> <./resultats/comparison_N.png>
+(partie8.tex [15 <./resultats/comparison_NE.png> <./resultats/comparison_N.png>
 ]
 Chapitre 8.
-[15
+[16
 
-]) (annexes.tex [16]
+]) (annexes.tex [17]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 12.
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-3.
-(C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-<./images/sphere.png, id=384, 351.3125pt x 309.65688pt>
+<./images/sphere.png, id=445, 351.3125pt x 309.65688pt>
 File: ./images/sphere.png Graphic file (type png)
 <use ./images/sphere.png>
 Package pdftex.def Info: ./images/sphere.png  used on input line 19.
 (pdftex.def)             Requested size: 222.5038pt x 196.12907pt.
-<./images/spirale.png, id=385, 349.305pt x 315.67938pt>
+<./images/spirale.png, id=446, 349.305pt x 315.67938pt>
 File: ./images/spirale.png Graphic file (type png)
 <use ./images/spirale.png>
 Package pdftex.def Info: ./images/spirale.png  used on input line 25.
 (pdftex.def)             Requested size: 222.5038pt x 201.08519pt.
-<./images/galaxies.png, id=386, 352.31625pt x 230.36063pt>
+<./images/galaxies.png, id=447, 352.31625pt x 230.36063pt>
 File: ./images/galaxies.png Graphic file (type png)
 <use ./images/galaxies.png>
 Package pdftex.def Info: ./images/galaxies.png  used on input line 32.
 (pdftex.def)             Requested size: 222.5038pt x 145.48296pt.
-<./images/BH_tree.png, id=387, 348.80313pt x 293.095pt>
+<./images/BH_tree.png, id=448, 348.80313pt x 293.095pt>
 File: ./images/BH_tree.png Graphic file (type png)
 <use ./images/BH_tree.png>
 Package pdftex.def Info: ./images/BH_tree.png  used on input line 36.
 (pdftex.def)             Requested size: 222.5038pt x 186.96745pt.
-)
-[17
+) [18
 
  <./images/sphere.png> <./images/spirale.png> <./images/galaxies.png> <./images
-/BH_tree.png>] (main.bbl) [18
+/BH_tree.png>] (main.bbl) [19
 
 ] (main.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 483969ACD5A6CE3E2F89321693B5D49E;7955.
+(rerunfilecheck)             Checksum: 1A50566F630F7C8521F65ACD9059BDFC;10616.
  ) 
 Here is how much of TeX's memory you used:
- 28331 strings out of 478584
- 510872 string characters out of 2844401
+ 28354 strings out of 478584
+ 511211 string characters out of 2844401
  993526 words of memory out of 3000000
- 45893 multiletter control sequences out of 15000+600000
+ 45905 multiletter control sequences out of 15000+600000
  483712 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,10n,133p,898b,1255s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
-1000.pk> <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecrm0800.pk> <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecrm0500.pk> <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecti1000.pk> <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour
+ <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
+0800.pk> <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecrm0500.pk> <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecti1000.pk> <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ectt1000.pk> <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour
 /jknappen/ec/dpi600\eccc1000.pk> <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/
 ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\fidac\AppData\Local\MiKTeX\fon
 ts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\fidac\AppData\Local\MiKT
@@ -1194,9 +1184,9 @@ Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/fidac
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Use
 rs/fidac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pf
 b>
-Output written on main.pdf (21 pages, 1062766 bytes).
+Output written on main.pdf (22 pages, 1078804 bytes).
 PDF statistics:
- 982 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
- 473 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1060 PDF objects out of 1200 (max. 8388607)
+ 118 named destinations out of 1000 (max. 500000)
+ 553 words of extra memory for PDF output out of 10000 (max. 10000000)
 

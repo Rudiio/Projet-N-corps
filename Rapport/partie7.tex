@@ -8,10 +8,10 @@ Pour cela, nous avons lancé des séries de tests avec 100 itérations et avec d
 \includegraphics[scale=0.6]{./resultats/tree_comparison.png}
 \captionsetup{hypcap=false}
 \captionof{figure}{Durée moyenne de construction de l'arbre}
-\label{fig7}
+\label{fig9}
 \end{center}
 
-On peut voir sur la figure que pour des plus petits nombres de particules, la version séquentielle aura légèrement de meilleure performance alors que pour des valeurs plus grandes(>250000), la version parallèle sera plus intéressante. Mais de manière globale, l'algorithme de création de l'arbre est aussi performant avec ou sans parallélisation. On peut alors penser que la parallélisation ne fonctionne pas correctement à cause de problème de compétition entre les threads : les insertions des particules ne sont pas totalement indépendantes.
+On peut voir sur la figure que pour des plus petits nombres de particules, la version séquentielle aura légèrement de meilleure performance alors que pour des valeurs plus grandes(>250000), la version parallèle sera plus intéressante. Mais de manière globale, l'algorithme de création de l'arbre est aussi performant avec ou sans parallélisation. On peut alors penser que la parallélisation ne fonctionne pas efficacement à cause de problème de compétition entre les threads : les insertions des particules ne sont pas totalement indépendantes.
 
 \section{Comparaisons des méthodes}
 
@@ -24,10 +24,14 @@ On peut voir sur la figure que pour des plus petits nombres de particules, la ve
     \begin{center}
      \includegraphics[width=9cm]{./resultats/method_comparison_par.png}
         \end{center}
-         \captionsetup{hypcap=false}
- \captionof{figure}{Durée moyenne en fonction du nombre de particule}
-\label{fig8}
  \end{minipage}
+ 
+ \begin{center}
+ \captionsetup{hypcap=false}
+ \captionof{figure}{Durée moyenne en fonction du nombre de 
+ particule}
+\label{fig8*10}
+ \end{center}
 
 \par Les résultats confirment la théorie. Il est clair que les méthodes brutes ont une complexité en $O(N^2)$ alors que l'algorithme de Barnes-Hut a une complexité bien inférieure en $O(Nlog(N))$.
 On peut également confirmer que l'algorithme naïf optimisé a une meilleure complexité que la version naïve.
@@ -39,7 +43,7 @@ On peut également confirmer que l'algorithme naïf optimisé a une meilleure co
 \includegraphics[scale=0.6]{./resultats/comparison_BH.png}
 \captionsetup{hypcap=false}
 \captionof{figure}{Résultats pour l'algorithme de Barnes-Hut}
-\label{fig9}
+\label{fig11}
 \end{center}
 
 
@@ -50,7 +54,7 @@ On peut voir sur la figure que globalement la parallélisation n'améliore pas �
 \includegraphics[scale=0.6]{./resultats/comparison_NE.png}
 \captionsetup{hypcap=false}
 \captionof{figure}{Résultats pour l'algorithme naïf optimisé}
-\label{fig10}
+\label{fig12}
 \end{center}
 
 
@@ -62,7 +66,7 @@ Cela s'explique simplement par les situations de compétition des threads lors d
 \includegraphics[scale=0.6]{./resultats/comparison_N.png}
 \captionsetup{hypcap=false}
 \captionof{figure}{Résultats pour l'algorithme naïf }
-\label{fig11}
+\label{fig13}
 \end{center}
 
 

@@ -4,43 +4,53 @@
 \contentsline {section}{\numberline {1.2}Objectif : r\IeC {\'e}solution la plus efficace possible du probl\IeC {\`e}me \IeC {\`a} N-corps}{1}{section.1.2}%
 \contentsline {section}{\numberline {1.3}D\IeC {\'e}marche}{1}{section.1.3}%
 \contentsline {chapter}{\numberline {2}Aspect physique et math\IeC {\'e}matique du probl\IeC {\`e}me}{2}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Analyse du code}{4}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Visualisation}{4}{section.3.1}%
-\contentsline {section}{\numberline {3.2}ModelNBody.cpp // ModelNBody.h}{4}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Vector.cpp // Vector.h}{4}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Types.cpp // Types.h}{4}{section.3.4}%
-\contentsline {section}{\numberline {3.5}BHTree.cpp // BHTree.h}{4}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Int\IeC {\'e}grateurs}{4}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Impl\IeC {\'e}mentation na\IeC {\"\i }ve et optimisations}{5}{chapter.4}%
-\contentsline {section}{\numberline {4.1}M\IeC {\'e}thode de calcul brute}{5}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Optimisation de la m\IeC {\'e}thode de calcul brute}{5}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Algorithme de Barnes-Hut}{7}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Pr\IeC {\'e}sentation de l'algorithme}{7}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Principe g\IeC {\'e}n\IeC {\'e}ral de l'algorithme}{7}{section.5.2}%
-\contentsline {section}{\numberline {5.3}L'algorithme de Barnes-Hut}{7}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}La construction de l'arbre}{8}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Le calcul des masses et centres de masse}{8}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Le calcul des forces}{8}{subsection.5.3.3}%
-\contentsline {chapter}{\numberline {6}Parall\IeC {\'e}lisation }{10}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Fonctionnement d'OpenMP}{10}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Principe}{10}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Directives et fonctions importantes}{10}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Application \IeC {\`a} notre programme de r\IeC {\'e}solution du probl\IeC {\`e}me \IeC {\`a} N-corps}{11}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Analyse comparative des performances}{12}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Construction de l'arbre}{12}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Comparaisons des m\IeC {\'e}thodes}{13}{section.7.2}%
-\contentsline {section}{\numberline {7.3}S\IeC {\'e}quentiel et parall\IeC {\`e}le}{13}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Algorithme de Barnes-Hut}{13}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Na\IeC {\"\i }ve optimis\IeC {\'e}e}{14}{subsection.7.3.2}%
-\contentsline {subsection}{\numberline {7.3.3}Na\IeC {\"\i }ve}{14}{subsection.7.3.3}%
-\contentsline {chapter}{\numberline {8}Conclusions du projet}{15}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusion}{15}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Impacts du projet}{15}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Bilans personnels}{15}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Camille}{15}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Noah}{15}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Rudio}{16}{subsection.8.3.3}%
-\contentsline {subsection}{\numberline {8.3.4}Elyas}{16}{subsection.8.3.4}%
-\contentsline {part}{Annexes}{17}{chapter*.3}%
-\contentsline {section}{\numberline {1}Lien vers le repository Github}{17}{section.Alph0.1}%
-\contentsline {section}{\numberline {2}Diff\IeC {\'e}rentes simulations}{17}{section.Alph0.2}%
+\contentsline {section}{\numberline {2.1}Un probl\IeC {\`e}me de m\IeC {\'e}canique}{2}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Expression des forces}{2}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Expression de l'acc\IeC {\'e}l\IeC {\'e}ration}{2}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Principe d'action-r\IeC {\'e}action}{3}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Param\IeC {\`e}tres physiques de la simulation}{3}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Probl\IeC {\`e}me th\IeC {\'e}orique : Newton ou Einstein ?}{3}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Question de l'initialisation : Avec ou sans trou noir ?}{3}{subsection.2.1.6}%
+\contentsline {section}{\numberline {2.2}L'aspect math\IeC {\'e}matique du probl\IeC {\`e}me : r\IeC {\'e}solution num\IeC {\'e}rique et calcul des positions}{3}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}La m\IeC {\'e}thode d'Euler explicite}{3}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}La m\IeC {\'e}thode saute-mouton (Leap frog)}{4}{subsection.2.2.2}%
+\contentsline {chapter}{\numberline {3}Analyse du code}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Visualisation}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}ModelNBody.cpp // ModelNBody.h}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Vector.cpp // Vector.h}{5}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Types.cpp // Types.h}{5}{section.3.4}%
+\contentsline {section}{\numberline {3.5}BHTree.cpp // BHTree.h}{5}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Int\IeC {\'e}grateurs}{5}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Impl\IeC {\'e}mentation na\IeC {\"\i }ve et optimisations}{6}{chapter.4}%
+\contentsline {section}{\numberline {4.1}M\IeC {\'e}thode de calcul brute}{6}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Optimisation de la m\IeC {\'e}thode de calcul brute}{6}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Algorithme de Barnes-Hut}{8}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Pr\IeC {\'e}sentation de l'algorithme}{8}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Principe g\IeC {\'e}n\IeC {\'e}ral de l'algorithme}{8}{section.5.2}%
+\contentsline {section}{\numberline {5.3}L'algorithme de Barnes-Hut}{8}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}La construction de l'arbre}{9}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Le calcul des masses et centres de masse}{9}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Le calcul des forces}{9}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {6}Parall\IeC {\'e}lisation }{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Fonctionnement d'OpenMP}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Principe}{11}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Directives et fonctions importantes}{11}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Application \IeC {\`a} notre programme de r\IeC {\'e}solution du probl\IeC {\`e}me \IeC {\`a} N-corps}{12}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Analyse comparative des performances}{13}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Construction de l'arbre}{13}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Comparaisons des m\IeC {\'e}thodes}{14}{section.7.2}%
+\contentsline {section}{\numberline {7.3}S\IeC {\'e}quentiel et parall\IeC {\`e}le}{14}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Algorithme de Barnes-Hut}{14}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Na\IeC {\"\i }ve optimis\IeC {\'e}e}{15}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Na\IeC {\"\i }ve}{15}{subsection.7.3.3}%
+\contentsline {chapter}{\numberline {8}Conclusions du projet}{16}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusion}{16}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Impacts du projet}{16}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Bilans personnels}{16}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Camille}{16}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Noah}{16}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Rudio}{17}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Elyas}{17}{subsection.8.3.4}%
+\contentsline {part}{Annexes}{18}{chapter*.3}%
+\contentsline {section}{\numberline {1}Lien vers le repository Github}{18}{section.Alph0.1}%
+\contentsline {section}{\numberline {2}Diff\IeC {\'e}rentes simulations}{18}{section.Alph0.2}%

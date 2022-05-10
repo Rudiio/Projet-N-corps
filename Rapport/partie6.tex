@@ -1,18 +1,19 @@
 \chapter{Parallélisation }
-Les programmes que nous écrivons sont tous généralement séquentiels, c'est-à-dire que les instructions vont s'exécuter les unes à la suite des autres ce qui engendre des temps d'exécution conséquents pour les programmes lourds comme les calculs des forces gravitationnelles.
+Les programmes que nous écrivons sont tous généralement séquentiels, c'est-à-dire que les instructions vont s'exécuter les unes à la suite des autres ce qui engendre des temps d'exécution conséquents pour les programmes lourds comme par exemple le calcul des forces gravitationnelles.
 La parallélisation ou programmation parallèle est un moyen d'optimiser notre programme et réduire son temps d'exécution. 
 Elle consiste à effectuer des tâches de manière simultanée. Ainsi, un programme parallèle pourra exécuter en même temps des processus définis de manière séquentielle et réduire son temps d'exécution.\\
 
 Ici, nous nous intéressons à la parallélisation multi-threads à mémoire partagée à travers l'interface de programmation (API) OpenMP.
 
-Un thread ou processus léger est un fil d'exécution qui constitue un processus et permet donc d'exécuter du code machine dans le processeur. Ainsi, l'exécution d'un programme lance un processus qui va ensuite lancer plusieurs threads.
+Un thread ou processus léger est un fil d'exécution qui constitue un processus et permet donc d'exécuter du code machine dans le processeur. Ainsi, l'exécution d'un programme lance un processus qui va ensuite lancer plusieurs threads qui vont exécuter chacun les mêmes instructions.
 
 
 \begin{center}
 \includegraphics[scale=0.8]{images/process_thread.png}
 \captionsetup{hypcap=false}
-\captionof{figure}{Processus et threads}
-\label{fig6}
+\captionof{figure}{Processus et threads  \\source : \url{https://ccub.u-bourgogne.fr}}
+\label{fig8}
+
 \end{center} 
 
 Dans le cas d'un programme séquentiel, seul le thread 0 effectuera une tâche tandis qu'en programmation parallèle, ils seront plusieurs.
@@ -49,7 +50,7 @@ omp_get_thread_num() // retourne le numéro du thread courant
 Dans notre cas, les processus les plus lourds sont les calculs de forces gravitationnelle et la création de l'arbre, c'est donc ceux-ci que nous allons paralléliser.
 
 \begin{itemize}
-\item La construction de l'arbre : les particules peuvent être ajoutées parallèlement cependant, il est possible d'obtenir des problèmes de synchronisation, il est donc intéressant de vérifier si la parallélisation effective.
+\item La construction de l'arbre : les particules peuvent être ajoutées parallèlement cependant, il est possible d'obtenir des problèmes de compétition entre les threads, il est donc intéressant de vérifier si la parallélisation effective.
 
 \item Le calcul des forces : les calculs intermédiaires (distances...) sont stockés dans des variables temporaires ce qui facilite la parallélisation.
 \end{itemize}

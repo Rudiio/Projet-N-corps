@@ -40,7 +40,7 @@ On peut déjà observer que la complexité de ce calcul est toujours  en $O(N^2)
 \begin{center}
 \includegraphics[scale=0.8]{images/NO.png}
 \captionsetup{hypcap=false}
-\captionof{figure}{Méthode naïve optimisée avec 2000 particules colorée}
+\captionof{figure}{Méthode naïve optimisée avec 2000 particules colorées}
 \label{fig4}
 \end{center} 
 
