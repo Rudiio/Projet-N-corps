@@ -10,6 +10,7 @@ Un thread ou processus léger est un fil d'exécution qui constitue un processus
 
 \begin{center}
 \includegraphics[scale=0.8]{images/process_thread.png}
+\captionsetup{hypcap=false}
 \captionof{figure}{Processus et threads}
 \label{fig6}
 \end{center} 

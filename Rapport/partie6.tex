@@ -1,7 +1,7 @@
 \chapter{Parallélisation }
-Les programmes que nous écrivons sont tous séquentiels, c'est-à-dire que les instructions vont s'exécuter les unes à la suite des autres ce qui engendre des temps d'exécution conséquents pour les programmes lourds comme pour le calcul des forces gravitationnelles.
+Les programmes que nous écrivons sont tous généralement séquentiels, c'est-à-dire que les instructions vont s'exécuter les unes à la suite des autres ce qui engendre des temps d'exécution conséquents pour les programmes lourds comme les calculs des forces gravitationnelles.
 La parallélisation ou programmation parallèle est un moyen d'optimiser notre programme et réduire son temps d'exécution. 
-Elle consiste à effectuer des tâches de manière simultanées. Ainsi, un programme parallèle pourra exécuter en même temps des processus défini de manière séquentielle.\\
+Elle consiste à effectuer des tâches de manière simultanée. Ainsi, un programme parallèle pourra exécuter en même temps des processus définis de manière séquentielle et réduire son temps d'exécution.\\
 
 Ici, nous nous intéressons à la parallélisation multi-threads à mémoire partagée à travers l'interface de programmation (API) OpenMP.
 
@@ -10,6 +10,7 @@ Un thread ou processus léger est un fil d'exécution qui constitue un processus
 
 \begin{center}
 \includegraphics[scale=0.8]{images/process_thread.png}
+\captionsetup{hypcap=false}
 \captionof{figure}{Processus et threads}
 \label{fig6}
 \end{center} 

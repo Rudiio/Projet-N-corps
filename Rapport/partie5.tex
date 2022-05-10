@@ -14,6 +14,7 @@ Au centre de cette approximation se trouve un arbre : une « carte » de l'espac
 
 \begin{center}
 \includegraphics[scale=0.2]{./images/quadtree.png}
+\captionsetup{hypcap=false}
 \captionof{figure}{Exemple de Quadtree}
 \label{fig4}
 \end{center}
@@ -87,8 +88,17 @@ Nous prendrons $\theta = 0.9$.
 Nous avons ainsi le résultat suivant
 \begin{center}
 \includegraphics[scale=0.4]{./images/arbre_bh.png}
+\captionsetup{hypcap=false}
 \captionof{figure}{Arbre construit avec l'algorithme de Barnes Hut}
 \label{fig5}
 \end{center}
 
 On peut donc déjà remarquer que physiquement le résultat obtenu semble correcte malgré les approximations effectuées, c'est ce qui fait la force de cet algorithme.
+Il devient alors possible de pousser les simulations plus loin pour simuler notamment la formation de galaxies (spirale ou sphériques) en augmentant considérablement le nombre de particules,. Cela montre alors l'intérêt et l'efficacité de l'algorithme de Barnes-Hut.
+
+\begin{center}
+\includegraphics[scale=0.9]{./images/spirale_2.png}
+\captionsetup{hypcap=false}
+\captionof{figure}{Galaxie spirale avec 30000 particules}
+\label{fig5}
+\end{center}

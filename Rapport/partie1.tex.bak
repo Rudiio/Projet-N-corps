@@ -13,6 +13,7 @@ Le problème à deux corps et le problème à trois sont  résolubles analytique
 \includegraphics[width=13cm]{presentation/2_corps.png}
 \end{center}
 %légende de l'image
+\captionsetup{hypcap=false}
 \caption{Solution du problème à 2 corps}
 \label{fig1}
 \end{figure}

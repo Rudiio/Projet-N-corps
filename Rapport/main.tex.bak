@@ -37,6 +37,8 @@
 \usepackage{subfig}
 \usepackage{etoolbox}
 
+\usepackage[toc,page]{appendix}
+
 \makeatletter
 % First, modify the \@endpart macro.
 \def\@endpart{} 
@@ -169,6 +171,7 @@ pdfstartview={FitH}}					% ajuste la page à la largueur de l'écran
 
 %espacement entre les lignes d'un tableau
 \renewcommand{\arraystretch}{1.5}
+
 
 %====================== INCLUSION DES PARTIES ======================
 
