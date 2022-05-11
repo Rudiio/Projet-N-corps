@@ -13,7 +13,7 @@
 #include <SDL/SDL.h>
 
 
-#define softening 0.5
+#define softening 1
 //------------------------------------------------------------------------------
 // static variables
 double BHTreeNode::s_theta = 0.9;
