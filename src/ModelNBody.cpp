@@ -199,7 +199,7 @@ void ModelNBody::GetOrbitalVelocity(const ParticleData &p1, const ParticleData &
          &vy = p2.m_pState->vy;
 
   vx =( r[1] / dist) * v*120;
-  vy =(-r[0] / dist) * v120;
+  vy =(-r[0] / dist) * v*120;
 }
 
 //------------------------------------------------------------------------
