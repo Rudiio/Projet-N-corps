@@ -64,6 +64,7 @@ Ce script permet simplement d'afficher les résultats des différentes mesures.
 
 ###  Sous Linux (Ubuntu)
 
+### Compilateur C++
 Pour installer g++ :
 ```
 sudo apt install g++
