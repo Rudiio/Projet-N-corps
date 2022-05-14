@@ -170,13 +170,13 @@ void NBodyWnd::DrawBodies()
   for(int i=0; i<m_pModel->GetN(); i++)
   {
     if(colorspread[i]==0) {
-      glColor3f(0.8,0.8,0.8);
+      glColor3f(0,0.8,0.8);
       //glPointSize(1);
     } else if(colorspread[i]==1) {
-      glColor3f(0.6,0.6,0.4);
+      glColor3f(0,01.7,0.4);
       //glPointSize(2);
     } else {
-      glColor3f(0,0,1);
+      glColor3f(0,0.6,0.6);
       //glPointSize(2);      
     }
     glVertex3f(state[i].x, state[i].y, 0.0f);

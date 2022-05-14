@@ -70,7 +70,7 @@ Pour la partie graphique, le programme repose sur la première version de la [SD
 
 Pour installer la SDL :
 ```
-sudo apt install libsdl1.2-dev libsdl-ttf1.2-dev libsdl-gfx1.2-dev libsdl-gfx1.2-5 libsdl-ttf1.2
+sudo apt install libsdl1.2-dev libsdl-gfx1.2-dev libsdl-gfx1.2-5
 ```
 
 Pour installer les paquets complémentaires d'OpenGL :
