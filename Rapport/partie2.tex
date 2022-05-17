@@ -1,6 +1,6 @@
 \chapter{Aspect physique et mathématique du problème}
 Le problème consiste à calculer pour chaque particule la force exercée sur elle par toutes les autres à un instant $t$.
-Cela revient donc à résoudre les équations de Newton des $N$ particules. La force prise en compte est ainsi l'interaction gravitationnelle d'un corps sur un autre.
+Cela revient donc à résoudre les équations de Newton des $N$ particules. L'unique force prise en compte est ainsi l'interaction gravitationnelle d'un corps sur un autre, les autres étant considérées comme négligeables à cette échelle.
 
 \section{Un problème de mécanique}
 \vspace{2mm}
@@ -19,6 +19,8 @@ où
 
 \item $m_1$ est la masse de $p_1$.
 \item $m_2$ est la masse de $p_2$.
+\item $\vec{p}_{2 \rightarrow 1}$ est la position de la particule $p_2$ à la particule $p_1$ 
+
 
 \end{itemize}
 
@@ -55,12 +57,20 @@ Cette formule est alors plus simple à implémenter.
 \vspace{2mm}
 
 On peut alors calculer l'accélération d'une particule avec la 2ème loi de Newton:
+\begin{center}
+    
 
-\begin{equation}
-ma(t) = \Sigma F = m \frac{dv}{dt}
-\end{equation}
+$
+\Sigma \vec{F} = m \vec{a}
+$
+où 
+$\vec{a}=\frac{d\vec{v}}{dt}
+$ et $ \vec{v}= \frac{d\vec{p}}{dt}
+$
+\end{center}
 
-où $v$ est la vitesse de la particule, $m$ sa masse et $F$ les forces qui s'y appliquent.
+
+avec $v$ est la vitesse de la particule, $m$ sa masse et $F$ les forces qui s'y appliquent.
 
 \vspace{2mm}
 \subsection{Principe d'action-réaction}
