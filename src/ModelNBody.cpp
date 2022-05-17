@@ -55,6 +55,7 @@ ModelNBody::ModelNBody(int num,int methode_calcul)
   ,m_bVerbose(false)
   ,mesure_temps(0)
   ,mesure_construction_BH(0)
+  ,Ecinetique(0)
 {
   BHTreeNode::s_gamma = gamma_1;
 
@@ -256,7 +257,7 @@ void ModelNBody::InitCollision(int num, int mode)
       st_aux.mass = 431000;//4310000; //43100;//1000000; //431000;   // 4.31 Millionen Sonnenmassen
     }
     //---------------------------------------------------------------------------------------------------- POUR DÉCIDER À PARTIR DE QUELLE PARTICULE ON CHANGE DE GALAXIE
-    else if (i<20000)  //Initialisation des autres particules  random autour de black hole 1
+    else if (i<70000)  //Initialisation des autres particules  random autour de black hole 1
     {
       const double rad = 10;
       double r = 0.1 + .8 * (rad * ((double)rand() / RAND_MAX));
@@ -268,7 +269,7 @@ void ModelNBody::InitCollision(int num, int mode)
 
       GetOrbitalVelocity(blackHole, ParticleData(&st, &st_aux));
     }
-    else if (i==20000)   //Initialisation de black hole 2
+    else if (i==70000)   //Initialisation de black hole 2
     {
       blackHole2.m_pState = &st;
       blackHole2.m_pAuxState = &st_aux;
@@ -560,11 +561,16 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
 
   gettimeofday(&start, NULL);
 
+  // omp_set_num_threads(8);
+  Ecinetique=0;
+  // m_root.Epotentielle=0;
+
   //Calcul des forces
   #pragma omp parallel for
   for (int i=0; i<m_num; ++i)   //i=1 de base
   {
 
+    // std:: cout << "num threads =" <<omp_get_num_threads()<< endl;
     ParticleData p(&pState[i], &m_pAux[i]);
 
     Vec2D acc;
@@ -591,6 +597,7 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
     pDeriv[i].ay = acc.y;
     pDeriv[i].vx = pState[i].vx;
     pDeriv[i].vy = pState[i].vy;
+    Ecinetique += 1/2*p.m_pAuxState->mass  * (pDeriv[i].vx*pDeriv[i].vx +pDeriv[i].vy*pDeriv[i].vy );
 
     // pDeriv[i].ax = acc.x;
     // pDeriv[i].ay = acc.y;
@@ -642,7 +649,7 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   pDeriv[0].ay = acc.y;
   pDeriv[0].vx = pState[0].vx;
   pDeriv[0].vy = pState[0].vy;
-
+  Ecinetique += 1/2*p.m_pAuxState->mass  * (pDeriv[0].vx*pDeriv[0].vx +pDeriv[0].vy*pDeriv[0].vy );
   // pDeriv[0].ax = acc.x;
   // pDeriv[0].ay = acc.y;
   // pDeriv[0].vx = pState[0].vx + m_timeStep * acc.x;
@@ -656,6 +663,7 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   // m_camPos.x = m_root.GetCenterOfMass().x;
   // m_camPos.y = m_root.GetCenterOfMass().y;
 
+  // m_root.Epotentielle *= gamma_si;
   //Anti-warning
   acc.x = acx[0];
   acc.y = acy[0];

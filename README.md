@@ -64,6 +64,12 @@ Ce script permet simplement d'afficher les résultats des différentes mesures.
 
 ###  Sous Linux (Ubuntu)
 
+### Compilateur C++
+Pour installer g++ :
+```
+sudo apt install g++
+```
+
 ### Bibliothèques graphiques
 
 Pour la partie graphique, le programme repose sur la première version de la [SDL](https://www.libsdl.org/) et sur [OpenGL](https://www.opengl.org/).

@@ -113,6 +113,9 @@ void NBodyWnd::Render()
 //      return;
   }
 
+//Passer en commentaire tout ce qui est en dessous pour supprimer l'affichage
+
+
   glClear(GL_COLOR_BUFFER_BIT  | GL_DEPTH_BUFFER_BIT);
 
   Vec3D orient;

@@ -99,7 +99,6 @@ private:
   BHTreeNode *m_parent;        ///< The parent node
   int m_num;                   ///< The number of particles in this node
   mutable bool m_bSubdivided;  ///< True if this node is too close to use the approximation for the force calculation
-
   static double s_theta;
   static std::vector<ParticleData> s_renegades;
 public:

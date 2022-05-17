@@ -377,11 +377,15 @@ void SDLWindow::MainLoop(int num,int methode,int nb_iterations_max)
   int ct = 0;
   double dt = 0;
   time_t t1(time(NULL)), t2;
+
+  nombre_iteration = 0;
   bool iteration_cap=false;
 
+  //On vérifie si la simulation doit effectuer un nombre d'itérations
   if(nb_iterations_max==-1)
     iteration_cap=true;
 
+  //Boucle principale de la simulation
   while (m_bRunning && (nombre_iteration < nb_iterations_max || iteration_cap))
   {
     Render();
@@ -397,14 +401,18 @@ void SDLWindow::MainLoop(int num,int methode,int nb_iterations_max)
       t1 = t2;
     }
     nombre_iteration++;
+    // cout << "nb particules=" <<num<< " num iterate =" << nombre_iteration << endl;
   }
+
+  //Stockage des valeurs dans les fichiers correspondants
   if(!iteration_cap){
+    
     //Temps moyen de construction de l'arbre
-    ofstream file("./data/seq_BH_Tree_Construction_time.txt", ios_base::app ); 
-    if(file.is_open()){
-        file <<num << " " << getconstruction()/(nombre_iteration*1.0) << endl;
-        file.close();
-      }
+    // ofstream file("./data/BH_Tree_Construction_time.txt", ios_base::app ); 
+    // if(file.is_open()){
+    //     file <<num << " " << getconstruction()/(nombre_iteration*1.0) << endl;
+    //     file.close();
+    //   }
 
     //Temps moyen de calcul BH
     if(methode==1){
@@ -417,7 +425,7 @@ void SDLWindow::MainLoop(int num,int methode,int nb_iterations_max)
 
     //Temps moyen de calcul Naïve optimisée
     else if(methode==2){
-      ofstream fichier("./data/donnees_temps_NE.txt", ios_base::app ); 
+      ofstream fichier("./data/donnees_temps_NO.txt", ios_base::app ); 
       if(fichier.is_open()){
         fichier <<num << " " << gettime()/(nombre_iteration*1.0) << endl;
         fichier.close();

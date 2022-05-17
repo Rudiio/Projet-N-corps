@@ -7,7 +7,8 @@ using namespace std;
 int main(int argc,char **argv)
 {
     int i=1;
-    for(int n=100;n<=2000;n+=100){ 
+    // Première série de tests
+    for(int n=100;n<2000;n+=100){ 
         
         char sbh[30];
         char sno[30];
@@ -47,7 +48,8 @@ int main(int argc,char **argv)
         }
     }
 
-    for(int n=2000;n<=40000;n+=2000){ 
+    //Deuxième série de tests
+    for(int n=22000;n<=70000;n+=2000){ 
         
         char sbh[30];
         char sno[30];

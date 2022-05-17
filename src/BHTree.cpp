@@ -290,6 +290,7 @@ Vec2D BHTreeNode::CalcNaiveForce(const ParticleData &p1, PODState *pState, PODAu
 
         acc.x += (m_pAux[i].mass * dx)/(r3+softening);
         acc.y += (m_pAux[i].mass *dy)/(r3+softening);
+        // Epotentielle += (m_pAux[i].mass *p1.m_pAuxState->mass)/(std::abs(dx*dx + dy*dy));
       }
         
     }
@@ -304,6 +305,7 @@ Vec2D BHTreeNode::CalcNaiveForce(const ParticleData &p1, PODState *pState, PODAu
 
         acc.x += (m_pAux[i].mass * dx)/(r3+softening);
         acc.y += (m_pAux[i].mass *dy)/(r3+softening);
+        // Epotentielle += (m_pAux[i].mass *p1.m_pAuxState->mass)/(std::abs(dx*dx + dy*dy))
       }
     }
   }
@@ -344,6 +346,8 @@ Vec2D BHTreeNode::CalcNaiveForceefficient(const ParticleData &p1, PODState *pSta
         acx[pos]+=fx;
         acy[pos]+=fy;
 
+        //Calcul de l'énergie potentielle
+        // Epotentielle += (m_pAux[i].mass *p1.m_pAuxState->mass)/(std::abs(dx*dx + dy*dy));
       }
     }
   }
@@ -469,6 +473,8 @@ void BHTreeNode::Insert(const ParticleData &newParticle,int level)
       m_num=1;
     }
   }
+  else
+    s_renegades.push_back(newParticle);
 }
 
 //------------------------------------------------------------------------------
