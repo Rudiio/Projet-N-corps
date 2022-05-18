@@ -1,6 +1,6 @@
 \chapter{Aspect physique et mathématique du problème}
 Le problème consiste à calculer pour chaque particule la force exercée sur elle par toutes les autres à un instant $t$.
-Cela revient donc à résoudre les équations de Newton des $N$ particules. La force prise en compte est ainsi l'interaction gravitationnelle d'un corps sur un autre.
+Cela revient donc à résoudre les équations de Newton des $N$ particules. L'unique force prise en compte est ainsi l'interaction gravitationnelle d'un corps sur un autre, les autres étant considérées comme négligeables à cette échelle.
 
 \section{Un problème de mécanique}
 \vspace{2mm}
@@ -19,6 +19,8 @@ où
 
 \item $m_1$ est la masse de $p_1$.
 \item $m_2$ est la masse de $p_2$.
+\item $\vec{p}_{2 \rightarrow 1}$ est le vecteur  allant de $p_2$ vers $p_1$.
+
 
 \end{itemize}
 
@@ -55,18 +57,35 @@ Cette formule est alors plus simple à implémenter.
 \vspace{2mm}
 
 On peut alors calculer l'accélération d'une particule avec la 2ème loi de Newton:
+\begin{center}
+    
 
+
+$\Sigma \vec{F} = m \vec{a}$
+
+\vspace{2mm}
+où 
+$\vec{a}=\frac{d\vec{v}}{dt}$ et $ \vec{v}= \frac{d\vec{p}}{dt}$
+
+
+\end{center}
+
+avec $\vec{v}$ la vitesse de la particule, $\vec{p}$ la position de la particule, $m$ sa masse et $\vec{F}$ les forces qui s'y appliquent.
+
+\subsection{Calcul de la position}
+
+On obtient donc l'équation différentielle sur la position $\vec{Op_1(t)}$ de la particule $p1$ par rapport à l'origine du référentiel $O$:
 \begin{equation}
-ma(t) = \Sigma F = m \frac{dv}{dt}
+\frac{d^2 \vec{Op_1(t)}}{dt^2} = \vec{a(t)}
 \end{equation}
 
-où $v$ est la vitesse de la particule, $m$ sa masse et $F$ les forces qui s'y appliquent.
+L'intégrateur permettra alors de résoudre numériquement et simplement cette équation différentielle qui n'est pas résoluble de manière exacte pour plus de $3$ particules.
 
 \vspace{2mm}
 \subsection{Principe d'action-réaction}
 \vspace{2mm}
 
-La 3ème loi de Newton appelée également principe d'action-réaction annonce que tout corps $1$ exerçant une force sur un corps $2$ subit une force de même intensité, de même direction mais de sens opposé, exercée par 2.
+La 3ème loi de Newton appelée également principe d'action-réaction énonce que tout corps $1$ exerçant une force sur un corps $2$ subit une force de même intensité, de même direction mais de sens opposé, exercée par 2.
 
 \vspace{2mm}
 
@@ -81,13 +100,13 @@ Ce principe nous sera utile pour améliorer nos performances étant donné qu'il
 \subsection{Paramètres physiques de la simulation}
 \vspace{2mm}
 
-Les paramètres utilisés lors d'une simulation permettent de modifier le type de simulation et de résultat que l'on veut obtenir. Il est donc important de les maîtriser et de les connaître afin d'avoir des simulations cohérentes, notamment pour simuler des galaxies. Les variables principales seront les masses des étoiles ainsi que la répartition initiale des étoiles. Les vitesses orbitales sont initialisées comme si la galaxie est déjà formée, même si cela peut paraître incohérent, c'est ce choix qui est fait dans la plupart des modélisations.
+Les paramètres utilisés lors d'une simulation permettent de modifier le type de simulation et de résultat que l'on veut obtenir. Il est donc important de les maîtriser et de les connaître afin d'avoir des simulations cohérentes, notamment pour simuler des galaxies. Les variables principales seront les masses des étoiles ainsi que la répartition initiale des étoiles. Les vitesses orbitales sont initialisées comme si la galaxie était déjà formée, même si cela peut paraître incohérent, c'est ce choix qui est fait dans la plupart des modélisations.
 
 \vspace{3mm}
 \subsection{Problème théorique : Newton ou Einstein ?}
 \vspace{2mm}
 
-Malgré l'efficacité de la loi d'attraction gravitationnelle de Newton, il demeure un problème : son cadre d'application, celle-ci ne pouvant s'appliquer que lorsque les champs gravitationnels sont faibles ou modérés (peu de particules, particules peu massives, ou particules éloignées). Dans le cadre où ces conditions ne sont pas respectées, ce qui se passe en réalité souvent (lorsque deux particules ont des positions très proches), une des particules va se retrouver éjectée en adoptant une vitesse plus grande que celle de la lumière, ces éjections étant un réel problème. Pour résoudre ce problème théorique, nous aurions pu utiliser la relativité générale d'Einstein, mais nous avons plutôt opté pour l'ajout d'un paramètre $\it{softening}$ qui va créer artificiellement une distance entre deux étoiles.
+Malgré l'efficacité de la loi d'attraction gravitationnelle de Newton, il demeure un problème : son cadre d'application, celle-ci ne pouvant s'appliquer que lorsque les champs gravitationnels sont faibles ou modérés (peu de particules, particules peu massives, ou particules éloignées). Dans le cadre où ces conditions ne sont pas respectées, ce qui se passe en réalité souvent (lorsque deux particules ont des positions très proches), une des particules va se retrouver éjectée en adoptant une vitesse plus grande que celle de la lumière, ces éjections étant un réel problème. Ces comportement est dû à la modélisation physique  du problème. Pour résoudre ce problème théorique, nous aurions pu utiliser la relativité générale d'Einstein, mais nous avons plutôt opté pour l'ajout d'un paramètre $\it{softening}$ qui va créer artificiellement une distance entre deux étoiles.
 
 \vspace{3mm}
 \subsection{Question de l'initialisation : Avec ou sans trou noir ?}
@@ -95,16 +114,7 @@ Malgré l'efficacité de la loi d'attraction gravitationnelle de Newton, il deme
 
 La question des trous noirs est assez importante car ce sont des objets qui participent à une stabilité locale du centre des galaxies, stabilité qui de proche en proche impacte la stabilité de l'ensemble. Nous avons donc choisi d'en positionner un au centre de chaque galaxie.
 
-\section{L'aspect mathématique du problème : résolution numérique et calcul des positions}
-
-On obtient donc l'équation différentielle sur la position $OP_1(t)$ :
-\begin{equation}
-\frac{d^2 \vec{OP_1(t)}}{dt^2} = \vec{a(t)}
-\end{equation}
-
-L'intégrateur permettra alors de résoudre numériquement et simplement cette équation différentielle qui serait compliquée à résoudre de manière exacte avec $N$ particules pour un $N>=3$.
-
-\vspace{2mm}
+\section{L'aspect mathématique du problème : résolution numérique}
 
 \subsection{La méthode d'Euler explicite}
 
@@ -140,10 +150,12 @@ $
 
 où $\Delta t$ est le pas de discrétisation du temps.
 
+Il est important de noter que diminuer $\Delta t$ permet d'augmenter la précision de la simulation mais réduit ses performances.
+
 \vspace{2mm}
 
 \subsection{La méthode saute-mouton (Leap frog)}
-Pour des problèmes de mécaniques, la méthode d'Euler n'est pas stable (divergence de trajectoire). Ainsi, il est préférable d'utiliser le schéma saute-mouton ("leap frog") qui est d'ordre 2 et conserve l'énergie mécanique des systèmes dynamiques.
+Pour des problèmes de mécaniques, la méthode d'Euler n'est pas stable (divergence de trajectoire). Ainsi, il est préférable d'utiliser le schéma saute-mouton ("leap frog") qui est d'ordre 2 et conserve l'énergie mécanique des systèmes étudiés.
 
 \vspace{3mm}
 Voici la forme de la version "Drift-kick-Drift" de la méthode:
@@ -183,3 +195,5 @@ $
 \vspace{2mm}
 
 où $\Delta t$ est le pas de discrétisation du temps.
+
+De même, réduire $\Delta t$ augmente la précision de la simulation au détriment de ses performances.

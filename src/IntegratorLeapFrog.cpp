@@ -43,6 +43,10 @@ void IntegratorLeapFrog::SingleStep()
   for(unsigned int i=0;i<m_dim/4;i++){
     halfState[i].x = pState[i].x + pState[i].vx * m_h/2;
     halfState[i].y = pState[i].y + pState[i].vy * m_h/2;
+
+    //Pour le calcul d'énergie cinétique
+    halfState[i].vx = pState[i].vx ;
+    halfState[i].vy = pState[i].vy;
   }
 
   //Kick

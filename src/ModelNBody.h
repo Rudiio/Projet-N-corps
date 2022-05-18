@@ -83,7 +83,6 @@ private:
 
     float mesure_temps;
     float mesure_construction_BH;
-    double Ecinetique; //Energie cinétique
 };
 
 #endif

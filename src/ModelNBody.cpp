@@ -55,7 +55,6 @@ ModelNBody::ModelNBody(int num,int methode_calcul)
   ,m_bVerbose(false)
   ,mesure_temps(0)
   ,mesure_construction_BH(0)
-  ,Ecinetique(0)
 {
   BHTreeNode::s_gamma = gamma_1;
 
@@ -260,10 +259,9 @@ void ModelNBody::InitCollision(int num, int mode)
     else if (i<70000)  //Initialisation des autres particules  random autour de black hole 1
     {
       const double rad = 10;
-      double r = 0.1 + .8 * (rad * ((double)rand() / RAND_MAX));
+      double r = 0.1 + .8 * (rad * ((double)rand() / RAND_MAX))+1;
       double a = 2.0*M_PI*((double)rand() / RAND_MAX);
       st_aux.mass =0.03 + 20 * ((double)rand() / RAND_MAX);
-      // cout << "mass=" << st_aux.mass << "\n";
       st.x = r*sin(a);
       st.y = r*cos(a);
 
@@ -562,9 +560,6 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   gettimeofday(&start, NULL);
 
   // omp_set_num_threads(8);
-  Ecinetique=0;
-  // m_root.Epotentielle=0;
-
   //Calcul des forces
   #pragma omp parallel for
   for (int i=0; i<m_num; ++i)   //i=1 de base
@@ -597,7 +592,8 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
     pDeriv[i].ay = acc.y;
     pDeriv[i].vx = pState[i].vx;
     pDeriv[i].vy = pState[i].vy;
-    Ecinetique += 1/2*p.m_pAuxState->mass  * (pDeriv[i].vx*pDeriv[i].vx +pDeriv[i].vy*pDeriv[i].vy );
+
+    // cout << "test=" << pState[i].vx <<endl;
 
     // pDeriv[i].ax = acc.x;
     // pDeriv[i].ay = acc.y;
@@ -649,7 +645,6 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   pDeriv[0].ay = acc.y;
   pDeriv[0].vx = pState[0].vx;
   pDeriv[0].vy = pState[0].vy;
-  Ecinetique += 1/2*p.m_pAuxState->mass  * (pDeriv[0].vx*pDeriv[0].vx +pDeriv[0].vy*pDeriv[0].vy );
   // pDeriv[0].ax = acc.x;
   // pDeriv[0].ay = acc.y;
   // pDeriv[0].vx = pState[0].vx + m_timeStep * acc.x;
@@ -663,7 +658,6 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   // m_camPos.x = m_root.GetCenterOfMass().x;
   // m_camPos.y = m_root.GetCenterOfMass().y;
 
-  // m_root.Epotentielle *= gamma_si;
   //Anti-warning
   acc.x = acx[0];
   acc.y = acy[0];

@@ -30,6 +30,7 @@ public:
   virtual void Render() = 0;
   virtual float gettime()=0;
   virtual float getconstruction()=0;
+  virtual void CalcultateEnergy(int methode)=0;
 
 protected:
 

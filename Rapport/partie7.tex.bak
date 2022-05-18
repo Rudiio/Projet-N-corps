@@ -51,7 +51,7 @@ On peut voir sur la figure que globalement la parallélisation n'améliore pas �
 
 \subsection{Naïve optimisée}
 \begin{center}
-\includegraphics[scale=0.6]{./resultats/comparison_NE.png}
+\includegraphics[scale=0.6]{./resultats/comparison_NO.png}
 \captionsetup{hypcap=false}
 \captionof{figure}{Résultats pour l'algorithme naïf optimisé}
 \label{fig12}

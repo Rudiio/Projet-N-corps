@@ -60,6 +60,7 @@ private:
     void DrawROI();
     void DrawCenterOfMass();      //Marche pas
     void DrawNode(BHTreeNode *pNode, int level);  //Marche pas
+    void CalcultateEnergy(int methode);
 
     ModelNBody *m_pModel;     //Objet : Modèle de résolution
     IIntegrator *m_pSolver;   //Objet : Intégrateur
@@ -71,6 +72,8 @@ private:
     std::ofstream m_outfile;
 
     int* colorspread;
+    double Ecin;
+    double Epot;
 };
 
 #endif	/* _NBODYWND_H */

@@ -14,6 +14,7 @@
 #include <omp.h>
 #include <iostream>
 
+using namespace std;
 //------------------------------------------------------------------------------
 #include "IntegratorEuler.h"
 #include "IntegratorLeapFrog.h"
@@ -89,6 +90,7 @@ void NBodyWnd::Render()
   if (!(m_flags & dspPAUSE))
   {
     m_pSolver->SingleStep();
+
     ++ct;
     if (m_bDumpState && ct%1000000==0)
     {
@@ -102,6 +104,7 @@ void NBodyWnd::Render()
       }
       m_outfile << std::endl;
     }
+
 
     // if (m_bDumpImage && ct%2000==0)
     // {
@@ -551,4 +554,56 @@ float NBodyWnd::gettime()
 float NBodyWnd::getconstruction()
 {
   return m_pModel->Getmesureconstruction();
+}
+
+void NBodyWnd::CalcultateEnergy(int methode)
+{
+  //Position et vitesse actuelle
+  PODState *pState = reinterpret_cast<PODState*>(m_pSolver->GetState());
+  int num = m_pModel->GetN();
+  double gamma = 6.67428e-11;
+  Ecin = Epot = 0;
+  
+  for(int i=0;i<num;i++){
+    double vx = pState[i].vx;
+    double vy = pState[i].vy;
+
+    Ecin += (double)1/2 * m_pModel->GetMass(i)* (vx*vx + vy*vy);
+
+    for(int j=0;j<num;j++){
+      if(i!=j){
+        double dx = pState[i].x - pState[j].x;  
+        double dy = pState[i].y - pState[j].y; 
+        double d = sqrt(dx*dx + dy*dy + 0.5);
+        Epot += gamma * m_pModel->GetMass(i)*m_pModel->GetMass(j)/(d);
+      }
+    }
+  }
+
+  //Ecriture dans les fichiers
+  //Barne-Hut
+  if(methode==1){
+    ofstream fichier("./data/E_BH.txt", ios_base::app ); 
+    if(fichier.is_open()){
+      fichier << m_pSolver->GetTime() << " " << Ecin << " " << Epot << " " << Ecin -Epot << endl;
+      fichier.close();
+    }
+  }
+
+  //Naïve optimisée
+  else if(methode==2){
+    std::ofstream fichier("./data/E_NO.txt", ios_base::app ); 
+    if(fichier.is_open()){
+      fichier << m_pSolver->GetTime() << " " << Ecin << " " << Epot << " " << Ecin -Epot << endl;
+      fichier.close();
+    }
+  }
+  //Naïve
+  else if(methode==3){
+    std::ofstream fichier("./data/E_N.txt", ios_base::app ); 
+    if(fichier.is_open()){
+      fichier << m_pSolver->GetTime() << " " << Ecin << " " << Epot << " " << Ecin -Epot << endl;
+      fichier.close();
+    }
+  }
 }

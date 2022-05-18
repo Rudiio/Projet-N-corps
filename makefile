@@ -36,7 +36,7 @@ SDLWnd.o : ./src/SDLWnd.cpp ./src/SDLWnd.h
 	$(CC) $(CFLAGS) -c $< -lSDL -DOpenGL_GL_PREFERENCE=LEGACY
 
 NBodyWnd.o : ./src/NBodyWnd.cpp ./src/NBodyWnd.h
-	$(CC) $(CFLAGS) -c $< -lSDL -DOpenGL_GL_PREFERENCE=LEGACY
+	$(CC) $(CFLAGS) -c $< -lSDL -DOpenGL_GL_PREFERENCE=LEGACY $(LIBS)
 
 Types.o :  ./src/Types.cpp ./src/Types.h
 	$(CC) $(CFLAGS) -c $< 
