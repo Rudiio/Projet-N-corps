@@ -392,7 +392,7 @@ void SDLWindow::MainLoop(int num,int methode,int nb_iterations_max)
     PollEvents();
 
     //Calcul des énergies à désactiver pour des simulations normales car en O(N^2)
-    CalcultateEnergy(methode);
+    // CalcultateEnergy(methode);
 
     ++ct;
 
