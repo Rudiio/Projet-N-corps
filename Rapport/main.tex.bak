@@ -133,7 +133,7 @@
 {Partie \ \thechapter} % label
 {0.5ex} % sep
 {
-    \vspace{1ex}
+    \vspace{0.5ex}
 } % before-code
 [
 \vspace{-0.5ex}%

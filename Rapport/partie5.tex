@@ -4,7 +4,7 @@ Pour accélérer les calculs et permettre de plus grandes simulations, nous allo
 
 \section{Présentation de l'algorithme}
 
-L'algorithme de Barnes-Hut est algorithme hiérarchique inventé par Josh Barnes et Piet Hut en 1986. Il est basé sur l'utilisation d'un arbre appelé $quadtree$ afin d'approximer le calcul des  interactions gravitationnelles. Il permet de réduire les calculs de manière à obtenir une complexité en $O(Nlog(N))$, tout en restant physiquement correct. Sa fiabilité et son efficacité en fait alors l'algorithme le plus utilisé pour résoudre le problème à N corps.
+L'algorithme de Barnes-Hut est un algorithme hiérarchique inventé par Josh Barnes et Piet Hut en 1986. Il est basé sur l'utilisation d'un arbre appelé $quadtree$ afin d'approximer le calcul des  interactions gravitationnelles. Il permet de réduire les calculs de manière à obtenir une complexité en $O(Nlog(N))$, tout en restant physiquement correct. Sa fiabilité et son efficacité en fait alors l'algorithme le plus utilisé pour résoudre le problème à N corps.
  
 \section{Principe général de l'algorithme}
 
@@ -80,7 +80,7 @@ longueur d'un coté du nœud actuel  et $D$ est la distance entre la particule $
 Si $\frac{l}{D} < \theta$ alors on calcule la force, appliquée à $p$ à partir du centre de masse et de la masse du nœud. Sinon, elle sera la somme des forces exercées par les fils de ce nœud.
 \end{itemize}
 
-Nous avons ainsi le résultat suivant
+Nous avons ainsi par exemple le résultat suivant:
 \begin{center}
 \includegraphics[scale=0.8]{./images/BH_tree.png}
 \captionsetup{hypcap=false}
@@ -88,7 +88,7 @@ Nous avons ainsi le résultat suivant
 \label{fig7}
 \end{center}
 
-Il devient alors possible de pousser les simulations plus loin pour simuler notamment la formation de galaxies (spirale ou sphériques) en augmentant considérablement le nombre de particules. Cela montre alors l'intérêt et l'efficacité de l'algorithme de Barnes-Hut.
+Il devient alors possible de pousser les simulations plus loin pour simuler notamment la formation de galaxies (spirales ou sphériques) en augmentant considérablement le nombre de particules. Cela montre alors l'intérêt et l'efficacité de l'algorithme de Barnes-Hut.
 
 \subsection{Vérification du modèle}
 

@@ -5,7 +5,7 @@ Pour cela, nous avons lancé des séries de tests avec 100 itérations et avec d
 
 \section{Construction de l'arbre}
 
-Les tests de parallélisation de notre algorithme de construction du $quadtree$ ont montré qu'il n'est pas parallélisable. En effet,  effectuer les insertions en parallèle engendre des erreurs lors  des calculs de force par l'utilisation de cet arbre, qui font diverger les particules. Cela pourrait s'expliquer par le fait que les insertions de particules sont dépendantes les unes des autres et ne peuvent donc être effectués en parallèle au risque de fausser les calculs. Ainsi, pour pouvoir le paralléliser, il est nécessaire de modifier au préalable le fonctionnement de l'algorithme d'insertion.
+Les tests de parallélisation de notre algorithme de construction du $quadtree$ ont montré qu'il n'est pas parallélisable. En effet,  effectuer les insertions en parallèle engendre des erreurs lors  des calculs de force par l'utilisation de cet arbre, qui font diverger les particules. Cela pourrait s'expliquer par le fait que les insertions de particules sont dépendantes les unes des autres et ne peuvent donc être effectuéss en parallèle au risque de fausser les calculs. Ainsi, pour pouvoir le paralléliser, il est nécessaire de modifier au préalable le fonctionnement de l'algorithme d'insertion.
 
 \begin{center}
 \includegraphics[scale=0.6]{./resultats/Energy_tree.png}
@@ -50,7 +50,7 @@ De plus, on peut déjà remarquer que l'ordre de grandeur des durée est plus pe
 \label{fig13}
 \end{center}
 
-On peut voir sur la figure que globalement la parallélisation améliore de manière conséquente l'efficacité des calculs. En effet, la version parallélisée est $1.7$ fois plus rapide que la version séquentielle. Dans les deux cas la complexité est en $Olog(N)$
+On peut voir sur la figure que globalement la parallélisation améliore de manière conséquente l'efficacité des calculs. En effet, la version parallélisée est $1.7$ fois plus rapide que la version séquentielle. Dans les deux cas la complexité est en $O(log(N))$
 
 \subsection{Naïve optimisée}
 \begin{center}

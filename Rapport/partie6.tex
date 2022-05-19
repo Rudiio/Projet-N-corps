@@ -24,7 +24,7 @@ La particularité des threads est qu'ils partagent la même zone mémoire ce qui
 \subsection{Principe}
 OpenMp est une interface pour la parallélisation multi-threads à mémoire partagée. Elle permet simplement, à partir d'instruction similaire à celle du pré-processeur de paralléliser un programme.
 
-Le principe est ici de paralléliser des blocs d'instructions comme des boucles. Ainsi, un programme utilisant OpenMp est constituée de région séquentielle et de région parallèle. En début de région parallèle, le thread 0 lance alors la création de nouveaux threads.
+Le principe est ici de paralléliser des blocs d'instructions comme des boucles. Ainsi, un programme utilisant OpenMp est constitué de régions séquentielles et de régions parallèles. En début de région parallèle, le thread 0 lance alors la création de nouveaux threads.
 
 Il est important de préciser que pour avoir une parallélisation efficace, il est nécessaire d'éviter de refaire des calculs inutiles et de s'assurer que chaque tâches peut s'effectuer sans déranger les autres notamment au niveau de la mémoire partagée.
 

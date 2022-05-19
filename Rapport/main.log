@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  18 MAY 2022 23:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  20 MAY 2022 00:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -999,7 +999,7 @@ l.1 \chapter
  <./presentation/two.png>]
 Chapitre 2.
 
-Overfull \hbox (3.17525pt too wide) in paragraph at lines 39--41
+Overfull \hbox (3.17525pt too wide) in paragraph at lines 39--42
 []\T1/cmr/m/n/10 La dis-tance $\OML/cmm/m/it/10 d$ \T1/cmr/m/n/10 entre ces deu
 x par-ti-cules est alors don-née par la for-mule sui-vante : $\OML/cmm/m/it/10 
 d \OT1/cmr/m/n/10 = []$\T1/cmr/m/n/10 . 
@@ -1170,7 +1170,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  28661 strings out of 478584
  515463 string characters out of 2844401
- 1003760 words of memory out of 3000000
+ 1003758 words of memory out of 3000000
  46204 multiletter control sequences out of 15000+600000
  482940 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1202,9 +1202,9 @@ AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Use
 rs/fidac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 ><C:/Users/fidac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mti10.pfb>
-Output written on main.pdf (23 pages, 1160752 bytes).
+Output written on main.pdf (23 pages, 1160286 bytes).
 PDF statistics:
- 1099 PDF objects out of 1200 (max. 8388607)
+ 1097 PDF objects out of 1200 (max. 8388607)
  121 named destinations out of 1000 (max. 500000)
  590 words of extra memory for PDF output out of 10000 (max. 10000000)
 

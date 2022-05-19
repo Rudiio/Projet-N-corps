@@ -33,7 +33,7 @@
 \caption{2 galaxies\label{fig18}}
 \end{minipage} \hfill
 \begin{minipage}[b]{.46\linewidth}
-\centering\epsfig{figure=./images/BH_tree.png,width=\linewidth}
+\centering\epsfig{figure=./images/BH.png,width=\linewidth}
 \caption{Quadtree\label{fig19}}
 \end{minipage}
 \end{figure}

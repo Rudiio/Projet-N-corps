@@ -19,7 +19,7 @@ En terme de performance, comme prévu l'algorithme est inefficace et montre ses 
 \vspace{2mm}
 
 Une première manière d'optimiser le calcul des forces est d'utiliser le principe d'action-réaction afin de ne pas effectuer plusieurs fois les calculs.
-Pour cela, nous pouvons suivre une démarche d'optimisation dynamique en utilisant plus de mémoire afin de réduire nos calculs. Ainsi, si l'on considère les particules $p1$ et $p2$, lors du calcul de la force $\vec{F}_{2 \rightarrow 1}$ de $p2$ sur $p1$ on peut stocker directement la force de $p1$ sur $p2$, $\vec{F}_{1 \rightarrow 2}$ qui vaut $-\vec{F}_{2 \rightarrow 1}$, ce qui nous permet de ne pas refaire le calcul.
+Pour cela, nous pouvons suivre une démarche d'optimisation dynamique en utilisant plus de mémoire afin de réduire nos calculs. Ainsi, si l'on considère les particules $p1$ et $p2$, lors du calcul de la force $\vec{F}_{2 \rightarrow 1}$ de $p2$ sur $p1$, nous pouvons stocker directement la force de $p1$ sur $p2$, $\vec{F}_{1 \rightarrow 2}$ qui vaut $-\vec{F}_{2 \rightarrow 1}$, ce qui nous permet de ne pas refaire le calcul lors du calcul des forces qui s'appliquent sur $p2$.
 
 \vspace{2mm}
 Cela donne donc le nombre de calculs suivant :
@@ -39,7 +39,7 @@ On peut déjà observer que la complexité de ce calcul est toujours  en $O(N^2)
 
 \section{Vérification des modèles}
 
-Il est nécessaire de vérifier si nos modèles sont bien implémentés et cohérent avec la physique du problème. Pour cela, un moyen de procéder est de calculer l'énergie mécanique du système à partir de son énergie cinétique et de son énergie potentielle. En effet, l'énergie mécanique du système se conserve au cours du temps étant donné qu'aucune force non conservative n'est prise en compte.
+Il est nécessaire de vérifier si nos modèles sont bien implémentés et cohérents avec la physique du problème. Pour cela, un moyen de procéder est de calculer l'énergie mécanique du système à partir de son énergie cinétique et de son énergie potentielle. En effet, l'énergie mécanique du système se conserve au cours du temps étant donné qu'aucune force non conservative n'est prise en compte.
 Cela permet aussi de vérifier la validité de notre intégrateur car l'instabilité d'un intégrateur se traduirait par le non respect de ce principe de conservation de l'énergie mécanique.
 
 Nos calculs ont été effectués avec un pas $\Delta t = 50 $ et $1000$ itérations.
@@ -59,7 +59,7 @@ Nos calculs ont été effectués avec un pas $\Delta t = 50 $ et $1000$ itérati
 \end{center} 
 
 
-Dans les deux méthodes, au début de la simulation les énergies
+Pour les deux méthodes, au début de la simulation les énergies
 varient beaucoup, cela est dû aux conditions initiales qui ne
 respectent pas forcément l'aspect physique du problème.
 On peut voir sur la figure $4.3$ que l'énergie mécanique de la

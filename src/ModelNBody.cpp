@@ -198,8 +198,8 @@ void ModelNBody::GetOrbitalVelocity(const ParticleData &p1, const ParticleData &
   double &vx = p2.m_pState->vx,
          &vy = p2.m_pState->vy;
 
-  vx =( r[1] / dist) * v*100;
-  vy =(-r[0] / dist) * v*100;
+  vx =( r[1] / dist) * v*150;
+  vy =(-r[0] / dist) * v*150;
 }
 
 //------------------------------------------------------------------------
@@ -253,7 +253,7 @@ void ModelNBody::InitCollision(int num, int mode)
       //Paramètres de black hole 1
       st.x  = st.y = 0;
       st.vx = st.vy = 0;    //vitesse nulle
-      st_aux.mass = 431000;//4310000; //43100;//1000000; //431000;   // 4.31 Millionen Sonnenmassen
+      st_aux.mass = 4310000;//4310000; //43100;//1000000; //431000;   // 4.31 Millionen Sonnenmassen
     }
     //---------------------------------------------------------------------------------------------------- POUR DÉCIDER À PARTIR DE QUELLE PARTICULE ON CHANGE DE GALAXIE
     else if (i<70000)  //Initialisation des autres particules  random autour de black hole 1

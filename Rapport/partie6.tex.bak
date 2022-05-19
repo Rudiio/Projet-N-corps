@@ -40,9 +40,9 @@ La plus importante et intéressante pour nous est celle permettant de paralléli
 Voici également des fonctions qui peuvent s'avérer utiles:
 
 \begin{lstlisting}
-omp_get_num_threads() //retourne le nombre total de threads utilisés
-omp_set_num_threads(int) // spécifie un nombre de thread dans une région parallèle
-omp_get_thread_num() // retourne le numéro du thread courant
+omp_get_num_threads() //renvoie le nombre total de threads utilisés
+omp_set_num_threads(int) // définit le nombre de thread à utiliser dans une région parallèle
+omp_get_thread_num() // renvoie le numéro du thread courant
 \end{lstlisting}
 
 Openmp permet aussi de définir si une variable doit être privée ou partagée entre tous les threads en utilisant la clause $private()$.
