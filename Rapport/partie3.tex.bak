@@ -1,9 +1,9 @@
 \chapter{Analyse du code}
 
-Notre projet s'effectue dans la continuité d'un projet déjà bien entamé, ainsi, la première étape est de comprendre et d'assimiler le travail qui a déjà été effectué. Le fait que nous codons par dessus un code qui n'est pas le nôtre nous a compliqué la tâche lors de l'implémentation de certaines fonctions, comme l'intégrateur. L'analyse du code consistera en une description de chaque fichier et des structures utilisées, le code est très commenté.
+Notre projet s'effectue dans la continuité d'un projet déjà bien entamé, ainsi, la première étape a été de comprendre et d'assimiler le travail déjà effectué. Le fait que nous codons par dessus un code qui n'est pas le nôtre nous a compliqué la tâche lors de l'implémentation de certaines fonctions, comme l'intégrateur. L'analyse du code consistera en une description de chaque fichier et des structures utilisées, le code est très commenté.
 
 \section{Visualisation}
-L'affichage est géré par les fichiers \textit{SDLWnd} et \textit{NBodyWnd}, qui utilise les libraires SDL et OpenGL. Cette partie du code était déjà implémentée quand le code nous a été transmis, les principales modifications que nous avons fait consiste en des corrections de bug (touches pour zoomer, dézommer, afficher l'arbre) ainsi qu'en l'ajout d'une coloration aux étoiles en fonction du mode d'initialisation choisi.
+L'affichage est géré par les fichiers \textit{SDLWnd} et \textit{NBodyWnd}, qui utilise les libraires SDL et OpenGL. Cette partie du code était déjà implémentée quand le code nous a été transmis, les principales modifications que nous avons fait consiste en des corrections de bug (touches pour zoomer, dézoomer, afficher l'arbre) ainsi qu'en l'ajout d'une coloration des étoiles en fonction du mode d'initialisation choisi.
 
 \section{ModelNBody.cpp // ModelNBody.h}
 Ces fichiers contiennent la classe sur laquelle repose la simulation. C'est ici que l'on initialise la simulation et toutes les particules.

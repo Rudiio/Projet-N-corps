@@ -12,7 +12,7 @@ Un thread ou processus léger est un fil d'exécution qui constitue un processus
 \includegraphics[scale=0.8]{images/process_thread.png}
 \captionsetup{hypcap=false}
 \captionof{figure}{Processus et threads  \\source : \url{https://ccub.u-bourgogne.fr}}
-\label{fig8}
+\label{fig10}
 
 \end{center} 
 
@@ -45,12 +45,14 @@ omp_set_num_threads(int) // spécifie un nombre de thread dans une région paral
 omp_get_thread_num() // retourne le numéro du thread courant
 \end{lstlisting}
 
+Openmp permet aussi de définir si une variable doit être privée ou partagée entre tous les threads en utilisant la clause $private()$.
+
 \section{Application à notre programme de résolution du problème à N-corps}
 
-Dans notre cas, les processus les plus lourds sont les calculs de forces gravitationnelle et la création de l'arbre, c'est donc ceux-ci que nous allons paralléliser.
+Dans notre cas, les processus les plus lourds sont les calculs de forces gravitationnelle et la création de l'arbre, c'est donc ceux-ci que nous avons parallélisés. Nous avons fixé le nombre de threads à $4$ et toutes les variables seront partagées entre les threads.
 
 \begin{itemize}
-\item La construction de l'arbre : les particules peuvent être ajoutées parallèlement cependant, il est possible d'obtenir des problèmes de compétition entre les threads, il est donc intéressant de vérifier si la parallélisation effective.
+\item La construction de l'arbre : les particules peuvent être ajoutées parallèlement cependant, il est possible d'obtenir des problèmes de compétition entre les threads, il est donc intéressant de vérifier si la parallélisation est effective.
 
 \item Le calcul des forces : les calculs intermédiaires (distances...) sont stockés dans des variables temporaires ce qui facilite la parallélisation.
 \end{itemize}

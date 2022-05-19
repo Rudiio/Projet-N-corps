@@ -16,9 +16,9 @@ Nous avons pu mettre en place $3$ méthodes de calcul différentes pour les forc
 \end{itemize}
 
 
-Au final, l'algorithme de Barnes-hut est bien plus rapide et efficace que les autres malgré qu'il donne des résultats similaires. Il s'agit donc de la meilleure résolution approchée possible au problème à N-corps. De plus, la parallélisation permet d'avoir des performances plus stables et montre son intérêt pour de grandes simulations. Cependant, la parallélisation des autres méthodes montre clairement l'importance d'avoir une implémentation qui soit compatible, au risque d'avoir une parallélisation inefficace ou même pénalisante.
+Au final, l'algorithme de Barnes-hut est bien plus rapide et efficace que les autres malgré qu'il donne des résultats similaires. Il s'agit donc de la meilleure résolution approchée possible au problème à N-corps. De plus, la parallélisation permet d'avoir des performances bien plus intéressantes et montre son intérêt pour de grandes simulations. Cependant, la parallélisation de l'insertion des particules dans l'arbre montre l'importance de la compatibilité des algorithme, au risque d'avoir une parallélisation inefficace ou même pénalisante.
 
-Cependant, ce projet reste encore exploitable puisqu'il existe encore beaucoup de possibilités comme par exemple le passage sur une carte graphique pour simuler plus de points ou encore le passage en 3 dimensions.
+Cependant, ce projet reste encore exploitable puisqu'il existe encore beaucoup de possibilités comme par exemple le passage sur une carte graphique pour simuler plus de points,encore le passage en 3 dimensions ou simplement une optimisation de la parallélisation.
 
 \section{Impacts du projet}
 
@@ -43,7 +43,7 @@ meilleure compréhension globale.
 \subsection{Noah}
 
 
-Ce projet, à l'intersection de la physique, des mathématiques et de l'informatique, nous a permis de développer nos compétences techniques en C++, parallélisation et optimisation. L'interdisciplinarité m'a vraiment plu car cela nous a permis de nous intéresser à beaucoup de chose différentes. Cependant, le fait que la majeure partie du code était déjà fournie nous a contraint à étudier le code pendant une longue période qui était au final peu intéressante, et nous a confronté à des difficultés d'implémentation de certaines fonctions. Je pense avoir su contribuer au développement du projet en suggérant des idées adaptées aux difficultés rencontrées.
+Ce projet, à l'intersection de la physique, des mathématiques et de l'informatique, nous a permis de développer nos compétences techniques en C++, parallélisation et optimisation. L'interdisciplinarité m'a vraiment plu car cela nous a permis de nous intéresser à beaucoup de chose différentes. Cependant, le fait que la majeure partie du code était déjà fournie nous a contraint à étudier le code pendant une longue période et nous a confronté à des difficultés d'implémentation de certaines fonctions. Je pense avoir su contribuer au développement du projet en suggérant des idées adaptées aux difficultés rencontrées.
 
 \subsection{Rudio}
 

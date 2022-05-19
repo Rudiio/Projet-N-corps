@@ -1,6 +1,6 @@
 \chapter{Algorithme de Barnes-Hut}
 
-Pour accélérer les calculs et permettre de plus grandes simulations, nous allons dans cette partie s’intéresser à l’algorithme de Barnes-Hut.
+Pour accélérer les calculs et permettre de plus grandes simulations, nous allons dans cette partie nous intéresser à l’algorithme de Barnes-Hut.
 
 \section{Présentation de l'algorithme}
 
@@ -8,7 +8,7 @@ L'algorithme de Barnes-Hut est algorithme hiérarchique inventé par Josh Barnes
  
 \section{Principe général de l'algorithme}
 
-L'idée est d'approcher les forces à longue portée en remplaçant un groupe de points éloignés par leur centre de masse. Il y a évidemment en contrepartie une légère part erreur et approximation mais ce schéma accélère considérablement le calcul. Notamment avec une complexité $ Nlog(N)$ plutôt que $N^2$.
+L'idée est d'approcher les forces à longue portée en considérant un groupe de points éloignés comme équivalent à leur centre de masse. Il y a évidemment en contrepartie une légère erreur due à l'approximation mais ce schéma accélère considérablement le calcul. Cette erreur peut être contrôlée à partir d'un paramètre appelé $\theta$. Notamment, la méthode permet d'obtenir une complexité en $ Nlog(N)$ plutôt qu'en $N^2$.
 Au centre de cette approximation se trouve un arbre : une « carte » de l'espace qui nous aide à modéliser des groupes de points comme un seul centre de masse. En deux dimensions, nous pouvons utiliser une structure de données quadtree, qui subdivise de manière récursive les régions carrées de l'espace en quatre quadrants de taille égale. (En trois dimensions, on peut utiliser un octree qui divise de la même manière un volume cubique en huit sous-cubes.)
 
 
@@ -16,7 +16,7 @@ Au centre de cette approximation se trouve un arbre : une « carte » de l'espac
 \includegraphics[scale=0.2]{./images/quadtree.png}
 \captionsetup{hypcap=false}
 \captionof{figure}{Exemple de Quadtree \\ \url{https://www.lrde.epita.fr}}
-\label{fig5}
+\label{fig6}
 \end{center}
 
 \section{L'algorithme de Barnes-Hut}
@@ -25,19 +25,20 @@ L'algorithme de Barnes Hut se décompose en trois étapes majeures:
 \begin{enumerate}
 \item la construction de l'arbre
 
-\item le calcul des centres des masses et des masses correspondant à un nœud
+\item le calcul des centres des masses et des masses correspondant à chaque nœud
 
 \item le calcul des forces appliquées sur les particules
 \end{enumerate}
 
+Selon la version de l'algorithme utilisée, les étapes $1$ et $2$ peuvent être effectuées simultanément. 
 
-Avant de détailler ces étapes nous avons besoin de mettre en place la notion de quadrants. Un quadrant est une division de notre arbre et donc un nœud de l'arbre. Comme nous travaillons en deux dimensions, nous avons besoin de quatre quadrants, un quadrant en haut à gauche, un autre en bas à gauche , un troisième à droite en haute et un dernier à droite en bas. On les appellera respectivement NW,SW,NE et SE en référence aux points cardinaux.
+Avant de détailler ces étapes nous avons besoin de mettre en place la notion de quadrants. Un quadrant est une division de notre arbre et donc un nœud de l'arbre. Comme nous travaillons en deux dimensions, nous avons besoin de quatre quadrants, un quadrant en haut à gauche, un autre en bas à gauche , un troisième à droite en haute et un dernier à droite en bas. On les appellera respectivement NW (North-West),SW (South-West),NE (North-East) et SE (South-East) en référence aux points cardinaux.
 
 \subsection{La construction de l'arbre}
 
 Elle consiste à insérer successivement les particules dans l'arbre.
 
-Soit la particule $p1$. Tout d'abord nous devons vérifier que $P1$ doit bien être insérée dans l'arbre.
+Soit la particule $p1$. Tout d'abord nous devons vérifier que $p1$ doit bien être insérée dans l'arbre.
 Si c'est le cas nous distinguons plusieurs cas. 
 \begin{itemize}
 
@@ -50,7 +51,7 @@ Si c'est le cas nous distinguons plusieurs cas.
 
 \end{itemize}
 
-Il est important de noter que seule les feuilles contiennent des particules.
+Les particules ne sont insérées que dans les feuilles de l'arbre, les nœuds peuvent contenir plusieurs particules mais les particules en elles-mêmes ne seront stockées dans l'arbre que dans des feuilles de l'arbre (nœuds sans fils).
 
 \subsection{Le calcul des masses et centres de masse}
 
@@ -67,38 +68,44 @@ où $\forall i\in \{1,2,3,4\}$ $CM_i$ est le centre de masse d'un fils et $m_i$ 
 
 \subsection{Le calcul des forces}
 
-L'avantage de l'utilisation d'un arbre est que le calcul des forces gravitationnelles pour chaque particule se fait simplement en se servant de la récursivité, à partir de la racine de l'arbre.
+L'avantage de l'utilisation d'un arbre est que le calcul des forces gravitationnelles pour chaque particule se fait simplement en se servant de la récursivité, à partir de la racine de l'arbre. De plus, comme dit précédemment, le niveau de précision de l'algorithme et donc le nombre de calculs dépendent du paramètre $\theta$ qu'on fixe autour de $1$. Nous prendrons $\theta = 0.9$.
 
-Pour chaque particule $p$.
+Pour chaque particule $p$, on parcourt l'arbre depuis sa racine.
 
 \begin{itemize}
 \item Si le nœud actuel est une feuille, on calcule simplement la force exercée par la particule qu'elle contient sur la particule actuelle.
 
 \item Sinon, on calcule le rapport $\frac{l}{D}$ où $l$ est la
 longueur d'un coté du nœud actuel  et $D$ est la distance entre la particule $p$ et le centre de masse du nœud actuel.
-
-On introduit alors le paramètre $\theta$ qu'on fixe autour de 1.
 Si $\frac{l}{D} < \theta$ alors on calcule la force, appliquée à $p$ à partir du centre de masse et de la masse du nœud. Sinon, elle sera la somme des forces exercées par les fils de ce nœud.
 \end{itemize}
-
-Ce paramètre est important car il permet de régler le niveau de précision de l'algorithme et donc le nombre de calcul à effectuer.
-Nous prendrons $\theta = 0.9$.
-
 
 Nous avons ainsi le résultat suivant
 \begin{center}
 \includegraphics[scale=0.4]{./images/arbre_bh.png}
 \captionsetup{hypcap=false}
 \captionof{figure}{Arbre construit avec l'algorithme de Barnes Hut}
-\label{fig6}
+\label{fig7}
 \end{center}
 
-On peut donc déjà remarquer que physiquement le résultat obtenu semble correcte malgré les approximations effectuées, c'est ce qui fait la force de cet algorithme.
-Il devient alors possible de pousser les simulations plus loin pour simuler notamment la formation de galaxies (spirale ou sphériques) en augmentant considérablement le nombre de particules,. Cela montre alors l'intérêt et l'efficacité de l'algorithme de Barnes-Hut.
+Il devient alors possible de pousser les simulations plus loin pour simuler notamment la formation de galaxies (spirale ou sphériques) en augmentant considérablement le nombre de particules. Cela montre alors l'intérêt et l'efficacité de l'algorithme de Barnes-Hut.
 
 \begin{center}
 \includegraphics[scale=0.9]{./images/spirale_2.png}
 \captionsetup{hypcap=false}
 \captionof{figure}{Galaxie spirale avec 30000 particules}
-\label{fig7}
+\label{fig8}
 \end{center}
+
+\subsection{Vérification du modèle}
+
+\begin{center}
+\includegraphics[scale=0.6]{./resultats/Energy_BH.png}
+\captionsetup{hypcap=false}
+\captionof{figure}{Bilan énergétique méthode de Barnes-Hut}
+\label{fig9}
+\end{center}
+
+Les paramètres sont les mêmes que pour les autres modèles : $\Delta t = 50$ et $1000$ itérations.
+
+L'énergie mécanique se conserve à partir de la $260$ème itération, avant ça le modèle est perturbé par les conditions initiales. Ainsi, le modèle est bien valide physiquement malgré les approximations effectuées, ce qui montre l'intérêt de l'algorithme. Il a une vitesse de convergence située entre celles des deux précédents modèles.

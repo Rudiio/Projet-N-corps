@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  17 MAY 2022 18:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  18 MAY 2022 23:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -564,6 +564,18 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
+(C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box67
+\beforetitleunit=\skip58
+\aftertitleunit=\skip59
+\ttl@plus=\dimen271
+\ttl@minus=\dimen272
+\ttl@toksa=\toks46
+\titlewidth=\dimen273
+\titlewidthlast=\dimen274
+\titlewidthfirst=\dimen275
+)
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
 
@@ -610,7 +622,7 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen271
+\@linkdim=\dimen276
 \Hy@linkcounter=\count310
 \Hy@pagecounter=\count311
  (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
@@ -640,7 +652,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
 \c@Hy@tempcnt=\count313
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen272
+\XeTeXLinkMargin=\dimen277
 
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -651,8 +663,8 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count314
-\Field@Width=\dimen273
-\Fld@charsize=\dimen274
+\Field@Width=\dimen278
+\Fld@charsize=\dimen279
 Package hyperref Info: Hyper figures OFF on input line 6076.
 Package hyperref Info: Link nesting OFF on input line 6081.
 Package hyperref Info: Hyper index ON on input line 6084.
@@ -694,28 +706,28 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip58
+\Hy@SectionHShift=\skip60
 )
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-\TX@col@width=\dimen275
-\TX@old@table=\dimen276
-\TX@old@col=\dimen277
-\TX@target=\dimen278
-\TX@delta=\dimen279
+\TX@col@width=\dimen280
+\TX@old@table=\dimen281
+\TX@old@col=\dimen282
+\TX@target=\dimen283
+\TX@delta=\dimen284
 \TX@cols=\count320
-\TX@ftn=\toks46
+\TX@ftn=\toks47
 )
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/abstract\abstract.sty
 Package: abstract 2009/06/08 v1.2a configurable abstracts
-\abstitleskip=\skip59
-\absleftindent=\skip60
-\absrightindent=\skip61
-\absparindent=\skip62
-\absparsep=\skip63
+\abstitleskip=\skip61
+\absleftindent=\skip62
+\absrightindent=\skip63
+\absparindent=\skip64
+\absparsep=\skip65
 )
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
@@ -729,15 +741,15 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@cnth=\count321
 \Gm@cntv=\count322
 \c@Gm@tempcnt=\count323
-\Gm@bindingoffset=\dimen280
-\Gm@wd@mp=\dimen281
-\Gm@odd@mp=\dimen282
-\Gm@even@mp=\dimen283
-\Gm@layoutwidth=\dimen284
-\Gm@layoutheight=\dimen285
-\Gm@layouthoffset=\dimen286
-\Gm@layoutvoffset=\dimen287
-\Gm@dimlist=\toks47
+\Gm@bindingoffset=\dimen285
+\Gm@wd@mp=\dimen286
+\Gm@odd@mp=\dimen287
+\Gm@even@mp=\dimen288
+\Gm@layoutwidth=\dimen289
+\Gm@layoutheight=\dimen290
+\Gm@layouthoffset=\dimen291
+\Gm@layoutvoffset=\dimen292
+\Gm@dimlist=\toks48
 
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
@@ -748,13 +760,13 @@ Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen288
-\captionmargin@=\dimen289
-\captionwidth=\dimen290
-\caption@tempdima=\dimen291
-\caption@indent=\dimen292
-\caption@parindent=\dimen293
-\caption@hangindent=\dimen294
+\captionmargin=\dimen293
+\captionmargin@=\dimen294
+\captionwidth=\dimen295
+\caption@tempdima=\dimen296
+\caption@indent=\dimen297
+\caption@parindent=\dimen298
+\caption@hangindent=\dimen299
 Package caption Info: Standard document class detected.
 Package caption Info: french babel package is loaded.
 )
@@ -764,18 +776,18 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
 \c@KVtest=\count326
-\sf@farskip=\skip64
-\sf@captopadj=\dimen295
-\sf@capskip=\skip65
-\sf@nearskip=\skip66
+\sf@farskip=\skip66
+\sf@captopadj=\dimen300
+\sf@capskip=\skip67
+\sf@nearskip=\skip68
 \c@subfigure=\count327
 \c@subfigure@save=\count328
 \c@lofdepth=\count329
 \c@subtable=\count330
 \c@subtable@save=\count331
 \c@lotdepth=\count332
-\sf@top=\skip67
-\sf@bottom=\skip68
+\sf@top=\skip69
+\sf@bottom=\skip70
 ) (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count333
@@ -786,23 +798,23 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@ppsaveapp=\count336
 ) (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count337
-\lst@gtempboxa=\box67
-\lst@token=\toks48
+\lst@gtempboxa=\box68
+\lst@token=\toks49
 \lst@length=\count338
-\lst@currlwidth=\dimen296
+\lst@currlwidth=\dimen301
 \lst@column=\count339
 \lst@pos=\count340
-\lst@lostspace=\dimen297
-\lst@width=\dimen298
+\lst@lostspace=\dimen302
+\lst@width=\dimen303
 \lst@newlines=\count341
 \lst@lineno=\count342
-\lst@maxwidth=\dimen299
+\lst@maxwidth=\dimen304
 
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count343
 \lst@skipnumbers=\count344
-\lst@framebox=\box68
+\lst@framebox=\box69
 )
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -824,30 +836,30 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 tex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count345
-\l__pdf_internal_box=\box69
+\l__pdf_internal_box=\box70
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Info: Redefining \degres on input line 149.
-LaTeX Info: Redefining \up on input line 149.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Info: Redefining \degres on input line 163.
+LaTeX Info: Redefining \up on input line 163.
 
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/ucs\ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
@@ -856,16 +868,16 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count346
-\scratchdimen=\dimen300
-\scratchbox=\box70
+\scratchdimen=\dimen305
+\scratchbox=\box71
 \nofMPsegments=\count347
 \nofMParguments=\count348
-\everyMPshowfont=\toks49
+\everyMPshowfont=\toks50
 \MPscratchCnt=\count349
-\MPscratchDim=\dimen301
+\MPscratchDim=\dimen306
 \MPnumerator=\count350
 \makeMPintoPDFobject=\count351
-\everyMPtoPDFconversion=\toks50
+\everyMPtoPDFconversion=\toks51
 )
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -877,7 +889,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 149.
+Package hyperref Info: Link coloring OFF on input line 163.
 
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -891,9 +903,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count352
 )
-LaTeX Info: Redefining \ref on input line 149.
-LaTeX Info: Redefining \pageref on input line 149.
-LaTeX Info: Redefining \nameref on input line 149.
+LaTeX Info: Redefining \ref on input line 163.
+LaTeX Info: Redefining \pageref on input line 163.
+LaTeX Info: Redefining \nameref on input line 163.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -939,12 +951,12 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count353
 (title.tex
-<./logo.png, id=230, 481.8pt x 190.46156pt>
+<./logo.png, id=242, 481.8pt x 190.46156pt>
 File: ./logo.png Graphic file (type png)
 <use ./logo.png>
 Package pdftex.def Info: ./logo.png  used on input line 5.
 (pdftex.def)             Requested size: 169.29684pt x 66.92409pt.
-<./galaxy.jpg, id=231, 369.88188pt x 357.83687pt>
+<./galaxy.jpg, id=243, 369.88188pt x 357.83687pt>
 File: ./galaxy.jpg Graphic file (type jpg)
 <use ./galaxy.jpg>
 Package pdftex.def Info: ./galaxy.jpg  used on input line 20.
@@ -957,7 +969,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.47 ...e {8}Conclusions du projet}{16}{chapter.8}
+l.46 ...el et parall\IeC {\`e}le}{15}{section.7.3}
                                                   % [1
 
 ])
@@ -966,11 +978,11 @@ l.47 ...e {8}Conclusions du projet}{16}{chapter.8}
 
  [0] (partie1.tex
 Chapitre 1.
-<presentation/2_corps.png, id=309, 344.2461pt x 159.2349pt>
-File: presentation/2_corps.png Graphic file (type png)
-<use presentation/2_corps.png>
-Package pdftex.def Info: presentation/2_corps.png  used on input line 13.
-(pdftex.def)             Requested size: 312.9803pt x 144.78249pt.
+<presentation/two.png, id=324, 200.75pt x 120.45pt>
+File: presentation/two.png Graphic file (type png)
+<use presentation/two.png>
+Package pdftex.def Info: presentation/two.png  used on input line 13.
+(pdftex.def)             Requested size: 160.6002pt x 96.3601pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
 7.
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
@@ -984,7 +996,7 @@ been already used, duplicate ignored
 l.1 \chapter
             {Aspect physique et mathématique du problème} [1
 
- <./presentation/2_corps.png>]
+ <./presentation/two.png>]
 Chapitre 2.
 
 Overfull \hbox (3.17525pt too wide) in paragraph at lines 39--41
@@ -1001,30 +1013,36 @@ Chapitre 3.
 
 ]
 Chapitre 4.
-<images/naive.png, id=350, 344.28625pt x 210.7875pt>
+<images/naive.png, id=365, 344.28625pt x 187.70125pt>
 File: images/naive.png Graphic file (type png)
 <use images/naive.png>
-Package pdftex.def Info: images/naive.png  used on input line 9.
-(pdftex.def)             Requested size: 275.42937pt x 168.63022pt.
-<images/naive_optimised.png, id=351, 347.2975pt x 199.24437pt>
-File: images/naive_optimised.png Graphic file (type png)
-<use images/naive_optimised.png>
-Package pdftex.def Info: images/naive_optimised.png  used on input line 34.
-(pdftex.def)             Requested size: 277.83836pt x 159.3957pt.
+Package pdftex.def Info: images/naive.png  used on input line 10.
+(pdftex.def)             Requested size: 275.42937pt x 150.1612pt.
+<images/NO.png, id=366, 344.28625pt x 233.87375pt>
+File: images/NO.png Graphic file (type png)
+<use images/NO.png>
+Package pdftex.def Info: images/NO.png  used on input line 34.
+(pdftex.def)             Requested size: 275.42937pt x 187.09923pt.
 [6
 
  <./images/naive.png>]
-<images/NO.png, id=357, 344.28625pt x 233.87375pt>
-File: images/NO.png Graphic file (type png)
-<use images/NO.png>
-Package pdftex.def Info: images/NO.png  used on input line 41.
-(pdftex.def)             Requested size: 275.42937pt x 187.09923pt.
-) (partie5.tex [7 <./images/naive_optimised.png> <./images/NO.png>]
+<resultats/Energy_N.png, id=372, 578.16pt x 361.35pt>
+File: resultats/Energy_N.png Graphic file (type png)
+<use resultats/Energy_N.png>
+Package pdftex.def Info: resultats/Energy_N.png  used on input line 48.
+(pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
+<resultats/Energy_NO.png, id=374, 578.16pt x 361.35pt>
+File: resultats/Energy_NO.png Graphic file (type png)
+<use resultats/Energy_NO.png>
+Package pdftex.def Info: resultats/Energy_NO.png  used on input line 55.
+(pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
+ [7 <./images/NO.png> <./resultats/Energy_N.png>])
+(partie5.tex [8 <./resultats/Energy_NO.png>]
 Chapitre 5.
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/ucs\uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-<./images/quadtree.png, id=364, 1439.97975pt x 714.56963pt>
+<./images/quadtree.png, id=388, 1439.97975pt x 714.56963pt>
 File: ./images/quadtree.png Graphic file (type png)
 <use ./images/quadtree.png>
 Package pdftex.def Info: ./images/quadtree.png  used on input line 16.
@@ -1032,132 +1050,131 @@ Package pdftex.def Info: ./images/quadtree.png  used on input line 16.
 
 (C:\Users\fidac\AppData\Local\Programs\MiKTeX\tex/latex/ucs\uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
-) [8
+) [9
 
  <./images/quadtree.png (PNG copy)>]
-<./images/arbre_bh.png, id=375, 702.625pt x 712.6625pt>
-File: ./images/arbre_bh.png Graphic file (type png)
-<use ./images/arbre_bh.png>
-Package pdftex.def Info: ./images/arbre_bh.png  used on input line 90.
-(pdftex.def)             Requested size: 281.04501pt x 285.05995pt.
- [9]
-<./images/spirale_2.png, id=381, 337.26pt x 243.91125pt>
-File: ./images/spirale_2.png Graphic file (type png)
-<use ./images/spirale_2.png>
-Package pdftex.def Info: ./images/spirale_2.png  used on input line 100.
-(pdftex.def)             Requested size: 303.53119pt x 219.51808pt.
-) (partie6.tex [10 <./images/arbre_bh.png> <./images/spirale_2.png>]
+<./images/BH_tree.png, id=399, 348.80313pt x 293.095pt>
+File: ./images/BH_tree.png Graphic file (type png)
+<use ./images/BH_tree.png>
+Package pdftex.def Info: ./images/BH_tree.png  used on input line 85.
+(pdftex.def)             Requested size: 279.04288pt x 234.4763pt.
+ [10]
+<./resultats/Energy_BH.png, id=406, 578.16pt x 361.35pt>
+File: ./resultats/Energy_BH.png Graphic file (type png)
+<use ./resultats/Energy_BH.png>
+Package pdftex.def Info: ./resultats/Energy_BH.png  used on input line 96.
+(pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
+) (partie6.tex [11 <./images/BH_tree.png> <./resultats/Energy_BH.png>]
 Chapitre 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
 
-<images/process_thread.png, id=390, 246.9225pt x 93.34875pt>
+<images/process_thread.png, id=415, 246.9225pt x 93.34875pt>
 File: images/process_thread.png Graphic file (type png)
 <use images/process_thread.png>
 Package pdftex.def Info: images/process_thread.png  used on input line 12.
 (pdftex.def)             Requested size: 197.53824pt x 74.6791pt.
-[11
+[12
 
- <./images/process_thread.png>]) (partie7.tex [12]
+ <./images/process_thread.png>]) (partie7.tex [13]
 Chapitre 7.
-<./resultats/tree_comparison.png, id=410, 578.16pt x 361.35pt>
-File: ./resultats/tree_comparison.png Graphic file (type png)
-<use ./resultats/tree_comparison.png>
-Package pdftex.def Info: ./resultats/tree_comparison.png  used on input line 8.
-
+<./resultats/Energy_tree.png, id=435, 578.16pt x 361.35pt>
+File: ./resultats/Energy_tree.png Graphic file (type png)
+<use ./resultats/Energy_tree.png>
+Package pdftex.def Info: ./resultats/Energy_tree.png  used on input line 11.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
-<./resultats/method_comparison_seq.png, id=411, 578.16pt x 361.35pt>
+<./resultats/method_comparison_seq.png, id=436, 578.16pt x 361.35pt>
 File: ./resultats/method_comparison_seq.png Graphic file (type png)
 <use ./resultats/method_comparison_seq.png>
 Package pdftex.def Info: ./resultats/method_comparison_seq.png  used on input l
-ine 20.
-(pdftex.def)             Requested size: 256.0748pt x 160.0421pt.
+ine 23.
+(pdftex.def)             Requested size: 270.30118pt x 168.93578pt.
 
-Overfull \hbox (33.571pt too wide) in paragraph at lines 20--21
+Overfull \hbox (47.79738pt too wide) in paragraph at lines 23--24
  [] 
  []
 
-<./resultats/method_comparison_par.png, id=412, 578.16pt x 361.35pt>
+<./resultats/method_comparison_par.png, id=437, 578.16pt x 361.35pt>
 File: ./resultats/method_comparison_par.png Graphic file (type png)
 <use ./resultats/method_comparison_par.png>
 Package pdftex.def Info: ./resultats/method_comparison_par.png  used on input l
-ine 25.
-(pdftex.def)             Requested size: 256.0748pt x 160.0421pt.
+ine 28.
+(pdftex.def)             Requested size: 270.30118pt x 168.93578pt.
 
-Overfull \hbox (33.571pt too wide) in paragraph at lines 25--26
+Overfull \hbox (47.79738pt too wide) in paragraph at lines 28--29
  [] 
  []
 
-[13
+[14
 
- <./resultats/tree_comparison.png>]
-<./resultats/comparison_BH.png, id=419, 578.16pt x 361.35pt>
+ <./resultats/Energy_tree.png>]
+<./resultats/comparison_BH.png, id=444, 578.16pt x 361.35pt>
 File: ./resultats/comparison_BH.png Graphic file (type png)
 <use ./resultats/comparison_BH.png>
-Package pdftex.def Info: ./resultats/comparison_BH.png  used on input line 43.
+Package pdftex.def Info: ./resultats/comparison_BH.png  used on input line 47.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
-<./resultats/comparison_NO.png, id=420, 578.16pt x 361.35pt>
+<./resultats/comparison_NO.png, id=445, 578.16pt x 361.35pt>
 File: ./resultats/comparison_NO.png Graphic file (type png)
 <use ./resultats/comparison_NO.png>
-Package pdftex.def Info: ./resultats/comparison_NO.png  used on input line 54.
+Package pdftex.def Info: ./resultats/comparison_NO.png  used on input line 57.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
- [14 <./resultats/method_comparison_seq.png> <./resultats/method_comparison_par
+ [15 <./resultats/method_comparison_seq.png> <./resultats/method_comparison_par
 .png> <./resultats/comparison_BH.png>]
-<./resultats/comparison_N.png, id=430, 578.16pt x 361.35pt>
+<./resultats/comparison_N.png, id=455, 578.16pt x 361.35pt>
 File: ./resultats/comparison_N.png Graphic file (type png)
 <use ./resultats/comparison_N.png>
-Package pdftex.def Info: ./resultats/comparison_N.png  used on input line 66.
+Package pdftex.def Info: ./resultats/comparison_N.png  used on input line 69.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
 )
-(partie8.tex [15 <./resultats/comparison_NO.png> <./resultats/comparison_N.png>
+(partie8.tex [16 <./resultats/comparison_NO.png> <./resultats/comparison_N.png>
 ]
 Chapitre 8.
-[16
+[17
 
-]) (annexes.tex [17]
+]) (annexes.tex [18]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 12.
 
-<./images/sphere.png, id=449, 351.3125pt x 309.65688pt>
+<./images/sphere.png, id=474, 351.3125pt x 309.65688pt>
 File: ./images/sphere.png Graphic file (type png)
 <use ./images/sphere.png>
 Package pdftex.def Info: ./images/sphere.png  used on input line 19.
 (pdftex.def)             Requested size: 222.5038pt x 196.12907pt.
-<./images/spirale.png, id=450, 349.305pt x 315.67938pt>
+<./images/spirale.png, id=475, 349.305pt x 315.67938pt>
 File: ./images/spirale.png Graphic file (type png)
 <use ./images/spirale.png>
 Package pdftex.def Info: ./images/spirale.png  used on input line 25.
 (pdftex.def)             Requested size: 222.5038pt x 201.08519pt.
-<./images/galaxies.png, id=451, 352.31625pt x 230.36063pt>
+<./images/galaxies.png, id=476, 352.31625pt x 230.36063pt>
 File: ./images/galaxies.png Graphic file (type png)
 <use ./images/galaxies.png>
 Package pdftex.def Info: ./images/galaxies.png  used on input line 32.
 (pdftex.def)             Requested size: 222.5038pt x 145.48296pt.
-<./images/BH_tree.png, id=452, 348.80313pt x 293.095pt>
-File: ./images/BH_tree.png Graphic file (type png)
-<use ./images/BH_tree.png>
-Package pdftex.def Info: ./images/BH_tree.png  used on input line 36.
-(pdftex.def)             Requested size: 222.5038pt x 186.96745pt.
-) [18
+<./images/BH.png, id=477, 349.80687pt x 329.73187pt>
+File: ./images/BH.png Graphic file (type png)
+<use ./images/BH.png>
+Package pdftex.def Info: ./images/BH.png  used on input line 36.
+(pdftex.def)             Requested size: 222.5038pt x 209.73965pt.
+) [19
 
  <./images/sphere.png> <./images/spirale.png> <./images/galaxies.png> <./images
-/BH_tree.png>] (main.bbl) [19
+/BH.png>] (main.bbl) [20
 
 ] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 908711FC54E48809ABB98614FA7F9D0E;10660.
+(rerunfilecheck)             Checksum: C049216C633D42D085FA23A770F44FA9;11233.
  ) 
 Here is how much of TeX's memory you used:
- 28355 strings out of 478584
- 511231 string characters out of 2844401
- 993526 words of memory out of 3000000
- 45906 multiletter control sequences out of 15000+600000
- 483712 words of font info for 51 fonts, out of 8000000 for 9000
+ 28661 strings out of 478584
+ 515463 string characters out of 2844401
+ 1003760 words of memory out of 3000000
+ 46204 multiletter control sequences out of 15000+600000
+ 482940 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,10n,133p,967b,1255s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,10n,133p,967b,1257s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
 0800.pk> <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecrm0500.pk> <C:\Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
@@ -1176,17 +1193,18 @@ Users\fidac\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk
 074.pk><C:/Users/fidac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmex10.pfb><C:/Users/fidac/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmmi10.pfb><C:/Users/fidac/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmmi7.pfb><C:/Users/fidac/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/fidac/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/fidac/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/fidac/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/fidac
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Use
-rs/fidac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pf
-b>
-Output written on main.pdf (22 pages, 1099974 bytes).
+pe1/public/amsfonts/cm/cmmi5.pfb><C:/Users/fidac/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/fidac/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/fidac/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/fidac/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/fidac/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Use
+rs/fidac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+><C:/Users/fidac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mti10.pfb>
+Output written on main.pdf (23 pages, 1160752 bytes).
 PDF statistics:
- 1066 PDF objects out of 1200 (max. 8388607)
- 118 named destinations out of 1000 (max. 500000)
- 561 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1099 PDF objects out of 1200 (max. 8388607)
+ 121 named destinations out of 1000 (max. 500000)
+ 590 words of extra memory for PDF output out of 10000 (max. 10000000)
 

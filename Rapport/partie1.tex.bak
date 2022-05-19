@@ -10,7 +10,7 @@ Le problème à deux corps et le problème à trois sont  résolubles analytique
 \begin{center}
 %taille de l'image en largeur
 %remplacer "width" par "height" pour régler la hauteur
-\includegraphics[width=11cm]{presentation/2_corps.png}
+\includegraphics[scale=0.8]{presentation/two.png}
 %légende de l'image
 \captionsetup{hypcap=false}
 \caption{Solution du problème à 2 corps \\

@@ -11,6 +11,7 @@
 \usepackage[table]{xcolor}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{url}
+\usepackage{titlesec}
 
 %pour les informations sur un document compilé en PDF et les liens externes / internes
 \usepackage{hyperref}
@@ -125,6 +126,19 @@
   title=\lstname,
 }
 
+\titleformat
+{\chapter} % command
+[display] % shape
+{\bfseries\Huge} % format
+{Partie \ \thechapter} % label
+{0.5ex} % sep
+{
+    \vspace{1ex}
+} % before-code
+[
+\vspace{-0.5ex}%
+] % after-code
+
 %====================== INFORMATION ET REGLES ======================
 
 %rajouter les numérotation pour les \paragraphe et \subparagraphe
@@ -162,7 +176,6 @@ pdfstartview={FitH}}					% ajuste la page à la largueur de l'écran
 \newpage
 
 %\input{./abstract.tex}
-
 \tableofcontents
 \thispagestyle{empty}
 \setcounter{page}{0}

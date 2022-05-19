@@ -44,7 +44,7 @@ ModelNBody::ModelNBody(int num,int methode_calcul)
   ,m_camDir()
   ,m_camPos()
   ,m_roi(1)                                                                           //Radial Orbit Instability
-  ,m_timeStep(50)
+  ,m_timeStep(100)
   ,mass_sun(1.988435e30)                                                              //masse soleil M
   ,pc_in_m(3.08567758129e16)                                                          //taux de conversion de parsec en mètre L
   ,gamma_si(6.67428e-11)                                                              //Constante gravitationnelle M-1 L3 T-2

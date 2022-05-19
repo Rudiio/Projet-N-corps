@@ -81,6 +81,37 @@ On obtient donc l'équation différentielle sur la position $\vec{Op_1(t)}$ de l
 
 L'intégrateur permettra alors de résoudre numériquement et simplement cette équation différentielle qui n'est pas résoluble de manière exacte pour plus de $3$ particules.
 
+\subsection{Conservation de l'énergie}
+
+Dans un système mécanique ne comprenant que des forces conservatives, l'énergie mécanique de ce système se conserve en fonction du temps. Il s'agit du théorème de l'énergie mécanique.
+
+L'énergie mécanique $E_m$ est la somme de l'énergie cinétique $E_c$ du système et de son énergie potentielle $E_p$ :
+
+\begin{center}
+$E_m = E_c + E_p$
+\end{center}
+
+Dans le cas du problème à N-corps, la seule force prise en compte est l'interaction gravitationnelle qui est conservative, on peut donc appliquer le théorème de conservation de l'énergie potentielle. Pour N corps, on a alors:
+
+\begin{center}
+$E_c = \sum\limits_{i=1}^{N} \frac{1}{2}m_iv_i$  et $E_m =- \sum\limits_{i=1}^{N} \sum\limits_{j=1,j \ne i}^{N} \frac{G m_i m_j}{| r_j - r_i |}$
+\end{center}
+
+avec 
+\begin{itemize}
+\item $v_i$ la vitesse de la $i$ème particule.
+
+\item $m_i$ la masse de la $i$ème particule.
+
+\item $G$ la constante gravitationnelle.
+
+\item $r_i$ la position de la $i$ème particule.
+
+\end{itemize}
+
+\vspace{1mm}
+Le théorème de l'énergie cinétique sera utile en pratique pour vérifier si nos algorithmes sont corrects et respectent l'aspect physique du problème.
+
 \vspace{2mm}
 \subsection{Principe d'action-réaction}
 \vspace{2mm}
@@ -196,4 +227,4 @@ $
 
 où $\Delta t$ est le pas de discrétisation du temps.
 
-De même, réduire $\Delta t$ augmente la précision de la simulation au détriment de ses performances.
+De même, réduire $\Delta t$ augmente la précision de la simulation au détriment des performances.

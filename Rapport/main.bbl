@@ -1,19 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{9}
-Méthode saute-mouton.
-
-\bibitem{8}
-N-body building.
-
-\bibitem{11}
-Re-bienvenue dans c++ - c++ moderne.
-
-\bibitem{4}
-{\em Bases de la parallélisation multitâches : OpenMP (Open
-  Multi-Processing)}.
-\newblock 2016.
-
 \bibitem{6}
 Mancheron Alban.
 \newblock Une introduction à la programmation parallèle avec open mpi et
@@ -34,9 +20,20 @@ Jalel Chergui and Pierre-François Lavallée.
 \newblock Openmp parallélisation multitâches pour machines à mémoire
   partagée, 2017.
 
+\bibitem{4}
+Centre de~Calcul de l’université~de Bourgogne.
+\newblock {\em Bases de la parallélisation multitâches : OpenMP (Open
+  Multi-Processing)}.
+\newblock 2016.
+
+\bibitem{8}
+Marion~Dierickx et~Stephen~Portillo.
+\newblock N-body building, December 2013.
+
 \bibitem{1}
 Gargne Fabien.
 \newblock Algorithme de barnes-hut pour le problème des n-body.
+\newblock 2005.
 
 \bibitem{0}
 Laurent Garcin.
