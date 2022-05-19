@@ -33,16 +33,19 @@ Le programme permet de saisir le nombre de particules à générer lors de la si
 
 Il est également nécessaire de choisir la méthode à utiliser :
 
-1. Barnes-Hut (<25000 particules)
-2. Naïve opitimisée (<2000 particules)
-3. Naïve (<1000 particules)
+1. Barnes-Hut ($<25000$ particules)
+2. Naïve opitimisée ($<2000$ particules)
+3. Naïve ($<1000$ particules)
 
 Il est également possible de modifier les paramétres de la simulation directement dans le code afin de moduler la simulation.
+
+Des calculs d'énergie sont aussi possibles en décommentant la ligne correspondante dans la fonction 
+mainloop située dans SDLWnd.cpp. Ces calculs s'effectuant en $O(N^2)$, il faut faire attention au nombre de particules ($\sim 2000$ pour avoir des performances correctes).
 
 ### executable main_mesure
 Le programme permet d'executer une simulation en passant directement le nombre de particules et le numéro de la méthode. 
 
-Il permet également d'écrire dans les fichiers situés dans le dossier data les temps moyens mis par la méthode en question pour ce nombre de particules. Ainsi, ce code n'éxecute qu'un certain nombre d'itérations (par défaut 100) avant de se fermer.
+Il permet également d'écrire dans les fichiers situés dans le dossier data les temps moyens mis par la méthode en question pour ce nombre de particules. Ainsi, ce code n'éxecute qu'un certain nombre d'itérations (par défaut $100$) avant de se fermer.
 
 ### executable tests
 Ce programme permet de lancer des séries des mesures de temps de calcul et de construction d'arbre pour les différentes méthodes et d'enregistrer les résultats dans des fichiers .txt exploitable par le script python ./data/analyse.py.
@@ -50,7 +53,11 @@ Ce programme permet de lancer des séries des mesures de temps de calcul et de c
 Pour réinitialiser les test, il faut supprimer les fichiers .txt.
 
 ### analyse.py
-Ce script permet simplement d'afficher les résultats des différentes mesures.
+Ce script permet simplement d'afficher les résultats des différentes mesures de performances des méthodes.
+
+### analyse_E.py
+Ce programme python affiche les bilans énergétiques de chaque méthode.
+
 
 ## Commandes
 
