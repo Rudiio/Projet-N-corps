@@ -28,7 +28,7 @@ Nous avons travaillé à partir d'un code C++ comprenant déja toute la partie d
 
 ##  Prise en main
 
-### executable main 
+### Executable main 
 Le programme permet de saisir le nombre de particules à générer lors de la simulation.
 
 Il est également nécessaire de choisir la méthode à utiliser :
@@ -42,20 +42,20 @@ Il est également possible de modifier les paramétres de la simulation directem
 Des calculs d'énergie sont aussi possibles en décommentant la ligne correspondante dans la fonction 
 mainloop située dans SDLWnd.cpp. Ces calculs s'effectuant en $O(N^2)$, il faut faire attention au nombre de particules ($\sim 2000$ pour avoir des performances correctes).
 
-### executable main_mesure
+### Executable main_mesure
 Le programme permet d'executer une simulation en passant directement le nombre de particules et le numéro de la méthode. 
 
 Il permet également d'écrire dans les fichiers situés dans le dossier data les temps moyens mis par la méthode en question pour ce nombre de particules. Ainsi, ce code n'éxecute qu'un certain nombre d'itérations (par défaut $100$) avant de se fermer.
 
-### executable tests
+### Executable tests
 Ce programme permet de lancer des séries des mesures de temps de calcul et de construction d'arbre pour les différentes méthodes et d'enregistrer les résultats dans des fichiers .txt exploitable par le script python ./data/analyse.py.
 
 Pour réinitialiser les test, il faut supprimer les fichiers .txt.
 
-### analyse.py
+### Script analyse.py
 Ce script permet simplement d'afficher les résultats des différentes mesures de performances des méthodes.
 
-### analyse_E.py
+### Script analyse_E.py
 Ce programme python affiche les bilans énergétiques de chaque méthode.
 
 
@@ -65,7 +65,8 @@ Ce programme python affiche les bilans énergétiques de chaque méthode.
 - **K** : permet de zoomer
 - **T** : permet d'afficher l'arbre de Barnes-Hut
 - **A** : permet d'afficher/cacher les graduations
-
+- **X** : permet de diminuer le paramètre $\theta$
+- **Y** : permet de d'augmenter le paramètre $\theta$
 
 ## Dependencies
 
