@@ -20,14 +20,14 @@ N= np.linspace(0,22000,50)
 ##Comparaison entre méthodes
 
 ##Arbre
-plt.figure(figsize=(8,5))
-plt.plot(par_tree[:,0],par_tree[:,1],"+-",label="parallèle")
-plt.plot(seq_tree[:,0],seq_tree[:,1],"+-",label="sequentiel")
-plt.xlabel("Nombre de particules")
-plt.ylabel("Durée en secondes")
-plt.title("Durée moyenne de construction de l'arbre")
-plt.legend()
-plt.show()
+# plt.figure(figsize=(8,5))
+# plt.plot(par_tree[:,0],par_tree[:,1],"+-",label="parallèle")
+# plt.plot(seq_tree[:,0],seq_tree[:,1],"+-",label="sequentiel")
+# plt.xlabel("Nombre de particules")
+# plt.ylabel("Durée en secondes")
+# plt.title("Durée moyenne de construction de l'arbre")
+# plt.legend()
+# plt.show()
 
 ###Séquentiel
 plt.figure(figsize=(8,5))
