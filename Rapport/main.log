@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  20 MAY 2022 21:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  20 MAY 2022 21:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1088,10 +1088,10 @@ Package pdftex.def Info: ./resultats/Energy_tree.png  used on input line 12.
 File: ./resultats/method_comparison_seq.png Graphic file (type png)
 <use ./resultats/method_comparison_seq.png>
 Package pdftex.def Info: ./resultats/method_comparison_seq.png  used on input l
-ine 24.
+ine 27.
 (pdftex.def)             Requested size: 270.30118pt x 168.93578pt.
 
-Overfull \hbox (47.79738pt too wide) in paragraph at lines 24--25
+Overfull \hbox (47.79738pt too wide) in paragraph at lines 27--28
  [] 
  []
 
@@ -1099,10 +1099,10 @@ Overfull \hbox (47.79738pt too wide) in paragraph at lines 24--25
 File: ./resultats/method_comparison_par.png Graphic file (type png)
 <use ./resultats/method_comparison_par.png>
 Package pdftex.def Info: ./resultats/method_comparison_par.png  used on input l
-ine 29.
+ine 32.
 (pdftex.def)             Requested size: 270.30118pt x 168.93578pt.
 
-Overfull \hbox (47.79738pt too wide) in paragraph at lines 29--30
+Overfull \hbox (47.79738pt too wide) in paragraph at lines 32--33
  [] 
  []
 
@@ -1112,19 +1112,19 @@ Overfull \hbox (47.79738pt too wide) in paragraph at lines 29--30
 <./resultats/comparison_N.png, id=449, 578.16pt x 361.35pt>
 File: ./resultats/comparison_N.png Graphic file (type png)
 <use ./resultats/comparison_N.png>
-Package pdftex.def Info: ./resultats/comparison_N.png  used on input line 48.
+Package pdftex.def Info: ./resultats/comparison_N.png  used on input line 51.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
 <./resultats/comparison_NO.png, id=450, 578.16pt x 361.35pt>
 File: ./resultats/comparison_NO.png Graphic file (type png)
 <use ./resultats/comparison_NO.png>
-Package pdftex.def Info: ./resultats/comparison_NO.png  used on input line 60.
+Package pdftex.def Info: ./resultats/comparison_NO.png  used on input line 63.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
  [15 <./resultats/method_comparison_seq.png> <./resultats/method_comparison_par
 .png> <./resultats/comparison_N.png>]
 <./resultats/comparison_BH.png, id=460, 578.16pt x 361.35pt>
 File: ./resultats/comparison_BH.png Graphic file (type png)
 <use ./resultats/comparison_BH.png>
-Package pdftex.def Info: ./resultats/comparison_BH.png  used on input line 71.
+Package pdftex.def Info: ./resultats/comparison_BH.png  used on input line 74.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
 )
 (partie8.tex [16 <./resultats/comparison_NO.png> <./resultats/comparison_BH.png
@@ -1212,9 +1212,9 @@ ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/
 fidac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 C:/Users/fidac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
 y7.pfb>
-Output written on main.pdf (24 pages, 1196851 bytes).
+Output written on main.pdf (24 pages, 1196188 bytes).
 PDF statistics:
- 1109 PDF objects out of 1200 (max. 8388607)
+ 1107 PDF objects out of 1200 (max. 8388607)
  124 named destinations out of 1000 (max. 500000)
  608 words of extra memory for PDF output out of 10000 (max. 10000000)
 
