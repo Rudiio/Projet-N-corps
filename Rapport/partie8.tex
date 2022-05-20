@@ -1,13 +1,11 @@
-\chapter{Conclusions du projet}
+\chapter{Conclusion du projet}
 
 \section{Conclusion}
 
-Le projet consistait à étudier différentes manières de résoudre numériquement le problème à N-corps afin d'obtenir la solution la plus efficace.
-
-Nous avons pu mettre en place $3$ méthodes de calcul différentes pour les forces :
+Le projet consistait à étudier différentes manières de résoudre numériquement le problème à N-corps afin d'obtenir la simulation la plus satisfaisante. Au final, nous avons implémenté $3$ méthodes de calcul différentes pour les forces :
 
 \begin{itemize}
-\item la méthode naïve qui calcule pour chaque particule les forces qui s'y applique de la manière la plus intuitive possible
+\item la méthode naïve qui calcule pour chaque particule les forces qui s'y applique de la manière la plus basique possible
 
 \item la méthode naïve optimisée qui utilise le principe d'action-réaction afin de diminuer le nombre de calculs
 
@@ -15,24 +13,24 @@ Nous avons pu mettre en place $3$ méthodes de calcul différentes pour les forc
 
 \end{itemize}
 
+\vspace{2mm}
+Au final, l'algorithme de Barnes-hut est bien plus rapide et efficace que les autres, et malgré les approximations qu'il fait, il produit une évolution valide. Il constitue pour le moment la meilleure résolution approchée possible au problème à N-corps. De plus, la parallélisation permet d'avoir des performances bien plus intéressantes et montre notamment son intérêt lorsqu'on augmente le nombre de particules à plusieurs dizaines de milliers. Cependant, la parallélisation de l'insertion des particules dans l'arbre montre l'importance de la compatibilité des algorithmes, au risque d'avoir une parallélisation inefficace, voire même une inconsistance de nos calculs.
 
-Au final, l'algorithme de Barnes-hut est bien plus rapide et efficace que les autres malgré qu'il donne des résultats similaires. Il s'agit donc de la meilleure résolution approchée possible au problème à N-corps. De plus, la parallélisation permet d'avoir des performances bien plus intéressantes et montre son intérêt pour de grandes simulations. Cependant, la parallélisation de l'insertion des particules dans l'arbre montre l'importance de la compatibilité des algorithme, au risque d'avoir une parallélisation inefficace ou même pénalisante.
-
-Cependant, ce projet reste encore exploitable puisqu'il existe encore beaucoup de possibilités comme par exemple le passage sur une carte graphique pour simuler plus de points, le passage en 3 dimensions ou simplement une optimisation de la parallélisation.
+\vspace{2mm}
+De nombreux axes de développement du projet sont possibles tel que l'optimisation de la parallélisation, l'utilisation d'une carte graphique pour simuler encore plus de particules, ou l'extension de la simulation en 3D, afin d'observer des structures qui ne sont pas nécessairement stables en 2D.
 
 \section{Impacts du projet}
 
-La résolution du problème à N-corps est extrêmement importante dans des domaines tels que l'astronomie. Elle permet aux scientifiques de ces domaines de pouvoir lancer des simulations en testant différents paramètres afin de vérifier leurs résultats théoriques.
-Cela leur permet donc d'avoir une vision pratique sur des concepts et des objets qui ne peuvent pas être étudiés ni visualisés facilement ce qui permet de servir la recherche sur les galaxie, la matière noire ...
+La résolution du problème à N-corps est extrêmement importante dans des domaines tels que l'astronomie. Elle permet aux scientifiques de ces domaines d'émettre des hypothèses ou de les vérifier de façon accessible et rapide, en modifiant les paramètres au besoin, du fait que les objets d'études des disciplines liées sont difficilement observables et manipulables.
 
-
-De plus, la partie optimisation a un fort impact sur la recherche dans ces domaines et donc sur la société mais aussi également sur l'environnement. En effet, la réduction des temps de calculs permet dans un premier temps d'élargir les possibilités ce qui permet donc d'avoir des simulations plus précises,plus conséquentes. Dans un deuxième temps, réduire les temps de calcul permet de réduire l'énergie dépensée et donc de diminuer la pollution lié à la production énergétique. Cela, se ressent évidemment plus sur des simulations de grande échelle lancées sur des super-calculateurs.
+\vspace{2mm}
+De plus, l'optimisation du calcul a un fort impact sur la recherche dans ces domaines, le calcul haute-performance étant un nouvel enjeu de nos sociétés. En effet, la réduction des temps de calculs permet dans un premier temps d'augmenter les volumes de données traités, ainsi que la précision des simulations. De plus, réduire les temps de calcul permet de réduire l'énergie dépensée, et donc de diminuer la pollution liée à la production énergétique. Ces améliorations sont indispensables à de plus grandes échelles. 
 
 \section{Bilans personnels}
 
 \subsection{Camille}
 
-Je pense que ce projet m’a beaucoup aidé en Informatique,
+Je pense que ce projet m’a beaucoup aidé en informatique,
 notamment par l'apprentissage d’un tout nouveau langage (C++).
 J’ai beaucoup aimé le principe de l’algorithme de Barnes-Hut et
 avoir travaillé et réfléchi dessus a été très formateur. Je pense
@@ -42,21 +40,18 @@ meilleure compréhension globale.
 
 \subsection{Noah}
 
-
 Ce projet, à l'intersection de la physique, des mathématiques et de l'informatique, nous a permis de développer nos compétences techniques en C++, parallélisation et optimisation. L'interdisciplinarité m'a vraiment plu car cela nous a permis de nous intéresser à beaucoup de chose différentes. Cependant, le fait que la majeure partie du code était déjà fournie nous a contraint à étudier le code pendant une longue période et nous a confronté à des difficultés d'implémentation de certaines fonctions. Je pense avoir su contribuer au développement du projet en suggérant des idées adaptées aux difficultés rencontrées.
 
 \subsection{Rudio}
 
-
 Au final, à travers ce projet, j'ai pu développer des connaissances dans différents domaines. Il m'a poussé à dépasser mes limites pour comprendre le fonctionnement du code qui était dans un langage que je ne maîtrisais pas et pour assimiler les aspects physiques et mathématiques du problème.
 Cela m'a donc permis de connaître les principaux aspects et concepts du C++ et de la programmation orientée objet mais aussi de la parallélisation multi-thread avec OpenMP. J'ai également pu améliorer mes connaissances en mécanique et en résolution numérique. 
 Ainsi, malgré les difficultés rencontrées, j'ai vraiment apprécié le projet et son déroulement notamment grâce aux résultats que nous avons pu obtenir. De plus, le travail de groupe m'a plu étant donné que chaque membre du groupe s'est investi et a apprécié le projet.
-J'aurais cependant aimé pouvoir poussé le projet plus loin en explorant d'autres manières d'optimiser le programme.
+J'aurais cependant aimé pouvoir poussé le projet plus loin en explorant d'autres façons d'optimiser le programme.
 
 
 \subsection{Elyas}
 
-
-Le projet était exactement ce que j'espérais, le fait que nous avons procédé à la simulation d'objets célestes m'a permis d'apprendre plusieurs notions techniques (au niveau informatique)mais aussi scientifiques (les $n$ corps). L'utilisation du C++ a été aussi très intéressante cependant je regrette qu'on n'ait pas exploité plus ce langage. Ce projet m'a aussi permis de voir que l'utilisation des mathématiques est un outil très important notamment pour l'amélioration des calculs avec la mise en place des différents intégrateurs.
+Le projet était exactement ce que j'espérais, le fait que nous avons procédé à la simulation d'objets célestes m'a permis d'apprendre plusieurs notions techniques (au niveau informatique)mais aussi scientifiques. L'utilisation du C++ a été aussi très intéressante cependant je regrette qu'on n'ait pas exploité plus ce langage. Ce projet m'a aussi permis de voir que l'utilisation des mathématiques est un outil très important notamment pour l'amélioration des calculs avec la mise en place des différents intégrateurs.
 
 

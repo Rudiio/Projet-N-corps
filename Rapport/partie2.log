@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  7 MAY 2022 11:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.2.13)  20 MAY 2022 14:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -223,7 +223,6 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
-Missing character: There is no N in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -236,7 +235,13 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no L in font nullfont!
-Missing character: There is no a in font nullfont!
+Missing character: There is no ' in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -310,6 +315,56 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
@@ -368,40 +423,116 @@ Overfull \hbox (4.44444pt too wide) in paragraph at lines 1--4
  []
 
 
+Overfull \hbox (9.12497pt too wide) in paragraph at lines 1--4
+\OML/cmm/m/it/10 N$
+ []
+
+
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 1--4
+\/cmr/m/n/10 e
+ []
+
+
+Overfull \hbox (8.88889pt too wide) in paragraph at lines 1--4
+\/cmr/m/n/10 ee
+ []
+
+
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 1--4
+\/cmr/m/n/10 e
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 1--4
+\/cmr/m/n/10 a
+ []
+
+
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 1--4
+\/cmr/m/n/10 e 
+ []
+
+! Undefined control sequence.
+l.5 \section
+            {Un problème mécanique}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
 ! LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6 \underline{Expressions des forces}
-                                      
+l.5 \section{U
+              n problème mécanique}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-Missing character: There is no E in font nullfont!
-Missing character: There is no x in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no d in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no f in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+! Undefined control sequence.
+l.7 \subsection
+               {Force gravitationnelle}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no F in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 6--8
-[]$[]$
+Overfull \hbox (20.0pt too wide) in paragraph at lines 5--9
+[]
+ []
+
+
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 5--9
+\/cmr/m/n/10 e
+ []
+
+
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 5--9
+\/cmr/m/n/10 e
  []
 
 
@@ -411,8 +542,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 S
-     oit $p_{1}$ et $p_{2}$ deux particules, la force appliquée par $p_2$ s...
+l.10 S
+      oit $p_{1}$ et $p_{2}$ deux particules, la force appliquée par $p_2$ ...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -464,32 +595,32 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 9--10
+Overfull \hbox (20.0pt too wide) in paragraph at lines 10--11
 []
  []
 
 
-Overfull \hbox (9.51738pt too wide) in paragraph at lines 9--10
+Overfull \hbox (9.51738pt too wide) in paragraph at lines 10--11
 \OML/cmm/m/it/10 p[]$
  []
 
 
-Overfull \hbox (9.51738pt too wide) in paragraph at lines 9--10
+Overfull \hbox (9.51738pt too wide) in paragraph at lines 10--11
 \OML/cmm/m/it/10 p[]$
  []
 
 
-Overfull \hbox (4.44444pt too wide) in paragraph at lines 9--10
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 10--11
 \/cmr/m/n/10 e
  []
 
 
-Overfull \hbox (9.51738pt too wide) in paragraph at lines 9--10
+Overfull \hbox (9.51738pt too wide) in paragraph at lines 10--11
 \OML/cmm/m/it/10 p[]$
  []
 
 
-Overfull \hbox (9.51738pt too wide) in paragraph at lines 9--10
+Overfull \hbox (9.51738pt too wide) in paragraph at lines 10--11
 \OML/cmm/m/it/10 p[]$
  []
 
@@ -500,18 +631,18 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.11 \begin{equation}
+l.12 \begin{equation}
                      
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 11--11
+Overfull \hbox (20.0pt too wide) in paragraph at lines 12--12
 [] 
  []
 
 
-Overfull \hbox (102.25685pt too wide) detected at line 13
+Overfull \hbox (102.25685pt too wide) detected at line 14
 [] \/cmr/m/n/10 = [][]
  []
 
@@ -522,14 +653,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.15 o
+l.16 o
       ù
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no o in font nullfont!
 
-Overfull \hbox (25.55557pt too wide) in paragraph at lines 15--16
+Overfull \hbox (25.55557pt too wide) in paragraph at lines 16--17
 []\/cmr/m/n/10 u 
  []
 
@@ -564,41 +695,18 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (7.86249pt too wide) in paragraph at lines 17--18
+Overfull \hbox (7.86249pt too wide) in paragraph at lines 18--19
 \OML/cmm/m/it/10 G$
  []
 
 
-Overfull \hbox (18.418pt too wide) in paragraph at lines 17--18
+Overfull \hbox (18.418pt too wide) in paragraph at lines 18--19
 \OML/cmm/m/it/10 G \/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (92.80463pt too wide) in paragraph at lines 17--18
+Overfull \hbox (92.80463pt too wide) in paragraph at lines 18--19
 [][]$ 
- []
-
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no . in font nullfont!
-
-Overfull \hbox (13.26627pt too wide) in paragraph at lines 19--20
-\OML/cmm/m/it/10 m[]$
- []
-
-
-Overfull \hbox (9.51738pt too wide) in paragraph at lines 19--20
-\OML/cmm/m/it/10 p[]$ 
  []
 
 Missing character: There is no e in font nullfont!
@@ -621,6 +729,69 @@ Overfull \hbox (13.26627pt too wide) in paragraph at lines 20--21
 
 
 Overfull \hbox (9.51738pt too wide) in paragraph at lines 20--21
+\OML/cmm/m/it/10 p[]$ 
+ []
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (13.26627pt too wide) in paragraph at lines 21--22
+\OML/cmm/m/it/10 m[]$
+ []
+
+
+Overfull \hbox (9.51738pt too wide) in paragraph at lines 21--22
+\OML/cmm/m/it/10 p[]$ 
+ []
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (21.47575pt too wide) in paragraph at lines 22--23
+[]$
+ []
+
+
+Overfull \hbox (9.51738pt too wide) in paragraph at lines 22--23
+\OML/cmm/m/it/10 p[]$
+ []
+
+
+Overfull \hbox (9.51738pt too wide) in paragraph at lines 22--23
 \OML/cmm/m/it/10 p[]$ 
  []
 
@@ -711,7 +882,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 26--27
+Overfull \hbox (20.0pt too wide) in paragraph at lines 29--30
 []
  []
 
@@ -766,37 +937,37 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 28--35
+Overfull \hbox (20.0pt too wide) in paragraph at lines 31--38
 []
  []
 
 
-Overfull \hbox (22.97908pt too wide) in paragraph at lines 28--35
+Overfull \hbox (22.97908pt too wide) in paragraph at lines 31--38
 [][] [] 
  []
 
 
-Overfull \hbox (9.38895pt too wide) in paragraph at lines 28--35
+Overfull \hbox (9.38895pt too wide) in paragraph at lines 31--38
 \OML/cmm/m/it/10 y[]$
  []
 
 
-Overfull \hbox (9.51738pt too wide) in paragraph at lines 28--35
+Overfull \hbox (9.51738pt too wide) in paragraph at lines 31--38
 \OML/cmm/m/it/10 p[]$
  []
 
 
-Overfull \hbox (22.97908pt too wide) in paragraph at lines 28--35
+Overfull \hbox (22.97908pt too wide) in paragraph at lines 31--38
 [][] [] 
  []
 
 
-Overfull \hbox (9.38895pt too wide) in paragraph at lines 28--35
+Overfull \hbox (9.38895pt too wide) in paragraph at lines 31--38
 \OML/cmm/m/it/10 y[]$
  []
 
 
-Overfull \hbox (9.51738pt too wide) in paragraph at lines 28--35
+Overfull \hbox (9.51738pt too wide) in paragraph at lines 31--38
 \OML/cmm/m/it/10 p[]$ 
  []
 
@@ -868,33 +1039,31 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 36--38
+Overfull \hbox (20.0pt too wide) in paragraph at lines 39--42
 []
  []
 
 
-Overfull \hbox (5.20486pt too wide) in paragraph at lines 36--38
+Overfull \hbox (5.20486pt too wide) in paragraph at lines 39--42
 \OML/cmm/m/it/10 d$
  []
 
 
-Overfull \hbox (4.44444pt too wide) in paragraph at lines 36--38
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 39--42
 \/cmr/m/n/10 e
  []
 
 
-Overfull \hbox (15.76038pt too wide) in paragraph at lines 36--38
+Overfull \hbox (15.76038pt too wide) in paragraph at lines 39--42
 \OML/cmm/m/it/10 d \/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (110.37498pt too wide) in paragraph at lines 36--38
+Overfull \hbox (110.37498pt too wide) in paragraph at lines 39--42
 []$ 
  []
 
-Missing character: There is no E in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
+Missing character: There is no L in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -935,34 +1104,39 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 39--40
+Overfull \hbox (20.0pt too wide) in paragraph at lines 43--44
 []
  []
 
 
-Overfull \hbox (4.44444pt too wide) in paragraph at lines 39--40
+Overfull \hbox (4.44444pt too wide) in paragraph at lines 43--44
 \/cmr/m/n/10 e
  []
 
 
-Overfull \hbox (9.51738pt too wide) in paragraph at lines 39--40
+Overfull \hbox (9.51738pt too wide) in paragraph at lines 43--44
 \OML/cmm/m/it/10 p[]$
  []
 
 
-Overfull \hbox (9.51738pt too wide) in paragraph at lines 39--40
+Overfull \hbox (9.51738pt too wide) in paragraph at lines 43--44
 \OML/cmm/m/it/10 p[]$
  []
 
 
-Overfull \hbox (22.87506pt too wide) in paragraph at lines 39--40
+Overfull \hbox (22.87506pt too wide) in paragraph at lines 43--44
 \OML/cmm/m/it/10 F[]$
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 45--45
+[] 
  []
 
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -973,7 +1147,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -984,7 +1158,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -995,14 +1169,14 @@ my insertion and my current dilemma will both disappear.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1013,14 +1187,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1031,14 +1205,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1049,14 +1223,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1067,14 +1241,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1085,14 +1259,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1103,14 +1277,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1121,14 +1295,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1139,14 +1313,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1157,14 +1331,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1175,14 +1349,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1193,14 +1367,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1211,14 +1385,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1229,14 +1403,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1247,14 +1421,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1265,14 +1439,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1283,14 +1457,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1301,14 +1475,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1319,14 +1493,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1337,14 +1511,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1355,14 +1529,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1373,14 +1547,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1391,14 +1565,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1409,14 +1583,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1427,14 +1601,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1445,14 +1619,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1463,14 +1637,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1481,14 +1655,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1499,14 +1673,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1517,14 +1691,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1535,14 +1709,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1553,14 +1727,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1571,14 +1745,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1589,14 +1763,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1607,14 +1781,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1625,14 +1799,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1643,14 +1817,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1661,14 +1835,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1679,14 +1853,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1697,14 +1871,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1715,14 +1889,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1733,14 +1907,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1751,14 +1925,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1769,14 +1943,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1787,14 +1961,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1805,14 +1979,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1823,14 +1997,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1841,14 +2015,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1859,16 +2033,16 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.42 \frac
+l.47 \frac
           {x_2 -x_1}{d^3}\\
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
  36 strings out of 478584
  600 string characters out of 2844401
- 291768 words of memory out of 3000000
+ 292768 words of memory out of 3000000
  18320 multiletter control sequences out of 15000+600000
  469259 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,11n,32p,207b,93s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23i,11n,32p,286b,106s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 !  ==> Fatal error occurred, no output PDF file produced!

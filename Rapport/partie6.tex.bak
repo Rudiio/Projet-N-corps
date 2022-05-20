@@ -1,11 +1,12 @@
 \chapter{Parallélisation }
-Les programmes que nous écrivons sont tous généralement séquentiels, c'est-à-dire que les instructions vont s'exécuter les unes à la suite des autres ce qui engendre des temps d'exécution conséquents pour les programmes lourds comme par exemple le calcul des forces gravitationnelles.
-La parallélisation ou programmation parallèle est un moyen d'optimiser notre programme et réduire son temps d'exécution. 
+Les programmes que nous écrivons sont séquentiels, c'est-à-dire que les instructions vont s'exécuter les unes à la suite des autres ce qui engendre des temps d'exécution conséquents pour les programmes lourds comme par exemple le calcul des forces gravitationnelles.
+La parallélisation, ou programmation parallèle, est un moyen d'optimiser notre programme et réduire son temps d'exécution. 
 Elle consiste à effectuer des tâches de manière simultanée. Ainsi, un programme parallèle pourra exécuter en même temps des processus définis de manière séquentielle et réduire son temps d'exécution.\\
 
 Ici, nous nous intéressons à la parallélisation multi-threads à mémoire partagée à travers l'interface de programmation (API) OpenMP.
 
-Un thread ou processus léger est un fil d'exécution qui constitue un processus et permet donc d'exécuter du code machine dans le processeur. Ainsi, l'exécution d'un programme lance un processus qui va ensuite lancer plusieurs threads qui vont exécuter chacun les mêmes instructions.
+\vspace{2mm}
+Un thread, ou processus léger, est un fil d'exécution qui constitue un processus et permet donc d'exécuter du code machine dans le processeur. Ainsi, l'exécution d'un programme lance un processus qui va ensuite lancer plusieurs threads qui vont exécuter en même temps des instructions instructions similaires.
 
 
 \begin{center}
@@ -18,26 +19,29 @@ Un thread ou processus léger est un fil d'exécution qui constitue un processus
 
 Dans le cas d'un programme séquentiel, seul le thread 0 effectuera une tâche tandis qu'en programmation parallèle, ils seront plusieurs.
 
-La particularité des threads est qu'ils partagent la même zone mémoire ce qui permet donc la parallélisation à condition que le programme soit "compatible".
+\vspace{2mm}
+La particularité des threads est qu'ils partagent la même zone mémoire ce qui permet donc la parallélisation à condition que le programme soit compatible.
 
 \section{Fonctionnement d'OpenMP}
 \subsection{Principe}
-OpenMp est une interface pour la parallélisation multi-threads à mémoire partagée. Elle permet simplement, à partir d'instruction similaire à celle du pré-processeur de paralléliser un programme.
+$\textit{OpenMp}$ est une interface pour la parallélisation multi-threads à mémoire partagée. Elle permet simplement, à partir d'instruction similaire à celle du pré-processeur, de paralléliser un programme.
 
-Le principe est ici de paralléliser des blocs d'instructions comme des boucles. Ainsi, un programme utilisant OpenMp est constituée de région séquentielle et de région parallèle. En début de région parallèle, le thread 0 lance alors la création de nouveaux threads.
+Le principe est ici de paralléliser des blocs d'instructions comme des boucles. Ainsi, un programme utilisant $\textit{OpenMp}$ est constitué de régions séquentielles et de régions parallèles. En début de région parallèle, le thread 0 lance alors la création de nouveaux threads.
 
-Il est important de préciser que pour avoir une parallélisation efficace, il est nécessaire d'éviter de refaire des calculs inutiles et de s'assurer que chaque tâches peut s'effectuer sans déranger les autres notamment au niveau de la mémoire partagée.
+Il est important de préciser que pour avoir une parallélisation efficace, il est nécessaire de s'assurer que chaque tâche peut s'effectuer sans requérir les autres, notamment au niveau de la mémoire partagée (par exemple que le calcul n°41 ne doit pas avoir besoin du calcul n°40, qui n'a peut-être pas encore été fait).
 
+\newpage
 \subsection{Directives et fonctions importantes}
-OpenMp est une API simple à utiliser, il est donc possible de paralléliser un code à partir d'instruction simples.
+$\textit{OpenMp}$ est une API simple à utiliser, il est donc possible de paralléliser un code à partir d'instructions simples.
 
-La plus importante et intéressante pour nous est celle permettant de paralléliser une boucle for :
+\vspace{2mm}
+La plus importante et intéressante pour nous est celle permettant de paralléliser une boucle $\textit{for}$ :
 
 \begin{lstlisting}
 #pragma omp parallel for
 \end{lstlisting}
 
-Voici également des fonctions qui peuvent s'avérer utiles:
+Voici également des fonctions qui peuvent s'avérer utiles :
 
 \begin{lstlisting}
 omp_get_num_threads() //renvoie le nombre total de threads utilisés
@@ -45,14 +49,14 @@ omp_set_num_threads(int) // définit le nombre de thread à utiliser dans une r�
 omp_get_thread_num() // renvoie le numéro du thread courant
 \end{lstlisting}
 
-Openmp permet aussi de définir si une variable doit être privée ou partagée entre tous les threads en utilisant la clause $private()$.
+$\textit{OpenMp}$ permet aussi de définir si une variable doit être privée ou partagée entre tous les threads en utilisant la clause $private()$.
 
 \section{Application à notre programme de résolution du problème à N-corps}
 
-Dans notre cas, les processus les plus lourds sont les calculs de forces gravitationnelle et la création de l'arbre, c'est donc ceux-ci que nous avons parallélisés. Nous avons fixé le nombre de threads à $4$ et toutes les variables seront partagées entre les threads.
+Dans notre cas, les processus les plus lourds sont les calculs de forces et la création de l'arbre, c'est donc ceux-ci que nous avons parallélisé. Nous avons fixé le nombre de threads à $4$ et toutes les variables sont partagées entre les threads.
 
 \begin{itemize}
-\item La construction de l'arbre : les particules peuvent être ajoutées parallèlement cependant, il est possible d'obtenir des problèmes de compétition entre les threads, il est donc intéressant de vérifier si la parallélisation est effective.
+\item La construction de l'arbre : les particules peuvent être ajoutées parallèlement cependant, il est possible d'obtenir des problèmes de compétition entre les threads, il est donc nécessaire de vérifier si la parallélisation est effective.
 
 \item Le calcul des forces : les calculs intermédiaires (distances...) sont stockés dans des variables temporaires ce qui facilite la parallélisation.
 \end{itemize}

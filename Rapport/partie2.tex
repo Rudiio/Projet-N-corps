@@ -2,9 +2,9 @@
 Le problème consiste à calculer pour chaque particule la force exercée sur elle par toutes les autres à un instant $t$.
 Cela revient donc à résoudre les équations de Newton des $N$ particules. L'unique force prise en compte est ainsi l'interaction gravitationnelle d'un corps sur un autre, les autres étant considérées comme négligeables à cette échelle.
 
-\section{Un problème de mécanique}
+\section{Un problème mécanique}
 \vspace{2mm}
-\subsection{Expression des forces}
+\subsection{Force gravitationnelle}
 \vspace{2mm}
 
 Soit $p_{1}$ et $p_{2}$ deux particules, la force appliquée par $p_2$ sur $p_1$ est :
@@ -50,9 +50,6 @@ $F_{2 \rightarrow 1}=G*m_1*m_2*\begin{pmatrix}
 $
 \end{center}
 
-\vspace{2mm}
-Cette formule est alors plus simple à implémenter.
-
 \vspace{3mm}
 \subsection{Expression de l'accélération}
 \vspace{2mm}
@@ -80,11 +77,11 @@ On obtient donc l'équation différentielle sur la position $\vec{Op_1(t)}$ de l
 \frac{d^2 \vec{Op_1(t)}}{dt^2} = \vec{a(t)}
 \end{equation}
 
-L'intégrateur permettra alors de résoudre numériquement et simplement cette équation différentielle qui n'est pas résoluble de manière exacte pour plus de $3$ particules.
+L'intégrateur permettra alors de résoudre numériquement et simplement cette équation différentielle, ce qui se substituera à une solution exacte.
 
 \subsection{Conservation de l'énergie}
 
-Dans un système mécanique ne comprenant que des forces conservatives, l'énergie mécanique de ce système se conserve en fonction du temps. Il s'agit du théorème de l'énergie mécanique.
+Dans un système mécanique ne comprenant que des forces conservatives, l'énergie mécanique se conserve en fonction du temps. Il s'agit du théorème de l'énergie mécanique.
 
 L'énergie mécanique $E_m$ est la somme de l'énergie cinétique $E_c$ du système et de son énergie potentielle $E_p$ :
 
@@ -92,13 +89,13 @@ L'énergie mécanique $E_m$ est la somme de l'énergie cinétique $E_c$ du syst�
 $E_m = E_c + E_p$
 \end{center}
 
-Dans le cas du problème à N-corps, la seule force prise en compte est l'interaction gravitationnelle qui est conservative, on peut donc appliquer le théorème de conservation de l'énergie potentielle. Pour N corps, on a alors:
+Dans le cas du problème à N-corps, la seule force prise en compte est l'interaction gravitationnelle qui est conservative, on peut donc appliquer le théorème de conservation de l'énergie potentielle. Pour N-corps, on a alors:
 
 \begin{center}
-$E_c = \sum\limits_{i=1}^{N} \frac{1}{2}m_iv_i$  et $E_m =- \sum\limits_{i=1}^{N} \sum\limits_{j=1,j \ne i}^{N} \frac{G m_i m_j}{| r_j - r_i |}$
+$E_c = \sum\limits_{i=1}^{N} \frac{1}{2}m_i v_i^{2}$  et $E_m =- \sum\limits_{i=1}^{N} \sum\limits_{j=1,j \ne i}^{N} \frac{G m_i m_j}{| r_j - r_i |}$
 \end{center}
 
-avec 
+avec:
 \begin{itemize}
 \item $v_i$ la vitesse de la $i$ème particule.
 
@@ -111,13 +108,13 @@ avec
 \end{itemize}
 
 \vspace{1mm}
-Le théorème de l'énergie cinétique sera utile en pratique pour vérifier si nos algorithmes sont corrects et respectent l'aspect physique du problème.
+Le théorème de l'énergie cinétique sera utile en pratique pour vérifier si nos algorithmes sont corrects et s'ils respectent l'aspect physique du problème.
 
 \vspace{2mm}
 \subsection{Principe d'action-réaction}
 \vspace{2mm}
 
-La 3ème loi de Newton appelée également principe d'action-réaction énonce que tout corps $1$ exerçant une force sur un corps $2$ subit une force de même intensité, de même direction mais de sens opposé, exercée par 2.
+La 3ème loi de Newton appelée, également principe d'action-réaction, énonce que tout corps $1$ exerçant une force sur un corps $2$ subit une force de même intensité, de même direction mais de sens opposé, exercée par 2.
 
 \vspace{2mm}
 
@@ -125,30 +122,30 @@ Cela se traduit ainsi :
 $\vec{F}_{2 \rightarrow 1} = -\vec{F}_{1 \rightarrow 2}  $
 
 \vspace{2mm}
-Ce principe nous sera utile pour améliorer nos performances étant donné qu'il s'applique aux forces gravitationnelles.
+Cette réciprocité nous sera utile pour améliorer nos performances étant donné qu'il s'applique aux forces gravitationnelles.
 
 
 \vspace{3mm}
 \subsection{Paramètres physiques de la simulation}
 \vspace{2mm}
 
-Les paramètres utilisés lors d'une simulation permettent de modifier le type de simulation et de résultat que l'on veut obtenir. Il est donc important de les maîtriser et de les connaître afin d'avoir des simulations cohérentes, notamment pour simuler des galaxies. Les variables principales seront les masses des étoiles ainsi que la répartition initiale des étoiles. Les vitesses orbitales sont initialisées comme si la galaxie était déjà formée, même si cela peut paraître incohérent, c'est ce choix qui est fait dans la plupart des modélisations.
+Les paramètres utilisés lors d'une simulation permettent de modifier le type de simulation et de résultat que l'on veut obtenir. Il est donc important de les maîtriser et de les connaître afin d'avoir des simulations cohérentes, notamment pour simuler des galaxies. Les variables principales sont les masses des étoiles ainsi que la répartition initiale des étoiles. Les vitesses orbitales sont initialisées comme si la galaxie était déjà formée, même si cela peut paraître incohérent ; c'est ce choix qui est fait dans la plupart des modélisations.
 
 \vspace{3mm}
 \subsection{Problème théorique : Newton ou Einstein ?}
 \vspace{2mm}
 
-Malgré l'efficacité de la loi d'attraction gravitationnelle de Newton, il demeure un problème : son cadre d'application, celle-ci ne pouvant s'appliquer que lorsque les champs gravitationnels sont faibles ou modérés (peu de particules, particules peu massives, ou particules éloignées). Dans le cadre où ces conditions ne sont pas respectées, ce qui se passe en réalité souvent (lorsque deux particules ont des positions très proches), une des particules va se retrouver éjectée en adoptant une vitesse plus grande que celle de la lumière, ces éjections étant un réel problème. Ces comportement est dû à la modélisation physique  du problème. Pour résoudre ce problème théorique, nous aurions pu utiliser la relativité générale d'Einstein, mais nous avons plutôt opté pour l'ajout d'un paramètre $\it{softening}$ qui va créer artificiellement une distance entre deux étoiles.
+Malgré l'efficacité de la loi d'attraction gravitationnelle de Newton, il demeure un problème : son cadre d'application, celle-ci ne pouvant s'appliquer que lorsque les champs gravitationnels sont faibles ou modérés (peu de particules, particules peu massives, ou particules éloignées). Dans le cadre où ces conditions ne sont pas respectées, ce qui se passe en réalité souvent (lorsque deux particules ont des positions très proches), une des particules va se retrouver éjectée en adoptant une vitesse plus grande que celle de la lumière, ces éjections étant un réel problème. Ce comportement est dû à la modélisation physique  du système ; l'illustration de la concurrence entre ces deux théories de la gravitation est l'orbite de Mercure, qui soumise à un champ gravitationnel fort car proche du Soleil, n'est pas parfaitement décris par les équations de Newton. Pour résoudre ce problème théorique, nous aurions pu utiliser la relativité générale d'Einstein, mais nous avons plutôt opté pour l'ajout d'un paramètre $softening$ qui va créer artificiellement une distance entre deux étoiles.
 
 \vspace{3mm}
-\subsection{Question de l'initialisation : Avec ou sans trou noir ?}
+\subsection{Question de l'initialisation : avec ou sans trou noir ?}
 \vspace{2mm}
 
-La question des trous noirs est assez importante car ce sont des objets qui participent à une stabilité locale du centre des galaxies, stabilité qui de proche en proche impacte la stabilité de l'ensemble. Nous avons donc choisi d'en positionner un au centre de chaque galaxie.
+La question de l'initialisation avec des trous noirs au centre des galaxies est primordiale, car ce sont des objets super-massifs qui participent à une stabilité locale du centre des galaxies, stabilité qui impacte de proche en proche la stabilité totale de l'ensemble. Nous avons donc choisi d'en positionner un au centre de chaque galaxie.
 
 \section{L'aspect mathématique du problème : résolution numérique}
 
-Pour calculer la position de chaque particule, il est nécessaire de résoudre l'équation différentielle donnée dans la section 2.1.3. Cela peut se faire en utilisant un intégrateur numérique.
+Pour calculer la position de chaque particule, il est nécessaire de résoudre l'équation différentielle donnée dans la section 2.1.3, grâce aux intégrateurs numériques suivant.
 
 \subsection{La méthode d'Euler explicite}
 
@@ -184,12 +181,14 @@ $
 
 où $\Delta t$ est le pas de discrétisation du temps.
 
-Il est important de noter que diminuer $\Delta t$ permet d'augmenter la précision de la simulation mais réduit ses performances.
+\vspace{1mm}
+
+Il est important de noter pour plus tard que diminuer $\Delta t$ permet d'augmenter la précision de la simulation mais réduit ses performances. C'est le paramètre principal concernant la précision de l'évolution de notre système.
 
 \vspace{2mm}
 
 \subsection{La méthode saute-mouton (Leap frog)}
-Pour des problèmes de mécaniques, la méthode d'Euler n'est pas stable (divergence de trajectoire). Ainsi, il est préférable d'utiliser le schéma saute-mouton ("leap frog") qui est d'ordre 2 et conserve l'énergie mécanique des systèmes étudiés.
+Pour des problèmes de mécanique, et notamment dans notre cas, la méthode d'Euler n'est pas stable (divergence de trajectoire et/ou non conservation de l'énergie du système). Ainsi, il est préférable d'utiliser le schéma saute-mouton ("leap frog") qui est d'ordre 2, et a l'avantage de conserver l'énergie mécanique des systèmes étudiés.
 
 \vspace{3mm}
 Voici la forme de la version "Drift-kick-Drift" de la méthode:
@@ -230,4 +229,4 @@ $
 
 où $\Delta t$ est le pas de discrétisation du temps.
 
-De même, réduire $\Delta t$ augmente la précision de la simulation au détriment des performances.
+\vspace{2mm}

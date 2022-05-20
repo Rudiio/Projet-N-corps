@@ -4,12 +4,12 @@ Pour accélérer les calculs et permettre de plus grandes simulations, nous allo
 
 \section{Présentation de l'algorithme}
 
-L'algorithme de Barnes-Hut est un algorithme hiérarchique inventé par Josh Barnes et Piet Hut en 1986. Il est basé sur l'utilisation d'un arbre appelé $quadtree$ afin d'approximer le calcul des  interactions gravitationnelles. Il permet de réduire les calculs de manière à obtenir une complexité en $O(Nlog(N))$, tout en restant physiquement correct. Sa fiabilité et son efficacité en fait alors l'algorithme le plus utilisé pour résoudre le problème à N corps.
+L'algorithme de Barnes-Hut est un algorithme hiérarchique (cf. un algorithme qui classe les calculs à effectuer en fonction d'un paramètre) inventé par Josh Barnes et Piet Hut en 1986. Il est basé sur l'utilisation d'un arbre appelé $quadtree$ afin d'approximer le calcul des  interactions gravitationnelles. Il permet de réduire les calculs de manière à obtenir une complexité en $O(Nlog(N))$, tout en restant physiquement correct. Sa fiabilité et son efficacité en fait alors l'algorithme le plus utilisé pour résoudre le problème à N-corps.
  
 \section{Principe général de l'algorithme}
 
-L'idée est d'approcher les forces à longue portée en considérant un groupe de points éloignés comme équivalent à leur centre de masse. Il y a évidemment en contrepartie une légère erreur due à l'approximation mais ce schéma accélère considérablement le calcul. Cette erreur peut être contrôlée à partir d'un paramètre appelé $\theta$. Notamment, la méthode permet d'obtenir une complexité en $ Nlog(N)$ plutôt qu'en $N^2$.
-Au centre de cette approximation se trouve un arbre : une « carte » de l'espace qui nous aide à modéliser des groupes de points comme un seul centre de masse. En deux dimensions, nous pouvons utiliser une structure de données quadtree, qui subdivise de manière récursive les régions carrées de l'espace en quatre quadrants de taille égale. (En trois dimensions, on peut utiliser un octree qui divise de la même manière un volume cubique en huit sous-cubes.)
+L'idée est d'approcher les forces à longue portée en considérant un groupe de points éloignés comme équivalent à leur centre de masse. Il y a évidemment en contrepartie une légère erreur due à l'approximation mais ce schéma accélère considérablement le calcul. Cette erreur peut être contrôlée à partir d'un paramètre appelé $\theta$. Cet algorithme a une complexité en $O(Nlog(N))$ au lieu du $O(N^2)$ des méthodes naïves.
+Au centre de cette approximation se trouve un arbre : une « carte » de l'espace qui nous aide à modéliser des groupes de points comme un seul centre de masse. En deux dimensions, nous pouvons utiliser une structure de données $\textit{quadtree}$, qui subdivise de manière récursive les régions carrées de l'espace en quatre quadrants de taille égale. En trois dimensions, on peut utiliser un octree qui divise de la même manière un cube en huit sous-cubes.
 
 
 \begin{center}
@@ -57,14 +57,15 @@ Les particules ne sont insérées que dans les feuilles de l'arbre, les nœuds p
 
 Les calculs des masses et centres de masses se calculent naturellement en utilisant la récursivité en commençant par les feuilles de l'arbre.
 
+\vspace{2mm}
 Soit le nœud $n$. 
-Si $n$ ne contient qu'une seule particule alors il s'agit d'une feuille et sa masse correspond à la masse de la particule et son centre de masse sera la position de la particule. Si ce n'est pas le cas, la masse de $n$ sera la somme des masses de chacun des fils et son centre du masse se calcule par la formule suivant
+Si $n$ ne contient qu'une seule particule alors il s'agit d'une feuille et sa masse correspond à la masse de la particule et son centre de masse sera la position de la particule. Si ce n'est pas le cas, la masse de $n$ sera la somme des masses de chacun des fils et son centre du masse se calcule par la formule suivante
 
 \begin{equation}
     CM_n = \frac{m_1*CM_1 + m_2*CM_2+ m_3*CM_3 + m_4*CM_4 }{\sum_{i=1}^{4}{m_i}}
 \end{equation}
 
-où $\forall i\in \{1,2,3,4\}$ $CM_i$ est le centre de masse d'un fils et $m_i$ est sa masse.
+où $\forall i\in \{1,2,3,4\}$, $CM_i$ est le centre de masse d'un fils et $m_i$ est sa masse.
 
 \subsection{Le calcul des forces}
 
@@ -80,6 +81,7 @@ longueur d'un coté du nœud actuel  et $D$ est la distance entre la particule $
 Si $\frac{l}{D} < \theta$ alors on calcule la force, appliquée à $p$ à partir du centre de masse et de la masse du nœud. Sinon, elle sera la somme des forces exercées par les fils de ce nœud.
 \end{itemize}
 
+\newpage
 Nous avons ainsi par exemple le résultat suivant:
 \begin{center}
 \includegraphics[scale=0.8]{./images/BH_tree.png}
@@ -90,15 +92,13 @@ Nous avons ainsi par exemple le résultat suivant:
 
 Il devient alors possible de pousser les simulations plus loin pour simuler notamment la formation de galaxies (spirales ou sphériques) en augmentant considérablement le nombre de particules. Cela montre alors l'intérêt et l'efficacité de l'algorithme de Barnes-Hut.
 
-\subsection{Vérification du modèle}
+\section{Vérification du modèle}
 
 \begin{center}
 \includegraphics[scale=0.6]{./resultats/Energy_BH.png}
 \captionsetup{hypcap=false}
-\captionof{figure}{Bilan énergétique méthode de Barnes-Hut}
+\captionof{figure}{Bilan énergétique méthode de Barnes-Hut \\($\Delta t = 50$ et $1000$ itérations)}
 \label{fig9}
 \end{center}
 
-Les paramètres sont les mêmes que pour les autres modèles : $\Delta t = 50$ et $1000$ itérations.
-
-L'énergie mécanique se conserve à partir de la $260$ème itération, avant ça le modèle est perturbé par les conditions initiales. Ainsi, le modèle est bien valide physiquement malgré les approximations effectuées, ce qui montre l'intérêt de l'algorithme. Il a une vitesse de convergence située entre celles des deux précédents modèles.
+L'énergie mécanique se conserve à partir de la $260$ème itération, avant ça, le modèle est perturbé par les conditions initiales. Ainsi, le modèle est bien valide physiquement malgré les approximations effectuées, ce qui montre l'intérêt de l'algorithme. Il a une vitesse de convergence située entre celles des deux méthodes naïves.
