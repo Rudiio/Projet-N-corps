@@ -31,7 +31,7 @@ public:
     virtual void OnProcessEvents(uint8_t type);
     virtual float gettime();
     virtual float getconstruction();
-    void Init(int num,int methode_calcul);
+    void Init(int num,int methode_calcul,int mode_init);
 
 private:
 

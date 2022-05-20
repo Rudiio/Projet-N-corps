@@ -41,14 +41,14 @@ NBodyWnd::~NBodyWnd()
 }
 
 //------------------------------------------------------------------------------
-void NBodyWnd::Init(int num, int methode_calcul)
+void NBodyWnd::Init(int num, int methode_calcul,int mode_init)
 {
   // Clean stuff
   delete m_pModel;
   delete m_pSolver;
 
   // Create the n-body model class
-  m_pModel = new ModelNBody(num,methode_calcul);
+  m_pModel = new ModelNBody(num,methode_calcul,mode_init);
   std::cout <<"timestep =" << m_pModel->GetSuggestedTimeStep() << "\n";
   
   // Assign model to the solver and set the integration step width
@@ -117,8 +117,6 @@ void NBodyWnd::Render()
   }
 
 //Passer en commentaire tout ce qui est en dessous pour supprimer l'affichage
-
-
   glClear(GL_COLOR_BUFFER_BIT  | GL_DEPTH_BUFFER_BIT);
 
   Vec3D orient;
@@ -410,26 +408,6 @@ void NBodyWnd::OnProcessEvents(uint8_t type)
 {
   switch (type)
   {
-    // case SDL_MOUSEBUTTONDOWN:
-    //     {
-    //       if (!m_pSolver)
-    //         break;
-
-    //       PODState *state = reinterpret_cast<PODState*>(m_pSolver->GetState());
-    //       Vec3D p = GetOGLPos(m_event.button.x,
-    //                           m_event.button.y);
-    //       state[0].x = p.x;
-    //       state[0].y = p.y;
-    //       SetCamera(p, p, Vec3D(0, 1, 0));
-
-    //       // the solver may need to rest its temporary arrays. I can't just
-    //       // overwirte part of its data ADB schemes will go mad
-    //       // if i change a particles position. without restarting the engine
-    //       m_pSolver->SetInitialState(reinterpret_cast<double*>(state));
-    //       m_pSolver->SingleStep();
-    //     }
-    //     break;
-
     case SDL_KEYDOWN:
         switch (m_event.key.keysym.sym)
         {
@@ -556,6 +534,7 @@ float NBodyWnd::getconstruction()
   return m_pModel->Getmesureconstruction();
 }
 
+//------------------------------------------------------------------------------
 void NBodyWnd::CalcultateEnergy(int methode)
 {
   //Position et vitesse actuelle

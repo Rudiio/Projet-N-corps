@@ -270,6 +270,7 @@ Vec2D BHTreeNode::CalcForce(const ParticleData &p1) const
   return acc;
 }
 
+//------------------------------------------------------------------------------
 Vec2D BHTreeNode::CalcNaiveForce(const ParticleData &p1, PODState *pState, PODAuxState *m_pAux,int p_num,int pos) const
 {
   Vec2D acc;
@@ -312,6 +313,7 @@ Vec2D BHTreeNode::CalcNaiveForce(const ParticleData &p1, PODState *pState, PODAu
   return acc;
 }
 
+//------------------------------------------------------------------------------
 Vec2D BHTreeNode::CalcNaiveForceefficient(const ParticleData &p1, PODState *pState, PODAuxState *m_pAux,int p_num,int pos,double *acx,double *acy) const
 {
   Vec2D acc;

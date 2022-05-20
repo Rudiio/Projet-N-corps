@@ -22,6 +22,7 @@ source : \url{https://femto-physique.fr}}
 \section{Objectif : résolution la plus efficace possible du problème à N-corps}
 
 L'objectif du projet est donc de résoudre le plus efficacement possible le problème à N-corps afin de simuler des galaxies.
+Il sera alors intéressant de comparer les performances de ces méthode.
 Pour cela, nous utiliserons des solutions approchées calculées à partir de différents algorithmes dont l'algorithme de Barnes-Hut. Nous étudierons également l'application de la parallélisation à notre programme.
 En pratique, le projet consiste à compléter et améliorer un projet déjà commencé afin d'acquérir de nouvelles compétences en C++, sur les algorithmes hiérarchiques, en parallélisation et plus généralement en optimisation de code.
 

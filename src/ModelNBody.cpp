@@ -34,7 +34,7 @@ float time_diff(struct timeval *start, struct timeval *end)
 //------------------------------------------------------------------------
 
 /** \brief ModelNbody class constructor*/
-ModelNBody::ModelNBody(int num,int methode_calcul) 
+ModelNBody::ModelNBody(int num,int methode_calcul,int mode_init) 
 
   :IModel("N-Body simulation (2D)")
   ,m_pInitial(NULL) //Tableau contenant les positions et vitesses initiales
@@ -70,7 +70,7 @@ ModelNBody::ModelNBody(int num,int methode_calcul)
   //2 = 2 galaxies
   //3 = Galaxie sphérique
 
-  InitCollision(num, 2);
+  InitCollision(num, mode_init);
 
   gettimeofday(&fin, NULL);
   std::cout << "  Le temps passé dans la fonction InitCollision est : " <<time_diff(&start, &fin) << "sec \n";
@@ -176,8 +176,8 @@ void ModelNBody::GetOrbitalVelocity(const ParticleData &p1, const ParticleData &
   double &vx = p2.m_pState->vx,
          &vy = p2.m_pState->vy;
 
-  vx =( r[1] / dist) * v*150;
-  vy =(-r[0] / dist) * v*150;
+  vx =( r[1] / dist) * v*100;
+  vy =(-r[0] / dist) * v*100;
 }
 
 //------------------------------------------------------------------------
@@ -835,7 +835,7 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   // Particle 0 is calculated last, because the statistics
   // data relate to this particle. They would be overwritten
   // otherwise
-  m_root.StatReset();  //A remettre lorsque l'arbre sera en place
+  m_root.StatReset(); 
 
   ParticleData p(&pState[0], &m_pAux[0]);
 
@@ -869,12 +869,12 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   pDeriv[0].vy = pState[0].vy;
 
   // Save vectors for camera orientations
-  // m_camDir.x = pState[0].x - pState[4000].x;
-  // m_camDir.y = pState[0].y - pState[4000].y;
-  // m_camPos.x = 0;
-  // m_camPos.y = 0;
-  // m_camPos.x = m_root.GetCenterOfMass().x;
-  // m_camPos.y = m_root.GetCenterOfMass().y;
+  m_camDir.x = pState[0].x - pState[4000].x;
+  m_camDir.y = pState[0].y - pState[4000].y;
+  m_camPos.x = 0;
+  m_camPos.y = 0;
+  m_camPos.x = m_root.GetCenterOfMass().x;
+  m_camPos.y = m_root.GetCenterOfMass().y;
 
   //Anti-warning
   acc.x = acx[0];

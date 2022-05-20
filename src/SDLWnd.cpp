@@ -372,6 +372,8 @@ void SDLWindow::DrawAxis(const Vec2D &origin)
 }
 
 //-----------------------------------------------------------------------
+/** \brief Boucle principale du programme 
+ * On peut y activer le calcul des énergies, l'écriture dans les différents fichiers */
 void SDLWindow::MainLoop(int num,int methode,int nb_iterations_max)
 {
   int ct = 0;

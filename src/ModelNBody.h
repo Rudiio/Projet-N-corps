@@ -21,7 +21,7 @@ class ModelNBody : public IModel
 {
 public:
 
-    ModelNBody(int num,int methode_calcul);
+    ModelNBody(int num,int methode_calcul,int mode_init);
     virtual ~ModelNBody();
 
     void InitCollision(int num, int mode);
