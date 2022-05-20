@@ -65,8 +65,8 @@ Ce programme python affiche les bilans énergétiques de chaque méthode.
 - **K** : permet de zoomer
 - **T** : permet d'afficher l'arbre de Barnes-Hut
 - **A** : permet d'afficher/cacher les graduations
-- **X** : permet de diminuer le paramètre $\theta$
-- **Y** : permet de d'augmenter le paramètre $\theta$
+- **X** : permet de diminuer le paramètre <img src="https://render.githubusercontent.com/render/math?math=\theta">
+- **Y** : permet de d'augmenter le paramètre <img src="https://render.githubusercontent.com/render/math?math=\theta">
 
 ## Dependencies
 
