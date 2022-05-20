@@ -24,7 +24,7 @@ Nous avons travaillé à partir d'un code C++ comprenant déja toute la partie d
 - [x] Etude comparative des performances
 - [x] Rajouter un nouvel intégrateur
 - [x] Coloration des particules
-- [ ] Nouvelle initialisation
+- [x] Nouvelle initialisation
 
 ##  Prise en main
 
@@ -111,7 +111,3 @@ make
 
 ### Galaxie spirale
 ![spiral](./visuels/spirale.png)
-
-## A corriger
-
-- Fusion
