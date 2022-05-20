@@ -203,7 +203,7 @@ BHTreeNode* BHTreeNode::CreateQuadNode(EQuadrant eQuad)
     return NULL;
 }
 
-
+//------------------------------------------------------------------------------
 void BHTreeNode:: CreatequadTree()
 {
   /*Crée tous les fils du noeud actuel*/
@@ -291,8 +291,6 @@ Vec2D BHTreeNode::CalcNaiveForce(const ParticleData &p1, PODState *pState, PODAu
         acc.x += (m_pAux[i].mass * dx)/(r3+softening);
         acc.y += (m_pAux[i].mass *dy)/(r3+softening);
 
-        // //Calcul de l'énergie potentielle
-        // Epot += (m_pAux[i].mass * p1.m_pAuxState->mass)/(std::sqrt(dx*dx + dy*dy +0.1));
       }
         
     }
@@ -367,8 +365,6 @@ Vec2D BHTreeNode::CalcTreeForce(const ParticleData &p1) const
 
   double &x1(p1.m_pState->x);
   double &y1(p1.m_pState->y);
-  //double &x2(p2.m_pState->x);
-  //double &y2(p2.m_pState->y);
 
   if(m_num==1) {
 

@@ -568,10 +568,13 @@ void NBodyWnd::CalcultateEnergy(int methode)
     double vx = pState[i].vx;
     double vy = pState[i].vy;
 
+    //Clalcul de l'énergie cinétique
     Ecin += (double)1/2 * m_pModel->GetMass(i)* (vx*vx + vy*vy);
+
 
     for(int j=0;j<num;j++){
       if(i!=j){
+        //Calcul de l'énergie potentielle
         double dx = pState[i].x - pState[j].x;  
         double dy = pState[i].y - pState[j].y; 
         double d = sqrt(dx*dx + dy*dy + 0.5);

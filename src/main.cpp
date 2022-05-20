@@ -35,9 +35,8 @@ int main(int argc, char** argv)
     NBodyWnd wndMain(700, "NBody Simulation (Barnes Hut algorithm)");
 
     // Define simulation size
-    //Modifier Init pour qu'elle prenne le nombre de particules à générer
-    //implique des modifications d'autres fonctions 
-
+    //Le deuxième paramètre de Mainloop est le nombre d'itérations à effectuer
+    //S'il vaut -1 le programme tourne tant que l'utilisateur n'a pas fermé le programme 
     wndMain.Init(num,methode_calcul);
     wndMain.MainLoop(num,methode_calcul,-1);
   }

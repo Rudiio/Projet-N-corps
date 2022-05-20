@@ -6,6 +6,8 @@ using namespace std;
 
 int main(int argc,char **argv)
 {
+    /* Permet de lancer des séries de test avec les différentes méthodes.*/
+    
     int i=1;
     // Première série de tests
     for(int n=100;n<2000;n+=100){ 

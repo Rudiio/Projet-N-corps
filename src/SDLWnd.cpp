@@ -405,18 +405,17 @@ void SDLWindow::MainLoop(int num,int methode,int nb_iterations_max)
       t1 = t2;
     }
     nombre_iteration++;
-    // cout << "nb particules=" <<num<< " num iterate =" << nombre_iteration << endl;
   }
 
   //Stockage des valeurs dans les fichiers correspondants
   if(!iteration_cap){
     
     //Temps moyen de construction de l'arbre
-    // ofstream file("./data/BH_Tree_Construction_time.txt", ios_base::app ); 
-    // if(file.is_open()){
-    //     file <<num << " " << getconstruction()/(nombre_iteration*1.0) << endl;
-    //     file.close();
-    //   }
+    ofstream file("./data/BH_Tree_Construction_time.txt", ios_base::app ); 
+    if(file.is_open()){
+        file <<num << " " << getconstruction()/(nombre_iteration*1.0) << endl;
+        file.close();
+      }
 
     //Temps moyen de calcul BH
     if(methode==1){

@@ -88,5 +88,3 @@ plt.ylabel("Durée en secondes")
 plt.title("Durée moyenne de calcul par rapport au nombre de particules N")
 plt.legend()
 plt.show()
-
-# print(np.mean(N_seq[:,1]/N_par[:,1]))

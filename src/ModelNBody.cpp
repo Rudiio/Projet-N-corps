@@ -8,6 +8,7 @@
 #include "ModelNBody.h"
 
 //--- Standard includes --------------------------------------------------
+
 #include <cstdlib>
 #include <cmath>
 #include <limits>
@@ -22,8 +23,9 @@ using namespace std;
 
 struct timeval start;
 struct timeval fin;
-// ofstream fichier("./src/donnees_temps.txt", ios::out ); 
 
+//------------------------------------------------------------------------
+/** \brief Calcul des durées en secondes */
 float time_diff(struct timeval *start, struct timeval *end)
 {
     return (end->tv_sec - start->tv_sec) + 1e-6*(end->tv_usec - start->tv_usec);
@@ -58,44 +60,20 @@ ModelNBody::ModelNBody(int num,int methode_calcul)
 {
   BHTreeNode::s_gamma = gamma_1;
 
-  
-//Initialisation des particules
-
-  // gettimeofday(&start, NULL);
-  // Init();
-  // gettimeofday(&fin, NULL);
-  // std::cout << "  Le temps passé dans la fonction Init est : " <<time_diff(&start, &fin) << "sec \n";
-  // if(fichier){
-  //     fichier << time_diff(&start, &fin) << "\n" ;
-  //     fichier.close();
-  //     }
-  // else   
-  //     cerr << "Erreur à l'ouverture !" << endl;
-
   gettimeofday(&start, NULL);
-  //------------------------------------------------------------------------------------------------------------------------------- MODIFIER ICI POUR LE MODE D'INITIALISATION
-  InitCollision(num, 0);
+
+  //------------------------------------------------------------------------
+  //Initialisation des particules
+  //Le deuxième paramètre de InitCollision correspond au choix du mode d'initialisation :
+  //0 = 1 galaxie
+  //1 = mode "fantaisie"
+  //2 = 2 galaxies
+  //3 = Galaxie sphérique
+
+  InitCollision(num, 2);
+
   gettimeofday(&fin, NULL);
   std::cout << "  Le temps passé dans la fonction InitCollision est : " <<time_diff(&start, &fin) << "sec \n";
-  // if(fichier) 
-  //   {
-  //     fichier << time_diff(&start, &fin) << "\n" ;
-    
-  //     fichier.close(); 
-  //    }
-  // else  
-  //     cerr << "Erreur à l'ouverture !" << endl;
-
-  // gettimeofday(&start, NULL);
-  // Init3Body();
-  // gettimeofday(&fin, NULL);
-  // std::cout << "  Le temps passé dans la fonction Init3Body() est : " <<time_diff(&start, &fin) << "sec \n";
-  // if(fichier){
-  //     fichier << time_diff(&start, &fin) << "\n" ;
-  //     fichier.close();
-  //     }
-  // else   
-  //     cerr << "Erreur à l'ouverture !" << endl;
 }
 
 //------------------------------------------------------------------------
@@ -226,112 +204,370 @@ void ModelNBody::ResetDim(int num, double stepsize)
   m_center = Vec2D(0,0);    // for storing the center of mass
 }
 
-//------------------------------------------------------------------------*
+//---------------------------------------------------------------------------------------------------- GALAXIE SPIRALE
 /** \brief Initialise 2 black holes et des particules aléatoires autour des blackhole*/
 void ModelNBody::InitCollision(int num, int mode)
 {
-  // Reset model size
-  //Création des tableaux de particules +,le delta t
-  ResetDim(num, m_timeStep);
 
-  // initialize particles
-  ParticleData blackHole;
-  ParticleData blackHole2;
-
-  for (int i=0; i<m_num; ++i)
+  if(mode==0)
   {
-    //Itération dans le tableau de particules
-    PODState &st        = m_pInitial[i];
-    PODAuxState &st_aux = m_pAux[i];
+    // Reset model size
+    //Création des tableaux de particules +,le delta t
+    ResetDim(num, m_timeStep);
 
-    if (i==0)
+    // initialize particles
+    ParticleData blackHole;
+
+    for (int i=0; i<m_num; ++i)
     {
-      //On relie la particule balck hole 1 avec st[0] et st_aux[0]
-      blackHole.m_pState = &st;
-      blackHole.m_pAuxState = &st_aux;
+      //Itération dans le tableau de particules
+      PODState &st        = m_pInitial[i];
+      PODAuxState &st_aux = m_pAux[i];
 
-      //Paramètres de black hole 1
-      st.x  = st.y = 0;
-      st.vx = st.vy = 0;    //vitesse nulle
-      st_aux.mass = 4310000;//4310000; //43100;//1000000; //431000;   // 4.31 Millionen Sonnenmassen
-    }
-    //---------------------------------------------------------------------------------------------------- POUR DÉCIDER À PARTIR DE QUELLE PARTICULE ON CHANGE DE GALAXIE
-    else if (i<70000)  //Initialisation des autres particules  random autour de black hole 1
-    {
-      const double rad = 10;
-      double r = 0.1 + .8 * (rad * ((double)rand() / RAND_MAX))+1;
-      double a = 2.0*M_PI*((double)rand() / RAND_MAX);
-      st_aux.mass =0.03 + 20 * ((double)rand() / RAND_MAX);
-      st.x = r*sin(a);
-      st.y = r*cos(a);
+      if (i==0)
+      {
+        //On relie la particule balck hole 1 avec st[0] et st_aux[0]
+        blackHole.m_pState = &st;
+        blackHole.m_pAuxState = &st_aux;
 
-      GetOrbitalVelocity(blackHole, ParticleData(&st, &st_aux));
-    }
-    else if (i==70000)   //Initialisation de black hole 2
-    {
-      blackHole2.m_pState = &st;
-      blackHole2.m_pAuxState = &st_aux;
+        //Paramètres de black hole 1
+        st.x  = st.y = 0;
+        st.vx = st.vy = 0;      //vitesse nulle
+        st_aux.mass = 4310;  // 4.31 Millionen Sonnenmassen
+      }
+      //---------------------------------------------------------------------------------------------------- POUR DÉCIDER À PARTIR DE QUELLE PARTICULE ON CHANGE DE GALAXIE
+      else  //Initialisation des autres particules  random autour de black hole 1
+      {
+        const double rad = 100;
+        double r = 0.1 + .8 * (rad * ((double)rand() / RAND_MAX))+1;
+        double a = 2.0*M_PI*((double)rand() / RAND_MAX);
+        st_aux.mass =1 + 2 * ((double)rand() / RAND_MAX);
+        st.x = r*sin(a);
+        st.y = r*cos(a);
 
-      //Paramètres de black hole 2
-      st.x = st.y = 10;
-      st_aux.mass = 100000;
+        GetOrbitalVelocity(blackHole, ParticleData(&st, &st_aux));
+      }
 
-      //Vitesse orbitale de black hole 2 par rapport à black hole 1
-      GetOrbitalVelocity(blackHole, blackHole2);
-
-      //Vitesse orbitale non nulle de black hole 2 par rapport à black hole 1 
-      blackHole2.m_pState->vx *= 0.9;
-      blackHole2.m_pState->vy *= 0.9;
-
-    }
-    else
-    {
-      //Calculs des paramètres des particules random de black hole 2
-      const double rad = 3;
-      double r = 0.1 + .8 *  (rad * ((double)rand() / RAND_MAX));
-      double a = 2.0*M_PI*((double)rand() / RAND_MAX);
-      st_aux.mass = 0.03 + 20 * ((double)rand() / RAND_MAX);
-      st.x = blackHole2.m_pState->x + r*sin(a);
-      st.y = blackHole2.m_pState->y + r*cos(a);
-
-      //Calcule de la vitesse orbitale des particules random autour de black hole 2
-      GetOrbitalVelocity(blackHole2, ParticleData(&st, &st_aux));
-
-      //On rajoute la vitesse de black hole 2 aux vitesses
-      st.vx+=blackHole2.m_pState->vx;
-      st.vy+=blackHole2.m_pState->vy;
+      // determine the size of the area including all particles
+      m_max.x = std::max(m_max.x, st.x);
+      m_max.y = std::max(m_max.y, st.y);
+      m_min.x = std::min(m_min.x, st.x);
+      m_min.y = std::min(m_min.y, st.y);
     }
 
-    // determine the size of the area including all particles
-    m_max.x = std::max(m_max.x, st.x);
-    m_max.y = std::max(m_max.y, st.y);
-    m_min.x = std::min(m_min.x, st.x);
-    m_min.y = std::min(m_min.y, st.y);
+    // The Barnes Hut algorithm needs square shaped quadrants.
+    // calculate the height of the square including all particles (and a bit more space)
+    double l = 1.05 * std::max(m_max.x - m_min.x,
+                               m_max.y - m_min.y);
+
+    m_roi = l * 1.5;
+
+    // compute the center of the region including all particles
+    Vec2D c(m_min.x + (m_max.x - m_min.x)/2.0,
+            m_min.y + (m_max.y - m_min.y)/2.0);
+    m_min.x = c.x - l/2.0;
+    m_max.x = c.x + l/2.0;
+    m_min.y = c.y - l/2.0;
+    m_max.y = c.y + l/2.0;
+
+    std::cout << "Initial particle distribution area\n";
+    std::cout << "----------------------------------\n";
+    std::cout << "Particle spread:\n";
+    std::cout << "  xmin=" << m_min.x << ", ymin=" << m_min.y << "\n";
+    std::cout << "  xmax=" << m_max.y << ", ymax=" << m_max.y << "\n";
+    std::cout << "Bounding box:\n";
+    std::cout << "  cx =" << c.x   << ", cy  =" << c.y   << "\n";
+    std::cout << "  l  =" << l << "\n";
   }
 
-  // The Barnes Hut algorithm needs square shaped quadrants.
-  // calculate the height of the square including all particles (and a bit more space)
-  double l = 1.05 * std::max(m_max.x - m_min.x,
-                             m_max.y - m_min.y);
+  else if(mode==1)
+  {
+    // Reset model size
+    //Création des tableaux de particules +,le delta t
+    ResetDim(num, m_timeStep);
 
-  m_roi = l * 1.5;
+    // initialize particles
+    ParticleData blackHole;
 
-  // compute the center of the region including all particles
-  Vec2D c(m_min.x + (m_max.x - m_min.x)/2.0,
-          m_min.y + (m_max.y - m_min.y)/2.0);
-  m_min.x = c.x - l/2.0;
-  m_max.x = c.x + l/2.0;
-  m_min.y = c.y - l/2.0;
-  m_max.y = c.y + l/2.0;
+    float angle = 0;
+    for (int i=0; i<m_num; ++i)
+    {
+      //Itération dans le tableau de particules
+      PODState &st        = m_pInitial[i];
+      PODAuxState &st_aux = m_pAux[i];
 
-  std::cout << "Initial particle distribution area\n";
-  std::cout << "----------------------------------\n";
-  std::cout << "Particle spread:\n";
-  std::cout << "  xmin=" << m_min.x << ", ymin=" << m_min.y << "\n";
-  std::cout << "  xmax=" << m_max.y << ", ymax=" << m_max.y << "\n";
-  std::cout << "Bounding box:\n";
-  std::cout << "  cx =" << c.x   << ", cy  =" << c.y   << "\n";
-  std::cout << "  l  =" << l << "\n";
+      angle += M_PI/4;
+
+      if(i%8==0)
+      {
+        angle = 0;
+      }
+
+      if (i==0)
+      {
+        //On relie la particule balck hole 1 avec st[0] et st_aux[0]
+        blackHole.m_pState = &st;
+        blackHole.m_pAuxState = &st_aux;
+
+        //Paramètres de black hole 1
+        st.x  = st.y = 0;
+        st.vx = st.vy = 0;      //vitesse nulle
+        st_aux.mass = 431;  // 4.31 Millionen Sonnenmassen
+      }
+      //---------------------------------------------------------------------------------------------------- POUR DÉCIDER À PARTIR DE QUELLE PARTICULE ON CHANGE DE GALAXIE
+      else  //Initialisation des autres particules  random autour de black hole 1
+      {
+        double r = i*0.0001+0.8*((double)rand()/RAND_MAX);
+        st_aux.mass =0.03 + 20 * ((double)rand() / RAND_MAX);
+
+        st.x = r*sin(angle);
+        st.y = r*cos(angle);
+
+        GetOrbitalVelocity(blackHole, ParticleData(&st, &st_aux));
+      }
+
+      // determine the size of the area including all particles
+      m_max.x = std::max(m_max.x, st.x);
+      m_max.y = std::max(m_max.y, st.y);
+      m_min.x = std::min(m_min.x, st.x);
+      m_min.y = std::min(m_min.y, st.y);
+    }
+
+    // The Barnes Hut algorithm needs square shaped quadrants.
+    // calculate the height of the square including all particles (and a bit more space)
+    double l = 1.05 * std::max(m_max.x - m_min.x,
+                               m_max.y - m_min.y);
+
+    m_roi = l * 1.5;
+
+    // compute the center of the region including all particles
+    Vec2D c(m_min.x + (m_max.x - m_min.x)/2.0,
+            m_min.y + (m_max.y - m_min.y)/2.0);
+    m_min.x = c.x - l/2.0;
+    m_max.x = c.x + l/2.0;
+    m_min.y = c.y - l/2.0;
+    m_max.y = c.y + l/2.0;
+
+    std::cout << "Initial particle distribution area\n";
+    std::cout << "----------------------------------\n";
+    std::cout << "Particle spread:\n";
+    std::cout << "  xmin=" << m_min.x << ", ymin=" << m_min.y << "\n";
+    std::cout << "  xmax=" << m_max.y << ", ymax=" << m_max.y << "\n";
+    std::cout << "Bounding box:\n";
+    std::cout << "  cx =" << c.x   << ", cy  =" << c.y   << "\n";
+    std::cout << "  l  =" << l << "\n";
+  }
+
+  else if(mode==2)
+  {
+    // Reset model size
+    //Création des tableaux de particules +,le delta t
+    ResetDim(num, m_timeStep);
+
+    // initialize particles
+    ParticleData blackHole;
+    ParticleData blackHole2;
+
+    for (int i=0; i<m_num; ++i)
+    {
+      //Itération dans le tableau de particules
+      PODState &st        = m_pInitial[i];
+      PODAuxState &st_aux = m_pAux[i];
+
+      if (i==0)
+      {
+        //On relie la particule balck hole 1 avec st[0] et st_aux[0]
+        blackHole.m_pState = &st;
+        blackHole.m_pAuxState = &st_aux;
+
+        //Paramètres de black hole 1
+        st.x  = st.y = 0;
+        st.vx = st.vy = 0;      //vitesse nulle
+        st_aux.mass = 431000;  // 4.31 Millionen Sonnenmassen
+      }
+      //---------------------------------------------------------------------------------------------------- POUR DÉCIDER À PARTIR DE QUELLE PARTICULE ON CHANGE DE GALAXIE
+      else if (i<num/2)  //Initialisation des autres particules  random autour de black hole 1
+      {
+        const double rad = 10;
+        double r = 0.1 + .8 * (rad * ((double)rand() / RAND_MAX))+1;
+        double a = 2.0*M_PI*((double)rand() / RAND_MAX);
+        st_aux.mass =0.03 + 20 * ((double)rand() / RAND_MAX);
+        st.x = r*sin(a);
+        st.y = r*cos(a);
+
+        GetOrbitalVelocity(blackHole, ParticleData(&st, &st_aux));
+      }
+      else if (i==num/2)   //Initialisation de black hole 2
+      {
+        blackHole2.m_pState = &st;
+        blackHole2.m_pAuxState = &st_aux;
+
+        //Paramètres de black hole 2
+        st.x = st.y = 10;
+        st_aux.mass = 1000;
+
+        //Vitesse orbitale de black hole 2 par rapport à black hole 1
+        GetOrbitalVelocity(blackHole, blackHole2);
+
+        //Vitesse orbitale non nulle de black hole 2 par rapport à black hole 1 
+        blackHole2.m_pState->vx *= 0.9;
+        blackHole2.m_pState->vy *= 0.9;
+
+      }
+      else
+      {
+        //Calculs des paramètres des particules random de black hole 2
+        const double rad = 3;
+        double r = 0.1 + .8 *  (rad * ((double)rand() / RAND_MAX));
+        double a = 2.0*M_PI*((double)rand() / RAND_MAX);
+        st_aux.mass = 3 + 20 * ((double)rand() / RAND_MAX);
+        st.x = blackHole2.m_pState->x + r*sin(a);
+        st.y = blackHole2.m_pState->y + r*cos(a);
+
+        //Calcule de la vitesse orbitale des particules random autour de black hole 2
+        GetOrbitalVelocity(blackHole2, ParticleData(&st, &st_aux));
+
+        //On rajoute la vitesse de black hole 2 aux vitesses
+        st.vx+=blackHole2.m_pState->vx;
+        st.vy+=blackHole2.m_pState->vy;
+      }
+
+      // determine the size of the area including all particles
+      m_max.x = std::max(m_max.x, st.x);
+      m_max.y = std::max(m_max.y, st.y);
+      m_min.x = std::min(m_min.x, st.x);
+      m_min.y = std::min(m_min.y, st.y);
+    }
+
+    // The Barnes Hut algorithm needs square shaped quadrants.
+    // calculate the height of the square including all particles (and a bit more space)
+    double l = 1.05 * std::max(m_max.x - m_min.x,
+                               m_max.y - m_min.y);
+
+    m_roi = l * 1.5;
+
+    // compute the center of the region including all particles
+    Vec2D c(m_min.x + (m_max.x - m_min.x)/2.0,
+            m_min.y + (m_max.y - m_min.y)/2.0);
+    m_min.x = c.x - l/2.0;
+    m_max.x = c.x + l/2.0;
+    m_min.y = c.y - l/2.0;
+    m_max.y = c.y + l/2.0;
+
+    std::cout << "Initial particle distribution area\n";
+    std::cout << "----------------------------------\n";
+    std::cout << "Particle spread:\n";
+    std::cout << "  xmin=" << m_min.x << ", ymin=" << m_min.y << "\n";
+    std::cout << "  xmax=" << m_max.y << ", ymax=" << m_max.y << "\n";
+    std::cout << "Bounding box:\n";
+    std::cout << "  cx =" << c.x   << ", cy  =" << c.y   << "\n";
+    std::cout << "  l  =" << l << "\n";
+  }
+  else if(mode==3){
+    // Reset model size
+    //Création des tableaux de particules +,le delta t
+    ResetDim(num, m_timeStep);
+
+    // initialize particles
+    ParticleData blackHole;
+    ParticleData blackHole2;
+
+    for (int i=0; i<m_num; ++i)
+    {
+      //Itération dans le tableau de particules
+      PODState &st        = m_pInitial[i];
+      PODAuxState &st_aux = m_pAux[i];
+
+      if (i==0)
+      {
+        //On relie la particule balck hole 1 avec st[0] et st_aux[0]
+        blackHole.m_pState = &st;
+        blackHole.m_pAuxState = &st_aux;
+
+        //Paramètres de black hole 1
+        st.x  = st.y = 0;
+        st.vx = st.vy = 0;    //vitesse nulle
+        st_aux.mass = 4310000;//4310000; //43100;//1000000; //431000;   // 4.31 Millionen Sonnenmassen
+      }
+      //---------------------------------------------------------------------------------------------------- POUR DÉCIDER À PARTIR DE QUELLE PARTICULE ON CHANGE DE GALAXIE
+      else if (i<70000)  //Initialisation des autres particules  random autour de black hole 1
+      {
+        const double rad = 10;
+        double r = 0.1 + .8 * (rad * ((double)rand() / RAND_MAX))+1;
+        double a = 2.0*M_PI*((double)rand() / RAND_MAX);
+        st_aux.mass =0.03 + 20 * ((double)rand() / RAND_MAX);
+        st.x = r*sin(a);
+        st.y = r*cos(a);
+
+        GetOrbitalVelocity(blackHole, ParticleData(&st, &st_aux));
+      }
+      else if (i==70000)   //Initialisation de black hole 2
+      {
+        blackHole2.m_pState = &st;
+        blackHole2.m_pAuxState = &st_aux;
+
+        //Paramètres de black hole 2
+        st.x = st.y = 10;
+        st_aux.mass = 100000;
+
+        //Vitesse orbitale de black hole 2 par rapport à black hole 1
+        GetOrbitalVelocity(blackHole, blackHole2);
+
+        //Vitesse orbitale non nulle de black hole 2 par rapport à black hole 1 
+        blackHole2.m_pState->vx *= 0.9;
+        blackHole2.m_pState->vy *= 0.9;
+
+      }
+      else
+      {
+        //Calculs des paramètres des particules random de black hole 2
+        const double rad = 3;
+        double r = 0.1 + .8 *  (rad * ((double)rand() / RAND_MAX));
+        double a = 2.0*M_PI*((double)rand() / RAND_MAX);
+        st_aux.mass = 0.03 + 20 * ((double)rand() / RAND_MAX);
+        st.x = blackHole2.m_pState->x + r*sin(a);
+        st.y = blackHole2.m_pState->y + r*cos(a);
+
+        //Calcule de la vitesse orbitale des particules random autour de black hole 2
+        GetOrbitalVelocity(blackHole2, ParticleData(&st, &st_aux));
+
+        //On rajoute la vitesse de black hole 2 aux vitesses
+        st.vx+=blackHole2.m_pState->vx;
+        st.vy+=blackHole2.m_pState->vy;
+      }
+
+      // determine the size of the area including all particles
+      m_max.x = std::max(m_max.x, st.x);
+      m_max.y = std::max(m_max.y, st.y);
+      m_min.x = std::min(m_min.x, st.x);
+      m_min.y = std::min(m_min.y, st.y);
+    }
+
+    // The Barnes Hut algorithm needs square shaped quadrants.
+    // calculate the height of the square including all particles (and a bit more space)
+    double l = 1.05 * std::max(m_max.x - m_min.x,
+                              m_max.y - m_min.y);
+
+    m_roi = l * 1.5;
+
+    // compute the center of the region including all particles
+    Vec2D c(m_min.x + (m_max.x - m_min.x)/2.0,
+            m_min.y + (m_max.y - m_min.y)/2.0);
+    m_min.x = c.x - l/2.0;
+    m_max.x = c.x + l/2.0;
+    m_min.y = c.y - l/2.0;
+    m_max.y = c.y + l/2.0;
+
+    std::cout << "Initial particle distribution area\n";
+    std::cout << "----------------------------------\n";
+    std::cout << "Particle spread:\n";
+    std::cout << "  xmin=" << m_min.x << ", ymin=" << m_min.y << "\n";
+    std::cout << "  xmax=" << m_max.y << ", ymax=" << m_max.y << "\n";
+    std::cout << "Bounding box:\n";
+    std::cout << "  cx =" << c.x   << ", cy  =" << c.y   << "\n";
+    std::cout << "  l  =" << l << "\n";
+  }
+
 }
 
 //------------------------------------------------------------------------------
@@ -483,8 +719,6 @@ void ModelNBody::Fusion(double *a_state)
   double r=0;
 
   for (int i=1; i<m_num; ++i){
-    // cout << "x=" << pState[i].x << "\n";
-    // cout << "y=" << pState[i].y << "\n";
 
     for(int j=1; j<m_num;j++){
       dx=(pState+i)->x - (pState+j)->x;    //distance en x
@@ -550,7 +784,6 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   double acy[m_num];
 
   //initialisation des tableaux pour le calcul efficace
-
   #pragma omp parallel for
   for(int j=0; j<m_num; j++){
    acx[j]=0;
@@ -559,13 +792,17 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
 
   gettimeofday(&start, NULL);
 
+  //Nombre de threads à utiliser en région parallèle
   // omp_set_num_threads(8);
+
   //Calcul des forces
   #pragma omp parallel for
   for (int i=0; i<m_num; ++i)   //i=1 de base
   {
 
-    // std:: cout << "num threads =" <<omp_get_num_threads()<< endl;
+    //Affichage du nombre de threads
+    //std:: cout << "num threads =" <<omp_get_num_threads()<< endl;
+
     ParticleData p(&pState[i], &m_pAux[i]);
 
     Vec2D acc;
@@ -593,21 +830,6 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
     pDeriv[i].vx = pState[i].vx;
     pDeriv[i].vy = pState[i].vy;
 
-    // cout << "test=" << pState[i].vx <<endl;
-
-    // pDeriv[i].ax = acc.x;
-    // pDeriv[i].ay = acc.y;
-    // pDeriv[i].vx = pState[i].vx + m_timeStep * acc.x;
-    // pDeriv[i].vy = pState[i].vy + m_timeStep * acc.y;
-
-    if(pDeriv[i].vx > 299792458) {
-      pDeriv[i].vx = 299792458;
-      //cout<<"ALERT\n";
-    }
-    if(pDeriv[i].vy > 299792458) {
-      pDeriv[i].vy = 299792458;
-      //cout<<"ALERT\n";
-    }
   }
 
   // Particle 0 is calculated last, because the statistics
@@ -645,10 +867,6 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   pDeriv[0].ay = acc.y;
   pDeriv[0].vx = pState[0].vx;
   pDeriv[0].vy = pState[0].vy;
-  // pDeriv[0].ax = acc.x;
-  // pDeriv[0].ay = acc.y;
-  // pDeriv[0].vx = pState[0].vx + m_timeStep * acc.x;
-  // pDeriv[0].vy = pState[0].vy + m_timeStep * acc.y;
 
   // Save vectors for camera orientations
   // m_camDir.x = pState[0].x - pState[4000].x;
@@ -663,8 +881,6 @@ void ModelNBody::Eval(double *a_state, double a_time, double *a_deriv)
   acc.y = acy[0];
 
   gettimeofday(&fin, NULL);
-  // std::cout << "  Le temps passé dans la  durée des calculs est de  : " <<time_diff(&start, &fin) << "sec \n";
-  // fichier << time_diff(&start, &fin) << "\n" ;
   mesure_temps  += time_diff(&start, &fin);
 }
 
