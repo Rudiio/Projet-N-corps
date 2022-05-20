@@ -33,9 +33,9 @@ Le programme permet de saisir le nombre de particules à générer lors de la si
 
 Il est également nécessaire de choisir la méthode à utiliser :
 
-1. Barnes-Hut ($<25000$ particules)
-2. Naïve opitimisée ($<2000$ particules)
-3. Naïve ($<1000$ particules)
+1. Barnes-Hut (<25000 particules)
+2. Naïve opitimisée (<2000particules)
+3. Naïve (<1000 particules)
 
 Il est également possible de modifier les paramétres de la simulation directement dans le code afin de moduler la simulation.
 
