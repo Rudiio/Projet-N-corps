@@ -61,15 +61,3 @@ $(EXEC_TESTS):
 
 clean:
 	rm -f prog *.o *.mod ./OBJ/*.o $(EXEC) $(EXEC_MESURE) $(EXEC_TESTS)
-
-# default:
-# 	$(GC) -O3 -c BHTree.cpp
-# 	$(GC) -O3 -c IIntegrator.cpp
-# 	$(GC) -O3 -c IModel.cpp
-# 	$(GC) -O3 -c IntegratorEuler.cpp
-# 	$(GC) -O3 $(LIBS) -c ModelNBody.cpp 
-# 	$(GC) -O3 -c SDLWnd.cpp -lSDL -DOpenGL_GL_PREFERENCE=LEGACY
-# 	$(GC) -O3 -c NBodyWnd.cpp -lSDL -DOpenGL_GL_PREFERENCE=LEGACY
-# 	$(GC) -O3 -c Types.cpp
-# 	$(GC) -O3 -c Vector.cpp
-# 	$(GC) -O3 $(LIBS) main.cpp BHTree.o IIntegrator.o IModel.o IntegratorEuler.o ModelNBody.o SDLWnd.o NBodyWnd.o Types.o Vector.o -o main -lSDL -lGL -lGLU -lglut -lX11 -lSDL_gfx
