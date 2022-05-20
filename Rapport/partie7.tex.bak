@@ -11,7 +11,10 @@ Les tests de parallélisation de notre algorithme de construction du $quadtree$ 
 \begin{center}
 \includegraphics[scale=0.6]{./resultats/Energy_tree.png}
 \captionsetup{hypcap=false}
-\captionof{figure}{Bilan énergétique pour la parallélisation de la construction de l'arbre}
+\captionof{figure}{Bilan énergétique pour la parallélisation de la
+construction de l'arbre\\
+($\Delta t = 50$ ans et $1000$
+itérations)}
 \label{fig11}
 \end{center}
 

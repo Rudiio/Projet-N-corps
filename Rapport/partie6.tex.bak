@@ -6,7 +6,7 @@ Elle consiste à effectuer des tâches de manière simultanée. Ainsi, un progra
 Ici, nous nous intéressons à la parallélisation multi-threads à mémoire partagée à travers l'interface de programmation (API) OpenMP.
 
 \vspace{2mm}
-Un thread, ou processus léger, est un fil d'exécution qui constitue un processus et permet donc d'exécuter du code machine dans le processeur. Ainsi, l'exécution d'un programme lance un processus qui va ensuite lancer plusieurs threads qui vont exécuter en même temps des instructions instructions similaires.
+Un thread, ou processus léger, est un fil d'exécution qui constitue un processus et permet donc d'exécuter du code machine dans le processeur. Ainsi, l'exécution d'un programme lance un processus qui va ensuite lancer plusieurs threads qui vont exécuter en même temps des instructions similaires.
 
 
 \begin{center}

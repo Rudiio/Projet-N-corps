@@ -3,7 +3,7 @@
 Notre projet s'effectue dans la continuité d'un projet déjà bien entamé, ainsi, la première étape a été de comprendre et d'assimiler le travail déjà effectué. Le fait que nous codons par dessus un code qui n'est pas le nôtre nous a compliqué la tâche lors de l'implémentation de certaines fonctions, comme l'intégrateur. L'analyse du code consistera en une description de chaque fichier et des structures utilisées, le code est très commenté.
 
 \section{Visualisation}
-L'affichage est géré par les fichiers \textit{SDLWnd} et \textit{NBodyWnd}, qui utilise les libraires SDL et OpenGL. Cette partie du code était déjà implémentée quand le code nous a été transmis, les principales modifications que nous avons fait consiste en des corrections de bug (touches pour zoomer, dézoomer, afficher l'arbre) ainsi qu'en l'ajout d'une coloration des étoiles en fonction du mode d'initialisation choisi.
+L'affichage est géré par les fichiers \textit{SDLWnd} et \textit{NBodyWnd}, qui utilisent les libraires SDL et OpenGL. Cette partie du code était déjà implémentée quand le code nous a été transmis, les principales modifications que nous avons fait consiste en des corrections de bug (touches pour zoomer, dézoomer, afficher l'arbre) ainsi qu'en l'ajout d'une coloration des étoiles en fonction du mode d'initialisation choisi.
 
 \section{ModelNBody.cpp // ModelNBody.h}
 Ces fichiers contiennent la classe sur laquelle repose la simulation. C'est ici que l'on initialise la simulation et toutes les particules.
@@ -15,7 +15,7 @@ Le fichier \textit{Vector.cpp} permet la création et la manipulation de vecteur
 Cette partie du code contient tous les structures et les méthodes nécessaires à la manipulation des particules (étoiles) et de leurs caractéristiques (position, vitesse, accélération).
 
 \section{BHTree.cpp // BHTree.h}
-Ces fichiers concerne la mise en place des différentes fonctions nécessaires à l'algorithme de Barnes-Hut. Il y a notamment les structures des Quadrants, ainsi que tous les informations sur les masses et les centres de masse qui y sont stockées. Les fonctions de construction, de suppression ou de calcul sur l'arbre nécessaires ont été complétées dans \textit{BHTree.cpp}.
+Ces fichiers concernent la mise en place des différentes fonctions nécessaires à l'algorithme de Barnes-Hut. Il y a notamment les structures des Quadrants, ainsi que toutes les informations sur les masses et les centres de masse qui y sont stockées. Les fonctions de construction, de suppression ou de calcul sur l'arbre nécessaires ont été complétées dans \textit{BHTree.cpp}.
 
 \section{Intégrateurs}
 Le dossier \textit{src} contient également les fichiers \textit{IntegratorEuler} et \textit{IntegratorLeapFrog} qui sont des fichiers contenant des méthodes numériques qui nous permettent de calculer l'évolution des positions des particules en considérant un pas de temps \textit{$\Delta t$} et en ayant au préalable effectué le calcul des forces exercées sur chaque particule grâce aux fichiers \textit{BHTree}.
