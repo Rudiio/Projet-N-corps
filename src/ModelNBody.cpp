@@ -46,7 +46,7 @@ ModelNBody::ModelNBody(int num,int methode_calcul,int mode_init)
   ,m_camDir()
   ,m_camPos()
   ,m_roi(1)                                                                           //Radial Orbit Instability
-  ,m_timeStep(100)
+  ,m_timeStep(250)
   ,mass_sun(1.988435e30)                                                              //masse soleil M
   ,pc_in_m(3.08567758129e16)                                                          //taux de conversion de parsec en mètre L
   ,gamma_si(6.67428e-11)                                                              //Constante gravitationnelle M-1 L3 T-2
@@ -64,12 +64,6 @@ ModelNBody::ModelNBody(int num,int methode_calcul,int mode_init)
 
   //------------------------------------------------------------------------
   //Initialisation des particules
-  //Le deuxième paramètre de InitCollision correspond au choix du mode d'initialisation :
-  //0 = 1 galaxie
-  //1 = mode "fantaisie"
-  //2 = 2 galaxies
-  //3 = Galaxie sphérique
-
   InitCollision(num, mode_init);
 
   gettimeofday(&fin, NULL);

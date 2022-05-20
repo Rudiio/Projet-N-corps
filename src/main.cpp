@@ -28,7 +28,7 @@ int main(int argc, char** argv)
     //Choix de la méthode 
     int methode_calcul=1;
     std :: cout << "\nVeuillez choisir une méthode de calcul\n";
-    std :: cout <<"1: Barnes-Hut | 2: Naïve efficace | 3: Naïve\n";
+    std :: cout <<"1: Barnes-Hut | 2: Naïve optimisée | 3: Naïve\n";
     std :: cin >> methode_calcul;
     std :: cout << "\n";
 
