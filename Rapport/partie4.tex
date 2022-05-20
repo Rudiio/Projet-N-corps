@@ -13,7 +13,7 @@ Voici par exemple, le résultat que nous obtenons avec cette méthode :
 \label{fig2}
 \end{center}
 
-En terme de performance, comme prévu l'algorithme est inefficace et montre ses limites pour $N>1000$ ce qui est bien trop petit pour pouvoir simuler des galaxies. Pour mettre en perspectives, la Voie Lactée compte entre 100 et 200 milliards d'étoiles.
+En terme de performances, comme prévu l'algorithme est inefficace et montre ses limites pour $N>2000$ ce qui est bien trop petit pour pouvoir simuler des galaxies. Pour mettre en perspectives, la Voie Lactée compte entre 100 et 200 milliards d'étoiles.
 
 \section{Optimisation de la méthode naïve}
 \vspace{2mm}
@@ -25,7 +25,7 @@ Pour cela, nous pouvons faire de la programmation dynamique en se basant sur la 
 On effectue donc à la place $C=\sum_{n=1}^N n = \frac{N(N-1)}{2}$ calculs.
 
 \vspace{2mm}
-On peut déjà observer que la complexité de ce calcul est toujours  en $O(N^2)$, mais l'amélioration de cette méthode est un premier pas. Cependant, étant donné la complexité quadratique, nous ne pouvons toujours pas simuler une galaxie avec beaucoup d'étoiles. En pratique, nous pouvons simuler $2000$ particules tout en ayant de bonnes performances mais au-delà de $2000$, la méthode montre ses limites.
+On peut déjà observer que la complexité de ce calcul est toujours  en $O(N^2)$, mais l'amélioration de cette méthode est un premier pas. Cependant, étant donné la complexité quadratique, nous ne pouvons toujours pas simuler une galaxie avec beaucoup d'étoiles. En pratique, nous pouvons simuler $2500$ particules tout en ayant de bonnes performances mais au-delà de $2500$, la méthode montre ses limites.
 
 \begin{center}
 \includegraphics[scale=0.8]{images/NO.png}
@@ -36,20 +36,20 @@ On peut déjà observer que la complexité de ce calcul est toujours  en $O(N^2)
 
 \section{Vérification énergétique des modèles}
 
-Il est nécessaire de vérifier si nos modèles sont bien implémentés et cohérents avec la physique du problème. Pour cela, un moyen de procéder est de calculer l'énergie mécanique du système à partir de son énergie cinétique et de son énergie potentielle. En effet, l'énergie mécanique du système se conserve au cours du temps étant donné que la force gravitationnelle est conservative d'après la loi de Newton.
+Il est nécessaire de vérifier si nos modèles sont bien implémentés et cohérents avec la physique du problème. Pour cela, un moyen de procéder est de calculer l'énergie mécanique du système à partir de son énergie cinétique et de son énergie potentielle. En effet, l'énergie mécanique du système se conserve au cours du temps étant donné que la force gravitationnelle est conservative.
 Cela permet aussi de vérifier la validité de notre intégrateur car l'instabilité d'un intégrateur se traduirait par le non respect de ce principe de conservation de l'énergie mécanique.
 
 \begin{center}
 \includegraphics[scale=0.6]{resultats/Energy_N.png}
 \captionsetup{hypcap=false}
-\captionof{figure}{Bilan énergétique méthode naïve \\($\Delta t = 50$ ans et $1000$ itérations)}
+\captionof{figure}{Bilan énergétique méthode naïve \\($\Delta t = 50$ ans, $1000$ itérations et $2000$ particules)}
 \label{fig4}
 \end{center} 
 
 \begin{center}
 \includegraphics[scale=0.6]{resultats/Energy_NO.png}
 \captionsetup{hypcap=false}
-\captionof{figure}{Bilan énergétique méthode naïve optimisée \\($\Delta t = 50$ ans et $1000$ itérations)}
+\captionof{figure}{Bilan énergétique méthode naïve optimisée \\($\Delta t = 50$ ans, $1000$ itérations et $2000$ particules)}
 \label{fig5}
 \end{center} 
 

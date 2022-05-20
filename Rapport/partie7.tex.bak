@@ -13,8 +13,7 @@ Les tests de parallélisation de notre algorithme de construction du $quadtree$ 
 \captionsetup{hypcap=false}
 \captionof{figure}{Bilan énergétique pour la parallélisation de la
 construction de l'arbre\\
-($\Delta t = 50$ ans et $1000$
-itérations)}
+($\Delta t = 50$ ans, $1000$ itérations et $2000$ particules)}
 \label{fig11}
 \end{center}
 
@@ -55,7 +54,7 @@ De plus, on peut déjà remarquer que l'ordre de grandeur des durées est plus p
 \end{center}
 
 
-La parallélisation fonctionne bien sur la méthode de calcul naïve, le calcul parallélisé étant $1.5$ plus rapide que le calcul séquentiel. Cette amélioration n'a cependant aucun effet sur la complexité.
+La parallélisation fonctionne bien sur la méthode de calcul naïve, le calcul parallélisé étant $1.5$ plus rapide que le calcul séquentiel. Cette amélioration n'a cependant aucun effet sur la complexité. Les résultats de la figure 4.3 ont été obtenus avec en utilisant cette version parallèle ce qui confirme le fait que la parallélisation soit valide.
 
 
 \subsection{Naïve optimisée}
@@ -67,7 +66,7 @@ La parallélisation fonctionne bien sur la méthode de calcul naïve, le calcul 
 \end{center}
 
 
-La parallélisation fonctionne également bien sur la méthode de calcul naïve optimisée, le calcul parallélisé étant $1.4$ plus rapide que le calcul séquentiel.
+La parallélisation fonctionne également bien sur la méthode de calcul naïve optimisée, le calcul parallélisé étant $1.4$ plus rapide que le calcul séquentiel. La figure 4.4 a été obtenue en utilisant la version parallèle donc la méthode naïve optimisée reste cohérente physiquement malgré la parallélisation.
 
 \subsection{Algorithme de Barnes-Hut}
 \begin{center}
@@ -77,7 +76,7 @@ La parallélisation fonctionne également bien sur la méthode de calcul naïve 
 \label{fig13}
 \end{center}
 
-On peut voir sur la figure que globalement la parallélisation améliore de manière conséquente l'efficacité des calculs de Barnes-Hut. En effet, la version parallélisée est $1.7$ fois plus rapide que la version séquentielle. Dans les deux cas la complexité est en $O(log(N))$.
+On peut voir sur la figure que globalement la parallélisation améliore de manière conséquente l'efficacité des calculs de Barnes-Hut. En effet, la version parallélisée est $1.7$ fois plus rapide que la version séquentielle. Dans les deux cas la complexité est en $O(log(N))$. De plus, les résultats de la figure 5.3 proviennent de la version parallélisée de l'algorithme, ainsi, la parallélisation respecte l'aspect physique du problème.
 
 \subsection{Résultats de la parallélisation}
 Les résultats obtenus dans cette partie ont permis de vérifier les résultats théoriques par rapport aux performances des algorithmes : l'algorithme de Barnes-Hut est bien plus performant que les autres. De plus, ils ont également montré que la parallélisation permet bel et bien d'optimiser les calculs à conditions de respecter les conditions de parallélisation. En moyenne, le gain de vitesse avec $4$ threads est d'environ $1.53$ ce qui est plutôt élevé. Afin d'améliorer notre parallélisation, nous aurions pu augmenter le nombre de threads ou équilibrer davantage la charge entre les différents threads.

@@ -25,14 +25,14 @@ L'algorithme de Barnes Hut se décompose en trois étapes majeures:
 \begin{enumerate}
 \item la construction de l'arbre
 
-\item le calcul des centres des masses et des masses correspondant à chaque nœud
+\item le calcul des centres des masses et des masses correspondants à chaque nœud
 
 \item le calcul des forces appliquées sur les particules
 \end{enumerate}
 
 Selon la version de l'algorithme utilisée, les étapes $1$ et $2$ peuvent être effectuées simultanément. 
 
-Avant de détailler ces étapes nous avons besoin de mettre en place la notion de quadrants. Un quadrant est une division de notre arbre et donc un nœud de l'arbre. Comme nous travaillons en deux dimensions, nous avons besoin de quatre quadrants, un quadrant en haut à gauche, un autre en bas à gauche , un troisième à droite en haut et un dernier à droite en bas. On les appellera respectivement NW (North-West),SW (South-West),NE (North-East) et SE (South-East) en référence aux points cardinaux.
+Avant de détailler ces étapes nous avons besoin de mettre en place la notion de quadrant. Un quadrant est une division de notre arbre et donc un nœud de l'arbre. Comme nous travaillons en deux dimensions, nous avons besoin de quatre quadrants, un quadrant en haut à gauche, un autre en bas à gauche , un troisième à droite en haut et un dernier à droite en bas. On les appellera respectivement NW (North-West),SW (South-West),NE (North-East) et SE (South-East) en référence aux points cardinaux.
 
 \subsection{La construction de l'arbre}
 
@@ -42,7 +42,7 @@ Soit la particule $p1$. Tout d'abord nous devons vérifier que $p1$ doit bien ê
 Si c'est le cas nous distinguons plusieurs cas. 
 \begin{itemize}
 
-\item S'il existe plus d'une particule dans le nœud, on doit insérer la particule dans le fils du nœud auquel correspond sa position. S'il n'existe pas, on crée ce fils.
+\item S'il existe plus d'une particule dans le nœud, on doit insérer la particule dans le fils du nœud auquel correspond sa position donc dans un des quatre quadrants. S'il n'existe pas, on crée ce fils.
 
 
 \item S'il existe qu'une seule particule dans le nœud, on réinsère l'ancienne particule dans le fils auquel correspond sa position puis on effectue l'insertion de $p1$ dans le quadrant qui lui correspond. Si les fils n'existent pas, on les crée avant l'insertion. 
@@ -51,7 +51,7 @@ Si c'est le cas nous distinguons plusieurs cas.
 
 \end{itemize}
 
-Les particules ne sont insérées que dans les feuilles de l'arbre, les nœuds peuvent contenir plusieurs particules mais les particules en elles-mêmes ne seront stockées dans l'arbre que dans des feuilles de l'arbre (nœuds sans fils).
+Les particules ne sont insérées que dans les feuilles de l'arbre, les nœuds peuvent contenir plusieurs particules mais les particules en elles-mêmes ne seront stockées dans l'arbre que dans des feuilles de l'arbre (nœuds sans fils). Ainsi, on découpe notre à arbre en $4$ à chaque itération jusqu'à avoir inséré toutes les particules et que chaque carré ne contienne qu'au plus $1$ particule comme on peut le voir dans la figure 5.1.
 
 \subsection{Le calcul des masses et centres de masse}
 
@@ -97,8 +97,8 @@ Il devient alors possible de pousser les simulations plus loin pour simuler nota
 \begin{center}
 \includegraphics[scale=0.6]{./resultats/Energy_BH.png}
 \captionsetup{hypcap=false}
-\captionof{figure}{Bilan énergétique méthode de Barnes-Hut \\($\Delta t = 50$ ans et $1000$ itérations)}
+\captionof{figure}{Bilan énergétique méthode de Barnes-Hut \\($\Delta t = 50$ ans, $1000$ itérations et $2000$ particules)}
 \label{fig9}
 \end{center}
 
-L'énergie mécanique se conserve à partir de la $260$ème itération, avant ça, le modèle est perturbé par les conditions initiales. Ainsi, le modèle est bien valide physiquement malgré les approximations effectuées, ce qui montre l'intérêt de l'algorithme. Il a une vitesse de convergence située entre celles des deux méthodes naïves.
+L'énergie mécanique se conserve à partir de la $260$ème itération, avant ça, le modèle est perturbé par les conditions initiales. Ainsi, le modèle est bien valide physiquement malgré les approximations effectuées, ce qui montre la puissance de l'algorithme. Il a une vitesse de convergence située entre celles des deux méthodes naïves.

@@ -33,11 +33,18 @@ Le programme permet de saisir le nombre de particules à générer lors de la si
 
 Il est également nécessaire de choisir la méthode à utiliser :
 
-1. Barnes-Hut (<25000 particules)
-2. Naïve opitimisée (<2000particules)
-3. Naïve (<1000 particules)
+1. Barnes-Hut (<50000 particules)
+2. Naïve opitimisée (<2500particules)
+3. Naïve (<2000 particules)
 
-Il est également possible de modifier les paramétres de la simulation directement dans le code afin de moduler la simulation.
+Le programme propose 4 méthodes d'initialisation des particules :
+
+0. Grosse galaxie (galaxie sphérique à gros diamétre)
+1. Galaxie-atomes
+2. 2 galaxies (et collision)
+3. Galaxie sphérique
+
+Il est également possible de modifier les paramétres de la simulation directement dans le code afin de moduler plus précisément la simulation.
 
 Des calculs d'énergie sont aussi possibles en décommentant la ligne correspondante dans la fonction 
 mainloop située dans SDLWnd.cpp. Ces calculs s'effectuant en $O(N^2)$, il faut faire attention au nombre de particules ($\sim 2000$ pour avoir des performances correctes).
