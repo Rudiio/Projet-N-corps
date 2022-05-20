@@ -13,7 +13,7 @@ Voici par exemple, le résultat que nous obtenons avec cette méthode :
 \label{fig2}
 \end{center}
 
-En terme de performance, comme prévu l'algorithme est inefficace et montre ses limites pour $N>1000$ ce qui est bien trop petit pour pouvoir simuler des galaxies ; pour mettre en perspectives, la Voie Lactée compte entre 100 et 200 milliards d'étoiles.
+En terme de performance, comme prévu l'algorithme est inefficace et montre ses limites pour $N>1000$ ce qui est bien trop petit pour pouvoir simuler des galaxies. Pour mettre en perspectives, la Voie Lactée compte entre 100 et 200 milliards d'étoiles.
 
 \section{Optimisation de la méthode naïve}
 \vspace{2mm}
@@ -55,8 +55,8 @@ Cela permet aussi de vérifier la validité de notre intégrateur car l'instabil
 
 
 Pour les deux méthodes, au début de la simulation les énergies
-varient beaucoup, cela est dû aux conditions initiales qui ne
-respectent pas l'aspect physique du problème. On peut voir le premier saut comme un indicateur l'incohérence de nos conditions initiales.
+varient beaucoup. Cela est dû aux conditions initiales qui ne
+respectent pas l'aspect physique du problème. On peut voir le premier saut comme un indicateur d'incohérence de nos conditions initiales.
 On peut voir sur la figure $4.3$ que l'énergie mécanique de la
 méthode naïve est bien constante à partir de $t=20000$, ce qui
 valide bien le modèle. Cela nous informe aussi sur la vitesse de
@@ -70,5 +70,5 @@ méthode naïve.
 
 \vspace{2mm}
 Il est important de noter que pour les deux méthodes, on peut
-observer de légère variations qui sont dues aux approximations des
+observer de légères variations qui sont dues aux approximations des
 intégrateurs numérique, de la précision du calcul, et du paramètre $\textit{softening}$.
